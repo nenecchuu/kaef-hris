@@ -1,0 +1,116 @@
+ARG NODE_VERSION=22.9
+
+FROM node:${NODE_VERSION} AS frontend
+
+RUN mkdir -p /app/public
+COPY package.json package-lock.json tsconfig.app.json tsconfig.node.json tsconfig.json postcss.config.js tailwind.config.ts vite.config.ts eslint.config.js prettier.config.js /app/
+COPY resources/ /app/resources/
+WORKDIR /app
+
+# web build
+FROM frontend AS build
+COPY . .
+# Copy environment file for Vite build
+COPY .env.production .env
+RUN npm install
+RUN npm run build
+
+FROM php:8.1-apache AS app
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    vim \
+    git \
+    zip \
+    unzip \
+    gnupg2 \
+    libfreetype6-dev \
+    libjpeg62-turbo-dev \
+    libpng-dev \
+    libxml2-dev \
+    libonig-dev \
+    zlib1g-dev \
+    libzip-dev \
+    libpq-dev \
+    supervisor \
+    && docker-php-ext-install -j$(nproc) iconv \
+    && docker-php-ext-configure gd --with-freetype --with-jpeg \
+    && docker-php-ext-install -j$(nproc) gd
+
+# Install PHP extensions
+RUN docker-php-ext-install mbstring pdo pdo_pgsql pgsql zip bcmath exif
+
+# Basic tools + keyring dir
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends ca-certificates curl gnupg \
+ && install -d -m 0755 /etc/apt/keyrings
+
+# Import Microsoft key (no apt-key)
+RUN curl -fsSL https://packages.microsoft.com/keys/microsoft.asc \
+ | gpg --dearmor -o /etc/apt/keyrings/microsoft.gpg \
+ && chmod 644 /etc/apt/keyrings/microsoft.gpg
+
+RUN echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/microsoft.gpg] https://packages.microsoft.com/debian/12/prod bookworm main" \
+ > /etc/apt/sources.list.d/microsoft-prod.list
+
+# install SQL server
+#RUN curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
+#RUN curl https://packages.microsoft.com/config/ubuntu/20.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
+ENV ACCEPT_EULA=Y
+RUN apt-get update && apt-get -y --no-install-recommends install msodbcsql17 unixodbc-dev unixodbc
+RUN pecl install sqlsrv
+RUN pecl install pdo_sqlsrv
+RUN docker-php-ext-install gd zip sockets
+RUN docker-php-ext-enable sqlsrv pdo_sqlsrv
+
+# Copy application files
+COPY . /var/www/html
+COPY --from=build /app/public/build /var/www/html/public/build/
+
+# Composer stage
+COPY composer.json composer.lock ./
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+ENV COMPOSER_ALLOW_SUPERUSER=1
+# Fix git ownership issue
+RUN git config --global --add safe.directory /var/www/html
+
+RUN composer install \
+    --ignore-platform-reqs \
+    --no-interaction \
+    --no-plugins \
+    --no-scripts \
+    --prefer-dist
+
+# Generate Passport keys with force option (ignore if they exist)
+RUN php artisan passport:keys --force || echo "Passport keys generation completed"
+
+RUN touch /var/www/html/storage/logs/laravel.log
+
+# Set up permissions
+RUN chown -R www-data:www-data /var/www/html
+RUN chmod -R 777 /var/www/html/storage
+
+EXPOSE 80
+
+# Enable Apache modules
+RUN a2enmod rewrite
+
+# Copy configuration files
+COPY .docker/config/php-configuration.ini /usr/local/etc/php/conf.d/php-configuration.ini
+COPY .docker/services/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+COPY .docker/config/virtualhost.conf /etc/apache2/sites-enabled/000-default.conf
+
+# Set up log symlinks
+RUN ln -sf /dev/stdout /var/log/apache2/access.log \
+    && ln -sf /dev/stderr /var/log/apache2/error.log
+
+# Set working directory
+WORKDIR /var/www/html
+
+# Copy and set up entrypoint script
+COPY .docker/entrypoint.sh /usr/local/bin/
+RUN chmod +x /usr/local/bin/entrypoint.sh
+
+ENTRYPOINT ["entrypoint.sh"]
+# CMD ["apache2-foreground"]
+CMD ["/usr/bin/supervisord"]

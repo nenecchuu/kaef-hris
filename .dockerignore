@@ -1,0 +1,6 @@
+.scribe
+.vscode
+
+node_modules
+vendor
+public/dist

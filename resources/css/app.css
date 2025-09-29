@@ -1,0 +1,334 @@
+@import "./fonts.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Color palette */
+    --color-neutral-0: 0 0% 100%;
+    --color-neutral-1000: 0 0% 0%;
+
+    --color-gray-50: 0 0% 98%;
+    --color-gray-100: 0 0% 94%;
+    --color-gray-200: 0 0% 90%;
+    --color-gray-300: 0 0% 80%;
+    --color-gray-400: 0 0% 82%;
+    --color-gray-500: 0 0% 75%;
+    --color-gray-600: 0 0% 58%;
+    --color-gray-700: 0 0% 38%;
+    --color-gray-800: 0 0% 26%;
+    --color-gray-900: 0 0% 18%;
+
+    --color-blue-50: 218 92% 95%;
+    --color-blue-100: 216 95% 84%;
+    --color-blue-200: 216 93% 76%;
+    --color-blue-300: 216 94% 85%;
+    --color-blue-400: 216 94 59%;
+    --color-blue-500: 216 100% 48%;
+    --color-blue-600: 216 100% 44%;
+    --color-blue-700: 216 100% 38%;
+    --color-blue-800: 216 100% 27%;
+    --color-blue-900: 216 100% 20%;
+
+    --color-indigo-50: 236 88% 97%;
+    --color-indigo-100: 239 85% 90%;
+    --color-indigo-200: 238 85% 85%;
+    --color-indigo-300: 239 84% 78%;
+    --color-indigo-400: 238 84% 73%;
+    --color-indigo-500: 239 84% 67%;
+    --color-indigo-600: 239 64% 61%;
+    --color-indigo-700: 239 42% 47%;
+    --color-indigo-800: 238 42% 37%;
+    --color-indigo-900: 239 41% 28%;
+
+    --color-purple-50: 270 67% 94%;
+    --color-purple-100: 270 66% 81%;
+    --color-purple-200: 270 67% 73%;
+    --color-purple-300: 270 67% 60%;
+    --color-purple-400: 270 67% 52%;
+    --color-purple-500: 270 100% 40%;
+    --color-purple-600: 270 100% 36%;
+    --color-purple-700: 270 100% 28%;
+    --color-purple-800: 270 100% 22%;
+    --color-purple-900: 270 100% 17%;
+
+    --color-green-50: 155 61% 94%;
+    --color-green-100: 154 60% 81%;
+    --color-green-200: 154 61% 72%;
+    --color-green-300: 154 61% 59%;
+    --color-green-400: 154 60% 51%;
+    --color-green-500: 154 94% 39%;
+    --color-green-600: 154 95% 36%;
+    --color-green-700: 154 94% 28%;
+    --color-green-800: 154 95% 22%;
+    --color-green-900: 154 93% 16%;
+
+    --color-cyan-50: 185 79% 95%;
+    --color-cyan-100: 184 78% 83%;
+    --color-cyan-200: 184 77% 74%;
+    --color-cyan-300: 184 77% 62%;
+    --color-cyan-400: 184 77% 55%;
+    --color-cyan-500: 184 100% 44%;
+    --color-cyan-600: 184 100% 40%;
+    --color-cyan-700: 184 100% 31%;
+    --color-cyan-800: 184 100% 24%;
+    --color-cyan-900: 184 100% 18%;
+
+    --color-teal-50: 187 52% 94%;
+    --color-teal-100: 186 52% 80%;
+    --color-teal-200: 186 52% 70%;
+    --color-teal-300: 186 52% 56%;
+    --color-teal-400: 186 58% 47%;
+    --color-teal-500: 186 100% 34%;
+    --color-teal-600: 186 100% 31%;
+    --color-teal-700: 186 100% 24%;
+    --color-teal-800: 186 100% 19%;
+    --color-teal-900: 186 100% 14%;
+
+    --color-lime-50: 78 98% 95%;
+    --color-lime-100: 80 89% 89%;
+    --color-lime-200: 81 88% 80%;
+    --color-lime-300: 82 85% 67%;
+    --color-lime-400: 83 78% 55%;
+    --color-lime-500: 84 81% 44%;
+    --color-lime-600: 85 85% 35%;
+    --color-lime-700: 86 78% 27%;
+    --color-lime-800: 86 69% 23%;
+    --color-lime-900: 86 61% 20%;
+
+    --color-yellow-50: 48 100% 95%;
+    --color-yellow-100: 48 100% 85%;
+    --color-yellow-200: 48 100% 77%;
+    --color-yellow-300: 48 100% 66%;
+    --color-yellow-400: 48 100% 60%;
+    --color-yellow-500: 48 100% 50%;
+    --color-yellow-600: 48 100% 45%;
+    --color-yellow-700: 48 100% 35%;
+    --color-yellow-800: 48 100% 27%;
+    --color-yellow-900: 48 100% 21%;
+
+    --color-orange-50: 31 100% 95%;
+    --color-orange-100: 32 100% 85%;
+    --color-orange-200: 32 100% 77%;
+    --color-orange-300: 32 100% 66%;
+    --color-orange-400: 32 100% 60%;
+    --color-orange-500: 32 100% 50%;
+    --color-orange-600: 32 100% 45%;
+    --color-orange-700: 32 100% 35%;
+    --color-orange-800: 32 100% 27%;
+    --color-orange-900: 32 100% 21%;
+
+    --color-red-50: 0 100% 98%;
+    --color-red-100: 0 100% 88%;
+    --color-red-200: 0 100% 82%;
+    --color-red-300: 0 100% 74%;
+    --color-red-400: 0 100% 69%;
+    --color-red-500: 0 100% 62%;
+    --color-red-600: 0 79% 56%;
+    --color-red-700: 0 62% 44%;
+    --color-red-800: 0 63% 34%;
+    --color-red-900: 0 62% 26%;
+
+    --color-pink-50: 330 80% 96%;
+    --color-pink-100: 331 81% 88%;
+    --color-pink-200: 330 81% 82%;
+    --color-pink-300: 330 81% 73%;
+    --color-pink-400: 331 81% 68%;
+    --color-pink-500: 330 81% 60%;
+    --color-pink-600: 330 65% 55%;
+    --color-pink-700: 330 53% 43%;
+    --color-pink-800: 330 53% 33%;
+    --color-pink-900: 330 53% 25%;
+
+    --color-base-primary: 216 100% 48%;
+    --color-base-light-primary: var(--color-blue-50);
+    --color-base-darker-primary: 216 100% 13%;
+    --color-base-info: var(--color-blue-500);
+    --color-base-success: var(--color-green-500);
+    --color-base-warning: var(--color-yellow-500);
+    --color-base-error: var(--color-red-500);
+
+    --color-background-subtle: var(--color-neutral-0);
+    --color-background-default: var(--color-gray-50);
+    --color-background-darker: var(--color-gray-100);
+    --color-background-disabled: var(--color-gray-200);
+    --color-background-primary: var(--color-base-primary);
+    --color-background-light-primary: var(--color-base-light-primary);
+    --color-background-darker-primary: var(--color-base-darker-primary);
+    --color-background-info: var(--color-base-info);
+    --color-background-light-info: var(--color-blue-50);
+    --color-background-darker-info: var(--color-blue-700);
+    --color-background-success: var(--color-base-success);
+    --color-background-light-success: var(--color-green-50);
+    --color-background-darker-success: var(--color-green-700);
+    --color-background-warning: var(--color-base-warning);
+    --color-background-light-warning: var(--color-yellow-50);
+    --color-background-darker-warning: var(--color-yellow-700);
+    --color-background-error: var(--color-base-error);
+    --color-background-light-error: var(--color-red-50);
+    --color-background-darker-error: var(--color-red-700);
+
+    --color-icon-primary: var(--color-gray-900);
+    --color-icon-secondary: var(--color-gray-600);
+    --color-icon-tertiary: var(--color-gray-700);
+    --color-icon-placeholder: var(--color-gray-500);
+    --color-icon-negative: var(--color-neutral-0);
+    --color-icon-base-primary: var(--color-base-primary);
+    --color-icon-darker-primary: var(--color-base-darker-primary);
+    --color-icon-info: var(--color-base-info);
+    --color-icon-darker-info: var(--color-blue-700);
+    --color-icon-success: var(--color-base-success);
+    --color-icon-darker-success: var(--color-green-700);
+    --color-icon-warning: var(--color-base-warning);
+    --color-icon-darker-warning: var(--color-yellow-700);
+    --color-icon-error: var(--color-base-error);
+    --color-icon-darker-error: var(--color-red-700);
+
+    --color-outline-subtle: var(--color-neutral-0);
+    --color-outline-lighter: var(--color-gray-100);
+    --color-outline-default: var(--color-gray-200);
+    --color-outline-darker: var(--color-gray-300);
+    --color-outline-primary: var(--color-base-primary);
+    --color-outline-info: var(--color-base-info);
+    --color-outline-success: var(--color-base-success);
+    --color-outline-warning: var(--color-base-warning);
+    --color-outline-error: var(--color-base-error);
+
+    /* Brand Color */
+    --brand-primary: var(--color-base-primary);
+    --brand-primary-light: var(--color-base-light-primary);
+    --brand-primary-dark: var(--color-base-darker-primary);
+    --brand-success: var(--color-green-500);
+    --brand-success-dark: var(--color-green-600);
+    --brand-success-light: var(--color-green-50);
+    --brand-danger: var(--color-red-600);
+    --brand-danger-dark: var(--color-red-700);
+    --brand-danger-light: var(--color-red-50);
+    --brand-warning: var(--color-yellow-500);
+    --brand-warning-dark: var(--color-yellow-600);
+    --brand-warning-light: var(--color-yellow-50);
+    --brand-notice: var(--color-orange-500);
+    --brand-notice-dark: var(--color-orange-600);
+    --brand-notice-light: var(--color-orange-50);
+    --brand-info: var(--color-blue-500);
+    --brand-info-dark: var(--color-blue-600);
+    --brand-info-light: var(--color-blue-50);
+    --brand-approve: var(--color-blue-400);
+    --brand-approve-dark: var(--color-blue-500);
+    --brand-approve-light: var(--color-blue-50);
+    --brand-focus: var(--color-blue-100);
+    --brand-separator: var(--color-gray-100);
+    --brand-border: var(--color-gray-200);
+  }
+
+  body {
+    color: theme("colors.gray.900");
+    font-family: theme("fontFamily.sans");
+    font-feature-settings:
+      "cv02",
+      "cv03",
+      "cv04",
+      "cv11",
+      "liga" 1,
+      "calt" 1;
+    line-height: 1.5rem;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  input::-webkit-search-cancel-button,
+  input::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+}
+
+/* Make clicks pass-through */
+#nprogress {
+  pointer-events: none;
+}
+
+#nprogress .bar {
+  background: theme("colors.brand.primary");
+
+  position: fixed;
+  z-index: 1031;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 4px;
+}
+
+/* Fancy blur effect */
+#nprogress .peg {
+  display: block;
+  position: absolute;
+  right: 0px;
+  width: 100px;
+  height: 100%;
+  box-shadow:
+    0 0 10px theme("colors.brand.primary"),
+    0 0 5px theme("colors.brand.primary");
+  opacity: 1;
+
+  -webkit-transform: rotate(3deg) translate(0px, -4px);
+  -ms-transform: rotate(3deg) translate(0px, -4px);
+  transform: rotate(3deg) translate(0px, -4px);
+}
+
+/** React DatePicker Library */
+.react-datepicker__navigation {
+  top: 6.5px !important;
+}
+
+.react-datepicker__header__dropdown {
+  margin-top: 6px !important;
+}
+
+.react-datepicker-wrapper {
+  width: 100% !important;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--in-selecting-range,
+.react-datepicker__day--in-range,
+.react-datepicker__month-text--selected,
+.react-datepicker__quarter-text--selected,
+.react-datepicker__year-text--selected,
+.react-datepicker__day--selected:hover,
+.react-datepicker__month-text--selected:hover,
+.react-datepicker__quarter-text--selected:hover,
+.react-datepicker__year-text--selected:hover {
+  background-color: theme("colors.brand.primary") !important;
+}
+
+.react-datepicker__day--keyboard-selected,
+.react-datepicker__month-text--keyboard-selected,
+.react-datepicker__quarter-text--keyboard-selected,
+.react-datepicker__year-text--keyboard-selected {
+  background-color: theme("colors.brand.primary") !;
+  color: theme("colors.brand.primary") !important;
+}
+
+.react-datepicker__day--keyboard-selected:hover,
+.react-datepicker__month-text--keyboard-selected:hover,
+.react-datepicker__quarter-text--keyboard-selected:hover,
+.react-datepicker__year-text--keyboard-selected:hover {
+  background-color: theme("colors.brand.primary") !important;
+}
+
+.react-datepicker-popper {
+  z-index: 40 !important;
+}

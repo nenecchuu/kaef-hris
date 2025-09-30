@@ -105,12 +105,12 @@ Route::middleware(['auth:sanctum', 'as:user', 'guardMFA', 'guardResetPass'])->gr
         Route::get('/export', [App\Http\Controllers\Api\EmployeeController::class, 'exportEmployees']);
     });
 
-    // Employee child resources
-    Route::prefix('employees/{employee_id}')->group(function () {
-        Route::apiResource('education-history', App\Http\Controllers\Api\EmployeeEducationController::class);
-        Route::apiResource('certifications', App\Http\Controllers\Api\EmployeeCertificationController::class);
-        Route::apiResource('professional-licenses', App\Http\Controllers\Api\EmployeeProfessionalLicenseController::class);
-    });
+    // Employee child resources (TODO: Create controllers)
+    // Route::prefix('employees/{employee_id}')->group(function () {
+    //     Route::apiResource('education-history', App\Http\Controllers\Api\EmployeeEducationController::class);
+    //     Route::apiResource('certifications', App\Http\Controllers\Api\EmployeeCertificationController::class);
+    //     Route::apiResource('professional-licenses', App\Http\Controllers\Api\EmployeeProfessionalLicenseController::class);
+    // });
 
     // Employee reports
     Route::prefix('employee-reports')->group(function () {

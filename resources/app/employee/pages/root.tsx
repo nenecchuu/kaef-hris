@@ -23,6 +23,7 @@ import { Header, Title } from "@src/ui/page";
 import { View } from "@src/ui/view";
 
 import { EmployeeCard } from "../components/EmployeeCard";
+import { EmployeeFilters } from "../components/EmployeeFilters";
 import { EmployeeSearch } from "../components/EmployeeSearch";
 import { DEFAULT_PER_PAGE } from "../config";
 import { useEmployees } from "../hooks";

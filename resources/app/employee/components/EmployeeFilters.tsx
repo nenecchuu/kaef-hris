@@ -53,12 +53,11 @@ export function EmployeeFilters({
         <Select
           id="status-filter"
           placeholder="Semua Status"
-          value={statusKepegawaian || ""}
+          value={statusKepegawaian}
           onValueChange={(value) =>
-            onStatusChange(value ? (value as EmploymentStatus) : undefined)
+            onStatusChange(value as EmploymentStatus | undefined)
           }
         >
-          <SelectItem value="">Semua Status</SelectItem>
           {Object.entries(EMPLOYMENT_STATUS_LABELS).map(([value, label]) => (
             <SelectItem key={value} value={value}>
               {label}

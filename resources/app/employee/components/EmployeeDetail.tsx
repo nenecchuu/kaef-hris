@@ -40,24 +40,24 @@ export function EmployeeDetail({ employee, canEdit = false }: EmployeeDetailProp
   return (
     <div className="space-y-6">
       {/* Header Section */}
-      <div className="rounded-lg border bg-white p-6 shadow-sm">
-        <div className="flex items-start gap-6">
+      <div className="rounded-lg border bg-white p-4 sm:p-6 shadow-sm">
+        <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
           {/* Avatar */}
-          <Avatar className="h-24 w-24 rounded-lg">
+          <Avatar className="h-20 w-20 sm:h-24 sm:w-24 rounded-lg flex-shrink-0">
             <AvatarImage
               src={employee.foto_url || undefined}
-              alt={`${employee.nama_lengkap}'s photo`}
+              alt={`Foto ${employee.nama_lengkap}`}
             />
-            <AvatarFallback className="rounded-lg text-2xl">
+            <AvatarFallback className="rounded-lg text-xl sm:text-2xl" aria-label="Avatar default">
               {employee.nama_lengkap.charAt(0)}
             </AvatarFallback>
           </Avatar>
 
           {/* Basic Info */}
-          <div className="flex-1">
-            <div className="flex items-start justify-between">
-              <div>
-                <h2 className="text-2xl font-bold text-gray-900">
+          <div className="flex-1 min-w-0">
+            <div className="flex flex-col sm:flex-row items-start justify-between gap-3">
+              <div className="min-w-0 flex-1">
+                <h2 className="text-xl sm:text-2xl font-bold text-gray-900 break-words">
                   {employee.nama_lengkap}
                 </h2>
                 {employee.nama_panggilan && (
@@ -74,9 +74,10 @@ export function EmployeeDetail({ employee, canEdit = false }: EmployeeDetailProp
                   to={`/employees/${employee.id}/edit`}
                   variant="default"
                   size="sm"
+                  aria-label={`Edit data ${employee.nama_lengkap}`}
                 >
-                  <IconEdit className="h-4 w-4" />
-                  Edit
+                  <IconEdit className="h-4 w-4" aria-hidden="true" />
+                  <span className="hidden sm:inline">Edit</span>
                 </ButtonLink>
               )}
             </div>
@@ -114,26 +115,31 @@ export function EmployeeDetail({ employee, canEdit = false }: EmployeeDetailProp
 
       {/* Tabbed Content */}
       <Tabs defaultValue="personal" className="w-full">
-        <TabsList className="grid w-full grid-cols-5">
-          <TabsTrigger value="personal">
-            <IconUser className="mr-2 h-4 w-4" />
-            Info Pribadi
+        <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2">
+          <TabsTrigger value="personal" aria-label="Tab informasi pribadi">
+            <IconUser className="h-4 w-4 sm:mr-2" aria-hidden="true" />
+            <span className="hidden sm:inline">Info Pribadi</span>
+            <span className="sm:hidden text-xs">Pribadi</span>
           </TabsTrigger>
-          <TabsTrigger value="employment">
-            <IconBriefcase className="mr-2 h-4 w-4" />
-            Info Pekerjaan
+          <TabsTrigger value="employment" aria-label="Tab informasi pekerjaan">
+            <IconBriefcase className="h-4 w-4 sm:mr-2" aria-hidden="true" />
+            <span className="hidden sm:inline">Info Pekerjaan</span>
+            <span className="sm:hidden text-xs">Kerja</span>
           </TabsTrigger>
-          <TabsTrigger value="education">
-            <IconSchool className="mr-2 h-4 w-4" />
-            Pendidikan
+          <TabsTrigger value="education" aria-label="Tab riwayat pendidikan">
+            <IconSchool className="h-4 w-4 sm:mr-2" aria-hidden="true" />
+            <span className="hidden sm:inline">Pendidikan</span>
+            <span className="sm:hidden text-xs">Edu</span>
           </TabsTrigger>
-          <TabsTrigger value="certifications">
-            <IconCertificate className="mr-2 h-4 w-4" />
-            Sertifikasi
+          <TabsTrigger value="certifications" aria-label="Tab sertifikasi">
+            <IconCertificate className="h-4 w-4 sm:mr-2" aria-hidden="true" />
+            <span className="hidden sm:inline">Sertifikasi</span>
+            <span className="sm:hidden text-xs">Sertif</span>
           </TabsTrigger>
-          <TabsTrigger value="licenses">
-            <IconLicense className="mr-2 h-4 w-4" />
-            Lisensi
+          <TabsTrigger value="licenses" aria-label="Tab lisensi profesional">
+            <IconLicense className="h-4 w-4 sm:mr-2" aria-hidden="true" />
+            <span className="hidden sm:inline">Lisensi</span>
+            <span className="sm:hidden text-xs">Lisensi</span>
           </TabsTrigger>
         </TabsList>
 

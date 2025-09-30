@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom';
 
 import { useEmployees } from '../hooks';
 import { EmployeeList } from '../components/EmployeeList';
+import { EmployeeCard } from '../components/EmployeeCard';
 import { EmployeeSearch } from '../components/EmployeeSearch';
 import { EmployeeFilters } from '../components/EmployeeFilters';
 import { DEFAULT_PER_PAGE } from '../config';
@@ -200,13 +201,31 @@ export default function EmployeeIndexPage() {
               </div>
             </div>
           ) : (
-            <EmployeeList
-              employees={employees}
-              from={pagination?.from ?? 1}
-              onDelete={(employee) => setDeleteEmployee(employee)}
-              canEdit={canEdit}
-              canDelete={canDelete}
-            />
+            <>
+              {/* Desktop: Table View (hidden on mobile) */}
+              <div className="hidden md:block">
+                <EmployeeList
+                  employees={employees}
+                  from={pagination?.from ?? 1}
+                  onDelete={(employee) => setDeleteEmployee(employee)}
+                  canEdit={canEdit}
+                  canDelete={canDelete}
+                />
+              </div>
+
+              {/* Mobile: Card View (visible on mobile only) */}
+              <div className="block md:hidden space-y-4">
+                {employees.map((employee) => (
+                  <EmployeeCard
+                    key={employee.id}
+                    employee={employee}
+                    onDelete={(employee) => setDeleteEmployee(employee)}
+                    canEdit={canEdit}
+                    canDelete={canDelete}
+                  />
+                ))}
+              </div>
+            </>
           )}
         </View>
       </Record>

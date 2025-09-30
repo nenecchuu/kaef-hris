@@ -145,9 +145,14 @@ const employeeColumns = (
         <TableCell>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="sm" className="h-8 w-8 p-0">
-                <span className="sr-only">Buka menu</span>
-                <IconDotsVertical className="h-4 w-4" />
+              <Button
+                variant="ghost"
+                size="sm"
+                className="h-8 w-8 p-0"
+                aria-label={`Menu aksi untuk ${info.row.original.nama_lengkap}`}
+              >
+                <span className="sr-only">Buka menu aksi</span>
+                <IconDotsVertical className="h-4 w-4" aria-hidden="true" />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">

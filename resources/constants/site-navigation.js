@@ -1,17 +1,8 @@
 import {
-  IconBook,
-  IconBriefcase,
-  IconClock,
-  IconCreditCard,
-  IconExternalLink,
-  IconFileReport,
-  IconHeadset,
   IconHome,
-  IconKey,
   IconSettings,
   IconUsers,
   IconUsersGroup,
-  IconUserX,
 } from "@tabler/icons-react";
 
 import { EMPLOYEE_TYPE_INHOUSE, EMPLOYEE_TYPE_OUTSOURCED } from "./user";
@@ -25,19 +16,6 @@ const MENU_BLOCKED_USER = "blocked_user";
 const MENU_SETTINGS = "sub_menu_settings";
 const MENU_PASSWORD_COMPLEXITY_SETUP = "password_complexity_setup";
 const MENU_AUDIT_TRAIL = "audit_trail";
-const MENU_BIJPEDIA = "bijpedia";
-const MENU_FINANCING = "sub_menu_financing";
-const MENU_PENGAJUAN = "pengajuan";
-const MENU_ANALISA = "analisa";
-const MENU_KOMITE = "komite";
-const MENU_AKAD = "akad";
-const MENU_PENCAIRAN = "pencairan";
-const MENU_MONITORING = "monitoring";
-const MENU_LAPORAN_FINANCING = "laporan_financing";
-const MENU_GENERAL_AFFAIR = "general_affair";
-const MENU_HUMAN_RESOURCE = "human_resource";
-const MENU_REPORTING = "reporting";
-const MENU_HELP_DESK = "help_desk";
 const MENU_PROFILE = "profile";
 
 // Shared menu configurations - Define once, use everywhere!
@@ -88,99 +66,6 @@ const SHARED_MENUS = {
       },
     },
   },
-  [MENU_BIJPEDIA]: {
-    name: "BIJPedia",
-    pathname: "https://chatgpt.com/g/g-68b8e26233d48191ad8cdaedcebcfe19-ojekapedia",
-    icon: IconBook,
-    allow: [EMPLOYEE_TYPE_INHOUSE, EMPLOYEE_TYPE_OUTSOURCED],
-    isOnHold: true, // External link
-  },
-  [MENU_FINANCING]: {
-    name: "Financing",
-    icon: IconCreditCard,
-    pathnames: [
-      "/pengajuan",
-      "/analisa",
-      "/komite",
-      "/akad",
-      "/pencairan",
-      "/monitoring",
-      "/laporan-financing",
-    ],
-    isOnHold: true, // Disabled
-    menu: {
-      [MENU_PENGAJUAN]: {
-        name: "Pengajuan",
-        pathname: "/pengajuan",
-        allow: [EMPLOYEE_TYPE_INHOUSE, EMPLOYEE_TYPE_OUTSOURCED],
-        isOnHold: true,
-      },
-      [MENU_ANALISA]: {
-        name: "Analisa",
-        pathname: "/analisa",
-        allow: [EMPLOYEE_TYPE_INHOUSE, EMPLOYEE_TYPE_OUTSOURCED],
-        isOnHold: true,
-      },
-      [MENU_KOMITE]: {
-        name: "Komite",
-        pathname: "/komite",
-        allow: [EMPLOYEE_TYPE_INHOUSE, EMPLOYEE_TYPE_OUTSOURCED],
-        isOnHold: true,
-      },
-      [MENU_AKAD]: {
-        name: "Akad",
-        pathname: "/akad",
-        allow: [EMPLOYEE_TYPE_INHOUSE, EMPLOYEE_TYPE_OUTSOURCED],
-        isOnHold: true,
-      },
-      [MENU_PENCAIRAN]: {
-        name: "Pencairan",
-        pathname: "/pencairan",
-        allow: [EMPLOYEE_TYPE_INHOUSE, EMPLOYEE_TYPE_OUTSOURCED],
-        isOnHold: true,
-      },
-      [MENU_MONITORING]: {
-        name: "Monitoring",
-        pathname: "/monitoring",
-        allow: [EMPLOYEE_TYPE_INHOUSE, EMPLOYEE_TYPE_OUTSOURCED],
-        isOnHold: true,
-      },
-      [MENU_LAPORAN_FINANCING]: {
-        name: "Laporan",
-        pathname: "/laporan-financing",
-        allow: [EMPLOYEE_TYPE_INHOUSE, EMPLOYEE_TYPE_OUTSOURCED],
-        isOnHold: true,
-      },
-    },
-  },
-  [MENU_GENERAL_AFFAIR]: {
-    name: "General Affair",
-    pathname: "/general-affair",
-    icon: IconBriefcase,
-    allow: [EMPLOYEE_TYPE_INHOUSE, EMPLOYEE_TYPE_OUTSOURCED],
-    isOnHold: true, // Disabled
-  },
-  [MENU_HUMAN_RESOURCE]: {
-    name: "Human Resource",
-    pathname: "/human-resource",
-    icon: IconUsersGroup,
-    allow: [EMPLOYEE_TYPE_INHOUSE, EMPLOYEE_TYPE_OUTSOURCED],
-    isOnHold: true, // Disabled
-  },
-  [MENU_REPORTING]: {
-    name: "Reporting",
-    pathname: "/reporting",
-    icon: IconFileReport,
-    allow: [EMPLOYEE_TYPE_INHOUSE, EMPLOYEE_TYPE_OUTSOURCED],
-    isOnHold: true, // Disabled
-  },
-  [MENU_HELP_DESK]: {
-    name: "Help Desk",
-    pathname: "/help-desk",
-    icon: IconHeadset,
-    allow: [EMPLOYEE_TYPE_INHOUSE, EMPLOYEE_TYPE_OUTSOURCED],
-    isOnHold: true, // Disabled
-  },
   [MENU_PROFILE]: {
     name: "Profile",
     pathname: "/profile",
@@ -203,36 +88,21 @@ function pickMenus(menuKeys) {
 // Role-based navigation configurations
 // Now you only need to change the menu order/selection, not duplicate code!
 
+// PT Kimia Farma HRIS Navigation
 export const AdminSiteNavigation = pickMenus([
   MENU_HOME,
   MENU_EMPLOYEE_MANAGEMENT,
   MENU_USER_MANAGEMENT,
   MENU_SETTINGS,
-  MENU_BIJPEDIA,
-  MENU_FINANCING,
-  MENU_GENERAL_AFFAIR,
-  MENU_HUMAN_RESOURCE,
-  MENU_REPORTING,
-  MENU_HELP_DESK,
 ]);
 
 export const SupervisorSiteNavigation = pickMenus([
   MENU_HOME,
-  MENU_BIJPEDIA,
-  MENU_FINANCING,
-  MENU_GENERAL_AFFAIR,
-  MENU_HUMAN_RESOURCE,
-  MENU_REPORTING,
-  MENU_HELP_DESK,
+  MENU_EMPLOYEE_MANAGEMENT,
+  MENU_PROFILE,
 ]);
 
 export const UserSiteNavigation = pickMenus([
   MENU_HOME,
-  MENU_BIJPEDIA,
-  MENU_FINANCING,
-  MENU_GENERAL_AFFAIR,
-  MENU_HUMAN_RESOURCE,
-  MENU_REPORTING,
-  MENU_HELP_DESK,
   MENU_PROFILE,
 ]);

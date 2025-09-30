@@ -23,11 +23,11 @@ export const employeeKeys: EmployeeQueryKeys = {
  * API endpoints
  */
 export const EMPLOYEE_API = {
-  base: "/api/employees",
-  detail: (id: number) => `/api/employees/${id}`,
-  education: (id: number) => `/api/employees/${id}/pendidikan`,
-  certifications: (id: number) => `/api/employees/${id}/sertifikasi`,
-  licenses: (id: number) => `/api/employees/${id}/lisensi`,
+  base: "/api/v1/employees",
+  detail: (id: number) => `/api/v1/employees/${id}`,
+  education: (id: number) => `/api/v1/employees/${id}/pendidikan`,
+  certifications: (id: number) => `/api/v1/employees/${id}/sertifikasi`,
+  licenses: (id: number) => `/api/v1/employees/${id}/lisensi`,
 } as const;
 
 /**

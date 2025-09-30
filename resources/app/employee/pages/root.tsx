@@ -116,7 +116,7 @@ export default function EmployeeIndexPage() {
         alertToast({
           title: "Gagal menghapus karyawan",
           description: error.message,
-          variant: "destructive",
+          variant: "error",
         });
       },
     });

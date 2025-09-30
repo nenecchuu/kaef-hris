@@ -35,7 +35,7 @@ export default function EmployeeCreatePage() {
         alertToast({
           title: "Gagal menambahkan karyawan",
           description: error.message,
-          variant: "destructive",
+          variant: "error",
         });
       },
     });

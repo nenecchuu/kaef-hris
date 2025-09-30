@@ -40,7 +40,7 @@ export default function EmployeeEditPage() {
         alertToast({
           title: "Gagal memperbarui data karyawan",
           description: error.message,
-          variant: "destructive",
+          variant: "error",
         });
       },
     });

@@ -1,3 +1,4 @@
+import React from "react";
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -18,6 +19,12 @@ import { NotFoundFallback, RootFallback } from "@src/components/fallbacks";
 import { MainLayout } from "@src/components/main-layout";
 import { MfaGuard } from "@src/components/mfa-guard";
 
+// Lazy load employee module for code splitting
+const EmployeeIndexPage = React.lazy(() => import("@src/app/employee/pages/root"));
+const EmployeeDetailPage = React.lazy(() => import("@src/app/employee/pages/detail"));
+const EmployeeCreatePage = React.lazy(() => import("@src/app/employee/pages/new"));
+const EmployeeEditPage = React.lazy(() => import("@src/app/employee/pages/edit"));
+
 export const userRouter = createBrowserRouter(
   createRoutesFromElements(
     <Route
@@ -29,6 +36,12 @@ export const userRouter = createBrowserRouter(
       <Route errorElement={<RootFallback />}>
         <Route index={true} element={<HomeRootPage />} />
         <Route element={<AdminGuard requireAdminAccess={true} />}>
+          <Route path="employees" key="employees">
+            <Route index={true} element={<EmployeeIndexPage />} />
+            <Route path="new" element={<EmployeeCreatePage />} />
+            <Route path=":id" element={<EmployeeDetailPage />} />
+            <Route path=":id/edit" element={<EmployeeEditPage />} />
+          </Route>
           <Route path="users" key="users">
             <Route index={true} element={<UserRootPage key="users" />} />
             <Route path="new" element={<UserNewPage />} />

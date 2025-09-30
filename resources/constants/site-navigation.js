@@ -18,6 +18,7 @@ import { EMPLOYEE_TYPE_INHOUSE, EMPLOYEE_TYPE_OUTSOURCED } from "./user";
 
 // Menu constants
 const MENU_HOME = "home";
+const MENU_EMPLOYEE_MANAGEMENT = "employee_management";
 const MENU_USER_MANAGEMENT = "sub_menu_user_management";
 const MENU_MANAGEMENT_USER = "management_user";
 const MENU_BLOCKED_USER = "blocked_user";
@@ -45,6 +46,12 @@ const SHARED_MENUS = {
     name: "Home",
     pathname: "/",
     icon: IconHome,
+    allow: [EMPLOYEE_TYPE_INHOUSE, EMPLOYEE_TYPE_OUTSOURCED],
+  },
+  [MENU_EMPLOYEE_MANAGEMENT]: {
+    name: "Karyawan",
+    pathname: "/employees",
+    icon: IconUsersGroup,
     allow: [EMPLOYEE_TYPE_INHOUSE, EMPLOYEE_TYPE_OUTSOURCED],
   },
   [MENU_USER_MANAGEMENT]: {
@@ -198,6 +205,7 @@ function pickMenus(menuKeys) {
 
 export const AdminSiteNavigation = pickMenus([
   MENU_HOME,
+  MENU_EMPLOYEE_MANAGEMENT,
   MENU_USER_MANAGEMENT,
   MENU_SETTINGS,
   MENU_BIJPEDIA,

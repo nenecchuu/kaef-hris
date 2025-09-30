@@ -46,26 +46,26 @@ Comprehensive documentation of entire system to support HRIS development
 
 ### Actual Tech Stack (from package.json/composer.json)
 
-| Category        | Technology           | Version | Notes                                    |
-| --------------- | -------------------- | ------- | ---------------------------------------- |
-| Backend Runtime | PHP                  | ^8.0.2  | Laravel framework base                   |
-| Framework       | Laravel              | ^9.19   | With Vite for frontend build            |
-| Frontend        | React                | ^18.3.1 | With TypeScript                          |
-| Build Tool      | Vite                 | ^5.4.8  | Laravel Vite plugin integration          |
-| Database        | PostgreSQL           | Default | Configurable via .env                    |
-| Authentication  | Laravel Passport     | ^12.3   | OAuth2 + custom MFA implementation      |
-| Session Auth    | Laravel Sanctum      | ^2.14.1 | SPA authentication                       |
-| State Mgmt      | TanStack Query       | ^5.59.8 | Server state + React Query Devtools     |
-| UI Components   | Radix UI             | Various | Accessible component library             |
-| Styling         | TailwindCSS          | ^3.4.13 | Utility-first CSS                        |
-| Router          | React Router         | ^6.27.0 | Client-side routing                      |
-| Validation      | Zod                  | ^3.23.8 | TypeScript-first schema validation       |
-| Date Handling   | date-fns             | ^2.29.3 | Date utilities                           |
-| Code Quality    | ESLint + Prettier    | Latest  | TypeScript ESLint config                 |
-| PDF Generation  | Laravel DomPDF       | ^3.0    | Server-side PDF export                   |
-| Excel Export    | Maatwebsite Excel    | ^3.1    | Excel file handling                      |
-| QR/Barcode      | Milon Barcode        | ^11.0   | For MFA and document generation          |
-| Testing         | PHPUnit              | ^9.5.10 | Backend testing framework                |
+| Category        | Technology        | Version | Notes                               |
+| --------------- | ----------------- | ------- | ----------------------------------- |
+| Backend Runtime | PHP               | ^8.0.2  | Laravel framework base              |
+| Framework       | Laravel           | ^9.19   | With Vite for frontend build        |
+| Frontend        | React             | ^18.3.1 | With TypeScript                     |
+| Build Tool      | Vite              | ^5.4.8  | Laravel Vite plugin integration     |
+| Database        | PostgreSQL        | Default | Configurable via .env               |
+| Authentication  | Laravel Passport  | ^12.3   | OAuth2 + custom MFA implementation  |
+| Session Auth    | Laravel Sanctum   | ^2.14.1 | SPA authentication                  |
+| State Mgmt      | TanStack Query    | ^5.59.8 | Server state + React Query Devtools |
+| UI Components   | Radix UI          | Various | Accessible component library        |
+| Styling         | TailwindCSS       | ^3.4.13 | Utility-first CSS                   |
+| Router          | React Router      | ^6.27.0 | Client-side routing                 |
+| Validation      | Zod               | ^3.23.8 | TypeScript-first schema validation  |
+| Date Handling   | date-fns          | ^2.29.3 | Date utilities                      |
+| Code Quality    | ESLint + Prettier | Latest  | TypeScript ESLint config            |
+| PDF Generation  | Laravel DomPDF    | ^3.0    | Server-side PDF export              |
+| Excel Export    | Maatwebsite Excel | ^3.1    | Excel file handling                 |
+| QR/Barcode      | Milon Barcode     | ^11.0   | For MFA and document generation     |
+| Testing         | PHPUnit           | ^9.5.10 | Backend testing framework           |
 
 ### Repository Structure Reality Check
 
@@ -179,12 +179,12 @@ Core entities with relationships:
 
 ### External Services
 
-| Service        | Purpose            | Integration Type | Key Files                              |
-| -------------- | ------------------ | ---------------- | -------------------------------------- |
-| Google2FA      | Multi-factor auth  | Package          | `AuthenticationController.php`         |
-| DomPDF         | PDF generation     | Package          | Available for reports                  |
-| Maatwebsite    | Excel export       | Package          | `AuditTrailController.php` uses it     |
-| Barcode        | QR/barcode gen     | Package          | Available for MFA QR codes             |
+| Service     | Purpose           | Integration Type | Key Files                          |
+| ----------- | ----------------- | ---------------- | ---------------------------------- |
+| Google2FA   | Multi-factor auth | Package          | `AuthenticationController.php`     |
+| DomPDF      | PDF generation    | Package          | Available for reports              |
+| Maatwebsite | Excel export      | Package          | `AuditTrailController.php` uses it |
+| Barcode     | QR/barcode gen    | Package          | Available for MFA QR codes         |
 
 ### Internal Integration Points
 
@@ -199,6 +199,7 @@ Core entities with relationships:
 ### Local Development Setup
 
 1. **Backend Setup**:
+
    ```bash
    composer install
    php artisan key:generate
@@ -206,6 +207,7 @@ Core entities with relationships:
    ```
 
 2. **Frontend Setup**:
+
    ```bash
    npm install
    npm run dev  # Runs Vite + TypeScript compiler concurrently
@@ -251,18 +253,22 @@ npm run lint:fix       # Auto-fix ESLint issues
 ### Immediate HRIS Development Priorities
 
 1. **Employee Profile Enhancement**:
+
    - Add employment status, start date, salary fields to User model
    - Create Employee model extending User for HRIS-specific data
 
 2. **Payroll Module**:
+
    - Create Payroll, PayrollItem, Salary models
    - Add payroll processing controllers and services
 
 3. **Leave Management**:
+
    - Create LeaveType, LeaveRequest, LeaveBalance models
    - Implement leave approval workflow
 
 4. **Attendance System**:
+
    - Create Attendance, Shift, TimeLog models
    - Build check-in/check-out functionality
 

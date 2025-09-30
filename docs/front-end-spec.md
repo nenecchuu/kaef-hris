@@ -34,8 +34,8 @@ This document defines the user experience goals, information architecture, user 
 
 ### Change Log
 
-| Date       | Version | Description                           | Author     |
-| ---------- | ------- | ------------------------------------- | ---------- |
+| Date       | Version | Description                                          | Author            |
+| ---------- | ------- | ---------------------------------------------------- | ----------------- |
 | 2025-09-29 | 1.0     | Initial UI/UX Specification for Employee Master Data | Sally (UX Expert) |
 
 ## Information Architecture (IA)
@@ -100,6 +100,7 @@ graph TD
 
 **Primary Navigation:**
 Top-level horizontal navigation bar with role-based visibility:
+
 - Dashboard (always visible)
 - Employee Management (core module - all authenticated users)
 - Organizational Structure (HRD Managers, Division Managers)
@@ -109,6 +110,7 @@ Top-level horizontal navigation bar with role-based visibility:
 
 **Secondary Navigation:**
 Left sidebar contextual navigation that adapts based on primary selection:
+
 - Collapses on mobile devices
 - Shows quick filters and shortcuts for the current module
 - Recent employee searches and bookmarks
@@ -116,6 +118,7 @@ Left sidebar contextual navigation that adapts based on primary selection:
 
 **Breadcrumb Strategy:**
 Hierarchical breadcrumbs for deep navigation paths:
+
 - Always shows: Module > Section > Detail Level
 - Example: "Employee Management > Employee Directory > John Doe Profile > Career History"
 - Clickable breadcrumbs for quick navigation
@@ -128,17 +131,20 @@ Hierarchical breadcrumbs for deep navigation paths:
 **User Goal:** HRD manager needs to quickly find specific employee(s) from 10,000+ records using various search criteria
 
 **Entry Points:**
+
 - Dashboard search widget
 - Employee Directory main search
 - Organizational chart employee lookup
 - Reports drill-down navigation
 
 **Success Criteria:**
+
 - User finds target employee within 30 seconds
 - Search results are relevant and properly filtered
 - User can access employee profile with 1-2 clicks from results
 
 #### Flow Diagram
+
 ```mermaid
 graph TD
     A[User enters search term] --> B{Search type?}
@@ -175,6 +181,7 @@ graph TD
 ```
 
 #### Edge Cases & Error Handling:
+
 - No search results found: Suggest alternative search terms and display recent employees
 - Too many results (>100): Force user to add more filters with helpful suggestions
 - Search timeout: Show partial results with option to continue
@@ -188,18 +195,21 @@ graph TD
 **User Goal:** HR staff needs to create a new employee profile or update existing employee information with comprehensive data validation
 
 **Entry Points:**
+
 - "Add New Employee" button from Employee Directory
 - "Edit Profile" button from Employee Detail view
 - Bulk import wizard for multiple employees
 - Organizational chart "Add Employee" action
 
 **Success Criteria:**
+
 - Complete employee profile created with all required fields
 - Data validation prevents errors and ensures compliance
 - User receives clear confirmation of successful save
 - Audit trail automatically captures all changes
 
 #### Flow Diagram
+
 ```mermaid
 graph TD
     A[Initiate employee creation/edit] --> B{New or Edit?}
@@ -245,6 +255,7 @@ graph TD
 ```
 
 #### Edge Cases & Error Handling:
+
 - Required field validation: Clear inline validation with Indonesian language support
 - Duplicate employee detection: Check NIK and email before allowing save
 - File upload failures: Retry mechanism and format validation for documents
@@ -258,18 +269,21 @@ graph TD
 **User Goal:** HRD manager needs to modify organizational structure, reassign employees, and maintain reporting relationships
 
 **Entry Points:**
+
 - Organizational Structure main menu
 - Employee profile "Transfer Employee" action
 - Dashboard organizational health alerts
 - Bulk operations for restructuring
 
 **Success Criteria:**
+
 - Organizational changes applied without breaking reporting relationships
 - Affected employees receive notifications of changes
 - Historical organizational data preserved for audit purposes
 - Impact analysis shows before confirming major changes
 
 #### Flow Diagram
+
 ```mermaid
 graph TD
     A[Access Org Structure] --> B[Interactive Org Chart]
@@ -319,6 +333,7 @@ graph TD
 ```
 
 #### Edge Cases & Error Handling:
+
 - Circular reporting relationships: Prevent creation with clear error message
 - Manager without reports: Allow but show warning about span of control
 - Cross-subsidiary transfers: Additional approval workflow required
@@ -338,6 +353,7 @@ graph TD
 **Purpose:** Executive overview of employee data across all PT Kimia Farma divisions with actionable insights and quick access to critical functions
 
 **Key Elements:**
+
 - **Executive Summary Cards:** Total employees by division (Manufacturing: 3,200, Distribution: 1,800, Retail: 4,500, International: 300, Subsidiaries: 1,200) with trend indicators
 - **Organizational Health Metrics:** Turnover rates, promotion activity, succession planning coverage with pharmaceutical industry benchmarks
 - **Alert Center:** Certification expiries, compliance issues, high-priority employee changes requiring HRD attention
@@ -355,6 +371,7 @@ Dashboard widgets are interactive with click-through to detailed views. Real-tim
 **Purpose:** Primary interface for finding and accessing employee records from large dataset with powerful filtering and search capabilities
 
 **Key Elements:**
+
 - **Global Search Bar:** Prominent search with real-time suggestions, recent searches, and saved search shortcuts
 - **Advanced Filter Panel:** Collapsible sidebar with filters for division, employment status, location, career track, certification expiry, and custom date ranges
 - **Employee Results Grid:** Responsive card/list view showing employee photo, name, position, division, location, and key status indicators
@@ -372,6 +389,7 @@ Search supports Indonesian names and pharmaceutical terminology. Advanced filter
 **Purpose:** Comprehensive employee information display with edit capabilities, organized for efficient data access and management
 
 **Key Elements:**
+
 - **Employee Header:** Photo, name, employee ID, current position, and employment status with key action buttons (Edit, Transfer, Promote)
 - **Tabbed Content Areas:** Personal Info, Employment Details, Education & Certifications, Career History, Documents, Audit Trail
 - **Context-Sensitive Actions:** Edit buttons appear based on user permissions, confirmation dialogs for sensitive changes
@@ -389,6 +407,7 @@ Tabs maintain state during session. Edit mode shows inline validation. Document 
 **Purpose:** Visual representation of PT Kimia Farma's organizational structure with employee management capabilities
 
 **Key Elements:**
+
 - **Hierarchical Tree View:** Interactive org chart showing Board of Directors down to individual employees with zoom/pan controls
 - **Division & Subsidiary Panels:** Expandable sections for Manufacturing, Distribution, Retail, International, and subsidiary companies
 - **Employee Assignment Interface:** Drag-and-drop employee movement between organizational units with validation
@@ -406,6 +425,7 @@ Responsive zoom for different screen sizes. Touch-friendly controls for tablet u
 **Purpose:** Configuration interface for HRD managers to maintain employment parameters and organizational settings
 
 **Key Elements:**
+
 - **Master Data Categories:** Tabbed interface for Employment Statuses, Employee Levels, Career Tracks, Work Schedule Types, etc.
 - **CRUD Operations:** Create, read, update, delete interfaces for each master data type with validation
 - **Bulk Import/Export:** Excel-based import/export with template download and validation feedback
@@ -429,12 +449,14 @@ Changes require confirmation workflows. Bulk operations show progress indicators
 **Purpose:** Standardized display component for employee information across different contexts (directory, search results, org chart)
 
 **Variants:**
+
 - **Compact:** List view with essential info (photo, name, position, status)
 - **Standard:** Card view with additional details (division, location, contact)
 - **Detailed:** Expanded view with summary metrics (tenure, team size, recent activity)
 - **Mobile:** Touch-optimized layout for tablet/phone access
 
 **States:**
+
 - **Default:** Standard employee information display
 - **Hover:** Reveals quick action buttons (view profile, edit, contact)
 - **Selected:** Multi-select state for bulk operations
@@ -448,12 +470,14 @@ Changes require confirmation workflows. Bulk operations show progress indicators
 **Purpose:** Powerful search component for finding employees from large datasets with multiple filter criteria
 
 **Variants:**
+
 - **Global Search:** Header search bar with autocomplete and recent searches
 - **Advanced Filter Panel:** Comprehensive filtering with nested criteria
 - **Quick Filter Chips:** Applied filters shown as removable tags
 - **Saved Search Menu:** User-defined search templates with sharing capabilities
 
 **States:**
+
 - **Empty:** Placeholder with search suggestions and popular filters
 - **Typing:** Real-time search suggestions with highlight matching
 - **Results:** Search results with relevance scoring and pagination
@@ -467,12 +491,14 @@ Changes require confirmation workflows. Bulk operations show progress indicators
 **Purpose:** Interactive component for displaying and managing PT Kimia Farma's complex organizational structure
 
 **Variants:**
+
 - **Tree View:** Traditional hierarchical tree with expand/collapse nodes
 - **Interactive Chart:** Draggable org chart with zoom and pan controls
 - **List View:** Flat list view with indentation showing hierarchy levels
 - **Geographic Map:** Location-based view of organizational distribution
 
 **States:**
+
 - **View Mode:** Read-only exploration of organizational structure
 - **Edit Mode:** Interactive modification with drag-and-drop capabilities
 - **Validation:** Real-time validation of organizational changes
@@ -486,12 +512,14 @@ Changes require confirmation workflows. Bulk operations show progress indicators
 **Purpose:** Visual representation of employee career progression within pharmaceutical industry context
 
 **Variants:**
+
 - **Horizontal Timeline:** Left-to-right career progression view
 - **Vertical Timeline:** Top-to-bottom chronological career history
 - **Interactive Planner:** Future career path planning with goals and milestones
 - **Comparison View:** Side-by-side career path comparisons for benchmarking
 
 **States:**
+
 - **Historical:** Display completed career moves and achievements
 - **Current:** Highlight current position with context and metrics
 - **Planned:** Show future career goals and development plans
@@ -505,12 +533,14 @@ Changes require confirmation workflows. Bulk operations show progress indicators
 **Purpose:** Consistent confirmation patterns for critical HR operations that require user validation
 
 **Variants:**
+
 - **Simple Confirmation:** Basic yes/no confirmation for standard operations
 - **Impact Preview:** Show change impact before confirmation (affected employees, budget implications)
 - **Multi-Step Confirmation:** Complex changes requiring multiple validation steps
 - **Bulk Operation Confirmation:** Special handling for operations affecting multiple employees
 
 **States:**
+
 - **Warning:** Caution for potentially problematic changes
 - **Critical:** High-impact changes requiring additional verification
 - **Success:** Confirmation of successful operation completion
@@ -527,37 +557,39 @@ Changes require confirmation workflows. Bulk operations show progress indicators
 
 ### Color Palette (PT Kimia Farma Official)
 
-| Color Type | Hex Code | Brand Name | Usage |
-|------------|----------|------------|-------|
-| Primary | #003A78 | PT Kimia Farma Blue | Main navigation, headers, primary actions, brand identity |
-| Secondary | #F49200 | PT Kimia Farma Orange | Highlights, active states, call-to-action buttons, interactive elements |
-| Success | #10B981 | Custom Success Green | Confirmations, active employment status, completed tasks |
-| Warning | #F59E0B | Custom Warning Amber | Cautions, pending approvals, certification expiry alerts |
-| Error | #EF4444 | Custom Error Red | Errors, destructive actions, critical alerts |
-| Neutral | #64748B, #94A3B8, #CBD5E1, #F1F5F9 | Custom Neutral Grays | Text hierarchy, borders, backgrounds, data tables |
+| Color Type | Hex Code                           | Brand Name            | Usage                                                                   |
+| ---------- | ---------------------------------- | --------------------- | ----------------------------------------------------------------------- |
+| Primary    | #003A78                            | PT Kimia Farma Blue   | Main navigation, headers, primary actions, brand identity               |
+| Secondary  | #F49200                            | PT Kimia Farma Orange | Highlights, active states, call-to-action buttons, interactive elements |
+| Success    | #10B981                            | Custom Success Green  | Confirmations, active employment status, completed tasks                |
+| Warning    | #F59E0B                            | Custom Warning Amber  | Cautions, pending approvals, certification expiry alerts                |
+| Error      | #EF4444                            | Custom Error Red      | Errors, destructive actions, critical alerts                            |
+| Neutral    | #64748B, #94A3B8, #CBD5E1, #F1F5F9 | Custom Neutral Grays  | Text hierarchy, borders, backgrounds, data tables                       |
 
 ### Typography
 
 #### Font Families
+
 - **Primary:** Source Sans Pro (Official PT Kimia Farma title font, excellent for pharmaceutical industry professionalism)
 - **Secondary:** Inter (Enhanced readability for dense HR data displays, Indonesian language support)
 - **Monospace:** JetBrains Mono (employee IDs, data codes, technical information)
 
 #### Type Scale (Source Sans Pro Primary)
 
-| Element | Size | Weight | Line Height |
-|---------|------|--------|-------------|
-| H1 | 2.25rem (36px) | 700 (Bold) | 1.2 |
-| H2 | 1.875rem (30px) | 600 (Semibold) | 1.3 |
-| H3 | 1.5rem (24px) | 600 (Semibold) | 1.4 |
-| Body | 1rem (16px) | 400 (Regular) | 1.5 |
-| Small | 0.875rem (14px) | 400 (Regular) | 1.4 |
+| Element | Size            | Weight         | Line Height |
+| ------- | --------------- | -------------- | ----------- |
+| H1      | 2.25rem (36px)  | 700 (Bold)     | 1.2         |
+| H2      | 1.875rem (30px) | 600 (Semibold) | 1.3         |
+| H3      | 1.5rem (24px)   | 600 (Semibold) | 1.4         |
+| Body    | 1rem (16px)     | 400 (Regular)  | 1.5         |
+| Small   | 0.875rem (14px) | 400 (Regular)  | 1.4         |
 
 ### Iconography
 
 **Icon Library:** Tabler Icons (consistent with Radix UI ecosystem, pharmaceutical-appropriate, comprehensive coverage)
 
 **Usage Guidelines:**
+
 - 24px standard size for interface icons, 16px for inline/small contexts
 - Consistent stroke width (1.5px) across all icons
 - Pharmaceutical industry icons: pills, medical cross, lab equipment, certificates for relevant contexts
@@ -579,16 +611,19 @@ Changes require confirmation workflows. Bulk operations show progress indicators
 ### Key Requirements
 
 #### Visual:
+
 - Color contrast ratios: 4.5:1 minimum for normal text, 3:1 for large text, ensuring PT Kimia Farma brand colors (#003A78, #F49200) meet accessibility standards
 - Focus indicators: Clear, 2px solid outline with high contrast for keyboard navigation through complex employee data forms
 - Text sizing: Scalable text up to 200% without horizontal scrolling, critical for HR managers reviewing detailed employee information
 
 #### Interaction:
+
 - Keyboard navigation: Complete keyboard accessibility for all functions including employee search, profile editing, and organizational chart navigation
 - Screen reader support: Semantic HTML structure with proper ARIA labels for complex HR data tables and employee status indicators
 - Touch targets: Minimum 44px touch targets for mobile access by field managers at factories and retail locations
 
 #### Content:
+
 - Alternative text: Descriptive alt text for employee photos, organizational charts, and career path visualizations
 - Heading structure: Logical heading hierarchy (H1-H6) for employee profiles and HR documentation navigation
 - Form labels: Clear, descriptive labels for all employee data fields with error message association
@@ -605,40 +640,47 @@ Changes require confirmation workflows. Bulk operations show progress indicators
 
 ### Breakpoints
 
-| Breakpoint | Min Width | Max Width | Target Devices |
-|------------|-----------|-----------|----------------|
-| Mobile | 320px | 767px | Smartphones for field managers, emergency HR access |
-| Tablet | 768px | 1023px | iPads/Android tablets for store managers, factory supervisors |
-| Desktop | 1024px | 1439px | Standard office workstations for HRD staff, HR administrators |
-| Wide | 1440px | - | Large monitors for HRD managers, executive dashboards, data analysis |
+| Breakpoint | Min Width | Max Width | Target Devices                                                       |
+| ---------- | --------- | --------- | -------------------------------------------------------------------- |
+| Mobile     | 320px     | 767px     | Smartphones for field managers, emergency HR access                  |
+| Tablet     | 768px     | 1023px    | iPads/Android tablets for store managers, factory supervisors        |
+| Desktop    | 1024px    | 1439px    | Standard office workstations for HRD staff, HR administrators        |
+| Wide       | 1440px    | -         | Large monitors for HRD managers, executive dashboards, data analysis |
 
 ### Adaptation Patterns
 
 #### Layout Changes:
+
 **Desktop to Tablet:** Side navigation collapses to hamburger menu, employee cards reorganize from 3-column to 2-column grid, advanced filters move to slide-out panel
 
 **Tablet to Mobile:** Master-detail view becomes stacked navigation, data tables become horizontally scrollable cards, search filters become modal overlays
 
 #### Navigation Changes:
+
 **Desktop:** Persistent sidebar navigation with secondary menu expansion
 **Tablet:** Collapsible sidebar with gesture-friendly touch targets (minimum 44px)
 **Mobile:** Bottom navigation bar for primary functions, hamburger menu for secondary options
 
 #### Content Priority:
+
 **Mobile-First Content Hierarchy:**
+
 1. Employee search and basic contact information
 2. Employment status and key details
 3. Quick actions (call, email, basic updates)
 4. Detailed profile information (accessible via drill-down)
 
 #### Interaction Changes:
+
 **Touch Optimization (Mobile/Tablet):**
+
 - Minimum 44px touch targets for all interactive elements
 - Swipe gestures for navigation between employee profiles
 - Pull-to-refresh for employee list updates
 - Long-press for context menus and bulk selection
 
 **Mouse Optimization (Desktop):**
+
 - Hover states for detailed information preview
 - Right-click context menus for power user shortcuts
 - Keyboard shortcuts for efficient navigation
@@ -647,6 +689,7 @@ Changes require confirmation workflows. Bulk operations show progress indicators
 ## Animation & Micro-interactions
 
 ### Motion Principles
+
 Subtle, purposeful animations that enhance usability without distracting from critical HR operations. Animations support task completion and provide feedback for data-intensive workflows.
 
 ### Key Animations
@@ -663,12 +706,14 @@ Subtle, purposeful animations that enhance usability without distracting from cr
 ## Performance Considerations
 
 ### Performance Goals
+
 - **Dashboard Load:** Under 2 seconds for initial HRD dashboard with 10,000+ employee overview
 - **Employee Search Response:** Under 200ms for search result display with real-time filtering
 - **Profile Page Load:** Under 1 second for complete employee profile with all tabs
 - **Animation Performance:** Consistent 60fps for all micro-interactions and transitions
 
 ### Design Strategies
+
 **Data Loading Optimization:** Progressive loading with skeleton screens for employee lists, lazy loading for detailed profile tabs, virtual scrolling for large datasets
 
 **Image Optimization:** Compressed employee photos with WebP format support, placeholder images during loading, responsive image sizing based on device capabilities
@@ -680,24 +725,28 @@ Subtle, purposeful animations that enhance usability without distracting from cr
 ### Immediate Actions
 
 1. **Stakeholder Review and Approval**
+
    - Present UI/UX specification to PT Kimia Farma HRD leadership for validation
    - Review design decisions with key user representatives (HRD managers, HR staff, field managers)
    - Validate PT Kimia Farma brand integration and pharmaceutical industry appropriateness
    - Confirm accessibility requirements meet organizational standards
 
 2. **Design System Development**
+
    - Create Figma design system library with PT Kimia Farma official colors (#003A78, #F49200)
    - Develop comprehensive component library extending TailwindCSS and Radix UI
    - Build interactive prototypes for complex workflows (employee search, org chart management)
    - Create responsive design variations for desktop, tablet, and mobile breakpoints
 
 3. **Technical Architecture Collaboration**
+
    - Handoff UI/UX specification to Design Architect for technical implementation planning
    - Review component architecture requirements with development team
    - Validate performance requirements against Laravel/React infrastructure capabilities
    - Plan integration strategy with existing KAEF HRIS brownfield architecture
 
 4. **User Testing Preparation**
+
    - Plan usability testing sessions with actual HRD managers and HR staff
    - Prepare testing scenarios based on critical user flows documented in specification
    - Schedule accessibility testing with Indonesian language screen readers
@@ -721,18 +770,21 @@ Subtle, purposeful animations that enhance usability without distracting from cr
 ### Success Metrics for Implementation
 
 **User Experience Metrics:**
+
 - Employee search task completion time <30 seconds
 - Profile editing accuracy >95% on first attempt
 - Mobile accessibility satisfaction score >4.5/5 from field managers
 - Desktop efficiency improvement >40% over current system
 
 **Technical Performance Metrics:**
+
 - Dashboard load time <2 seconds (98th percentile)
 - Search result response time <200ms (95th percentile)
 - Component rendering performance >60fps
 - Mobile lighthouse accessibility score >95
 
 **Business Impact Metrics:**
+
 - HRD manager task efficiency improvement >50%
 - Reduction in employee data errors >30%
 - Field manager mobile usage adoption >80%

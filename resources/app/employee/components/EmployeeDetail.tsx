@@ -20,7 +20,7 @@ import { Link } from "react-router-dom";
 import { Avatar, AvatarFallback, AvatarImage } from "@src/ui/avatar";
 import { Badge } from "@src/ui/badge";
 import { ButtonLink } from "@src/ui/button";
-import { Tabs, TabsContent, TabsList, Tab } from "@src/ui/tabs";
+import { Tab, Tabs, TabsContent, TabsList } from "@src/ui/tabs";
 
 import { EMPLOYMENT_STATUS_LABELS, EMPLOYMENT_TYPE_LABELS } from "../config";
 import type { EmployeeDetail as EmployeeDetailType } from "../types";

@@ -12,10 +12,10 @@ Generate a comprehensive risk assessment matrix for a story implementation using
 
 ```yaml
 required:
-  - story_id: '{epic}.{story}' # e.g., "1.3"
-  - story_path: 'docs/stories/{epic}.{story}.*.md'
-  - story_title: '{title}' # If missing, derive from story file H1
-  - story_slug: '{slug}' # If missing, derive from title (lowercase, hyphenated)
+  - story_id: "{epic}.{story}" # e.g., "1.3"
+  - story_path: "docs/stories/{epic}.{story}.*.md"
+  - story_title: "{title}" # If missing, derive from story file H1
+  - story_slug: "{slug}" # If missing, derive from title (lowercase, hyphenated)
 ```
 
 ## Purpose
@@ -36,6 +36,7 @@ Identify, assess, and prioritize risks in the story implementation. Provide risk
 - `OPS`: Operational Risks
 
 1. **Technical Risks (TECH)**
+
    - Architecture complexity
    - Integration challenges
    - Technical debt
@@ -43,6 +44,7 @@ Identify, assess, and prioritize risks in the story implementation. Provide risk
    - System dependencies
 
 2. **Security Risks (SEC)**
+
    - Authentication/authorization flaws
    - Data exposure vulnerabilities
    - Injection attacks
@@ -50,6 +52,7 @@ Identify, assess, and prioritize risks in the story implementation. Provide risk
    - Cryptographic weaknesses
 
 3. **Performance Risks (PERF)**
+
    - Response time degradation
    - Throughput bottlenecks
    - Resource exhaustion
@@ -57,6 +60,7 @@ Identify, assess, and prioritize risks in the story implementation. Provide risk
    - Caching failures
 
 4. **Data Risks (DATA)**
+
    - Data loss potential
    - Data corruption
    - Privacy violations
@@ -64,6 +68,7 @@ Identify, assess, and prioritize risks in the story implementation. Provide risk
    - Backup/recovery gaps
 
 5. **Business Risks (BUS)**
+
    - Feature doesn't meet user needs
    - Revenue impact
    - Reputation damage
@@ -85,14 +90,14 @@ For each category, identify specific risks:
 
 ```yaml
 risk:
-  id: 'SEC-001' # Use prefixes: SEC, PERF, DATA, BUS, OPS, TECH
+  id: "SEC-001" # Use prefixes: SEC, PERF, DATA, BUS, OPS, TECH
   category: security
-  title: 'Insufficient input validation on user forms'
-  description: 'Form inputs not properly sanitized could lead to XSS attacks'
+  title: "Insufficient input validation on user forms"
+  description: "Form inputs not properly sanitized could lead to XSS attacks"
   affected_components:
-    - 'UserRegistrationForm'
-    - 'ProfileUpdateForm'
-  detection_method: 'Code review revealed missing validation'
+    - "UserRegistrationForm"
+    - "ProfileUpdateForm"
+  detection_method: "Code review revealed missing validation"
 ```
 
 ### 2. Risk Assessment
@@ -139,20 +144,20 @@ For each identified risk, provide mitigation:
 
 ```yaml
 mitigation:
-  risk_id: 'SEC-001'
-  strategy: 'preventive' # preventive|detective|corrective
+  risk_id: "SEC-001"
+  strategy: "preventive" # preventive|detective|corrective
   actions:
-    - 'Implement input validation library (e.g., validator.js)'
-    - 'Add CSP headers to prevent XSS execution'
-    - 'Sanitize all user inputs before storage'
-    - 'Escape all outputs in templates'
+    - "Implement input validation library (e.g., validator.js)"
+    - "Add CSP headers to prevent XSS execution"
+    - "Sanitize all user inputs before storage"
+    - "Escape all outputs in templates"
   testing_requirements:
-    - 'Security testing with OWASP ZAP'
-    - 'Manual penetration testing of forms'
-    - 'Unit tests for validation functions'
-  residual_risk: 'Low - Some zero-day vulnerabilities may remain'
-  owner: 'dev'
-  timeline: 'Before deployment'
+    - "Security testing with OWASP ZAP"
+    - "Manual penetration testing of forms"
+    - "Unit tests for validation functions"
+  residual_risk: "Low - Some zero-day vulnerabilities may remain"
+  owner: "dev"
+  timeline: "Before deployment"
 ```
 
 ## Outputs
@@ -178,12 +183,12 @@ risk_summary:
   highest:
     id: SEC-001
     score: 9
-    title: 'XSS on profile form'
+    title: "XSS on profile form"
   recommendations:
     must_fix:
-      - 'Add input sanitization & CSP'
+      - "Add input sanitization & CSP"
     monitor:
-      - 'Add security alerts for auth endpoints'
+      - "Add security alerts for auth endpoints"
 ```
 
 ### Output 2: Markdown Report
@@ -313,16 +318,19 @@ Maximum score = 100 (minimal risk)
 Based on risk profile, recommend:
 
 1. **Testing Priority**
+
    - Which tests to run first
    - Additional test types needed
    - Test environment requirements
 
 2. **Development Focus**
+
    - Code review emphasis areas
    - Additional validation needed
    - Security controls to implement
 
 3. **Deployment Strategy**
+
    - Phased rollout for high-risk changes
    - Feature flags for risky features
    - Rollback procedures

@@ -22,9 +22,9 @@ This foundation provides significant advantages including mature authentication,
 
 ### Change Log
 
-| Date       | Version | Description                 | Author      |
-| ---------- | ------- | --------------------------- | ----------- |
-| 2025-09-29 | 1.0     | Initial architecture design | Winston     |
+| Date       | Version | Description                 | Author  |
+| ---------- | ------- | --------------------------- | ------- |
+| 2025-09-29 | 1.0     | Initial architecture design | Winston |
 
 ## High Level Architecture
 
@@ -100,30 +100,30 @@ graph TD
 
 ### Technology Stack Table
 
-| Category | Technology | Version | Purpose | Rationale |
-|----------|------------|---------|---------|-----------|
-| **Language** | PHP | 8.0.2+ | Backend development | Maintain existing version, proven stable in current system |
-| **Runtime** | PHP-FPM | 8.0.2+ | PHP process manager | Production-ready with Docker containerization |
-| **Framework** | Laravel | 9.19 | Backend API framework | Established in codebase, extensive ecosystem for HRIS features |
-| **Frontend Language** | TypeScript | 5.3.3 | Frontend development | Established, provides type safety for complex employee data structures |
-| **Frontend Runtime** | Node.js | 20.11.0 LTS | Build tooling | Stable LTS for Vite build system |
-| **Frontend Framework** | React | 18.3.1 | UI library | Established in codebase with TanStack Query integration |
-| **Database** | PostgreSQL | 14+ | Primary database | Established, excellent for relational employee/org data |
-| **Containerization** | Docker | Latest | Application deployment | Enable consistent VPS deployment and environment isolation |
-| **Web Server** | Nginx | Latest | Reverse proxy/static files | Standard production setup for Laravel applications |
-| **ORM** | Laravel Eloquent | 9.19 | Database abstraction | Integrated with Laravel, supports complex relationships |
-| **Authentication** | Laravel Passport | 12.3 | API authentication | Established OAuth2 implementation |
-| **Session Auth** | Laravel Sanctum | 2.14.1 | SPA authentication | Established for React SPA integration |
-| **Authorization** | Laravel Gates/Policies | 9.19 | RBAC implementation | Extends existing role-based system |
-| **API Validation** | Laravel Form Requests | 9.19 | Input validation | Established pattern, type-safe validation |
-| **API Resources** | Laravel API Resources | 9.19 | Response formatting | Established for consistent JSON responses |
-| **Frontend State** | TanStack Query | 5.59.8 | Server state management | Established, excellent for employee data caching |
-| **UI Components** | Radix UI | Various | Accessible components | Established component library |
-| **Styling** | TailwindCSS | 3.4.13 | Utility-first CSS | Established design system |
-| **Build Tool** | Vite | 5.4.8 | Frontend build | Established with Laravel plugin |
-| **Testing Backend** | PHPUnit | 9.5.10 | Backend testing | Established, will extend coverage |
-| **Code Quality** | Laravel Pint | Latest | PHP formatting | Established code formatting |
-| **Code Quality** | ESLint + Prettier | Latest | JS/TS quality | Established frontend quality tools |
+| Category               | Technology             | Version     | Purpose                    | Rationale                                                              |
+| ---------------------- | ---------------------- | ----------- | -------------------------- | ---------------------------------------------------------------------- |
+| **Language**           | PHP                    | 8.0.2+      | Backend development        | Maintain existing version, proven stable in current system             |
+| **Runtime**            | PHP-FPM                | 8.0.2+      | PHP process manager        | Production-ready with Docker containerization                          |
+| **Framework**          | Laravel                | 9.19        | Backend API framework      | Established in codebase, extensive ecosystem for HRIS features         |
+| **Frontend Language**  | TypeScript             | 5.3.3       | Frontend development       | Established, provides type safety for complex employee data structures |
+| **Frontend Runtime**   | Node.js                | 20.11.0 LTS | Build tooling              | Stable LTS for Vite build system                                       |
+| **Frontend Framework** | React                  | 18.3.1      | UI library                 | Established in codebase with TanStack Query integration                |
+| **Database**           | PostgreSQL             | 14+         | Primary database           | Established, excellent for relational employee/org data                |
+| **Containerization**   | Docker                 | Latest      | Application deployment     | Enable consistent VPS deployment and environment isolation             |
+| **Web Server**         | Nginx                  | Latest      | Reverse proxy/static files | Standard production setup for Laravel applications                     |
+| **ORM**                | Laravel Eloquent       | 9.19        | Database abstraction       | Integrated with Laravel, supports complex relationships                |
+| **Authentication**     | Laravel Passport       | 12.3        | API authentication         | Established OAuth2 implementation                                      |
+| **Session Auth**       | Laravel Sanctum        | 2.14.1      | SPA authentication         | Established for React SPA integration                                  |
+| **Authorization**      | Laravel Gates/Policies | 9.19        | RBAC implementation        | Extends existing role-based system                                     |
+| **API Validation**     | Laravel Form Requests  | 9.19        | Input validation           | Established pattern, type-safe validation                              |
+| **API Resources**      | Laravel API Resources  | 9.19        | Response formatting        | Established for consistent JSON responses                              |
+| **Frontend State**     | TanStack Query         | 5.59.8      | Server state management    | Established, excellent for employee data caching                       |
+| **UI Components**      | Radix UI               | Various     | Accessible components      | Established component library                                          |
+| **Styling**            | TailwindCSS            | 3.4.13      | Utility-first CSS          | Established design system                                              |
+| **Build Tool**         | Vite                   | 5.4.8       | Frontend build             | Established with Laravel plugin                                        |
+| **Testing Backend**    | PHPUnit                | 9.5.10      | Backend testing            | Established, will extend coverage                                      |
+| **Code Quality**       | Laravel Pint           | Latest      | PHP formatting             | Established code formatting                                            |
+| **Code Quality**       | ESLint + Prettier      | Latest      | JS/TS quality              | Established frontend quality tools                                     |
 
 ## Data Models
 
@@ -132,6 +132,7 @@ graph TD
 **Purpose:** Core employee business entity separate from authentication concerns, containing comprehensive professional and personal information for PT Kimia Farma staff across all divisions and subsidiaries.
 
 **Key Attributes:**
+
 - employee_id: string (unique identifier, e.g., "KF2024001") - Business identifier separate from database ID
 - user_id: foreign key (nullable) - Links to authentication User when employee has system access
 - employee_number: string (unique) - PT Kimia Farma internal employee number
@@ -152,6 +153,7 @@ graph TD
 - photo_url: string (nullable) - Employee photo for identification
 
 **Relationships:**
+
 - belongsTo User (nullable) - Authentication account link
 - belongsTo Division - Organizational division assignment
 - belongsTo JobPosition - Current job position
@@ -167,6 +169,7 @@ graph TD
 **Purpose:** Represents PT Kimia Farma's actual organizational structure including business units, subsidiaries, and departmental hierarchy to support proper employee assignment and reporting.
 
 **Key Attributes:**
+
 - division_code: string (unique) - Business code (e.g., "MFG", "DIST", "RETAIL")
 - division_name: string - Full division name
 - division_type: enum - business_unit, subsidiary, department, section
@@ -177,6 +180,7 @@ graph TD
 - head_employee_id: foreign key (nullable) - Division head/manager
 
 **Relationships:**
+
 - belongsTo Division as parent - Hierarchical structure
 - hasMany Division as children - Sub-divisions
 - hasMany Employee - Employees assigned to division
@@ -187,6 +191,7 @@ graph TD
 **Purpose:** Defines career positions within PT Kimia Farma's pharmaceutical industry context, supporting career path progression and organizational hierarchy.
 
 **Key Attributes:**
+
 - position_code: string (unique) - Standard position code
 - position_title: string - Job title
 - position_level: integer - Career level for progression tracking
@@ -198,6 +203,7 @@ graph TD
 - is_active: boolean - Whether position is currently available
 
 **Relationships:**
+
 - hasMany Employee - Employees in this position
 - hasMany CareerPath - Career progression records
 
@@ -206,6 +212,7 @@ graph TD
 **Purpose:** Tracks employee career progression, promotions, transfers, and position changes within PT Kimia Farma to support career development and organizational planning.
 
 **Key Attributes:**
+
 - employee_id: foreign key - Employee reference
 - from_position_id: foreign key (nullable) - Previous position
 - to_position_id: foreign key - New position
@@ -219,6 +226,7 @@ graph TD
 - notes: text (nullable) - Additional comments
 
 **Relationships:**
+
 - belongsTo Employee - Career owner
 - belongsTo JobPosition as fromPosition - Previous role
 - belongsTo JobPosition as toPosition - New role
@@ -233,6 +241,7 @@ graph TD
 **Responsibility:** Core employee lifecycle management, profile operations, and data validation for PT Kimia Farma's employee master data system.
 
 **Key Interfaces:**
+
 - `EmployeeController` - REST API endpoints for employee CRUD operations
 - `EmployeeService` - Business logic for employee operations and validation
 - `EmployeeRepository` - Data access abstraction for employee entities
@@ -247,6 +256,7 @@ graph TD
 **Responsibility:** PT Kimia Farma organizational structure management including divisions, subsidiaries, and hierarchical relationships.
 
 **Key Interfaces:**
+
 - `DivisionController` - REST API for organizational structure operations
 - `OrganizationService` - Business logic for hierarchical operations and validation
 - `DivisionRepository` - Data access for division and organizational data
@@ -261,6 +271,7 @@ graph TD
 **Responsibility:** Employee career progression tracking, promotion workflows, and career development analytics within pharmaceutical industry context.
 
 **Key Interfaces:**
+
 - `CareerPathController` - REST API for career tracking and promotion management
 - `CareerProgressionService` - Business logic for career moves and validation
 - `CareerPathRepository` - Data access for career history and progression
@@ -275,6 +286,7 @@ graph TD
 **Responsibility:** Configuration and management of HRIS master data including job positions, employment types, and system parameters for HRD managers.
 
 **Key Interfaces:**
+
 - `JobPositionController` - REST API for position management
 - `MasterDataService` - Business logic for configurable parameters
 - `JobPositionRepository` - Data access for position and configuration data
@@ -289,6 +301,7 @@ graph TD
 **Responsibility:** Professional development tracking including education history, certifications, and license management with expiry notifications.
 
 **Key Interfaces:**
+
 - `EducationController` - REST API for education history management
 - `CertificationController` - REST API for certification and license tracking
 - `ProfessionalDevelopmentService` - Business logic for education validation
@@ -794,16 +807,16 @@ Production VPS (Docker Compose)
 
 ### Naming Conventions
 
-| Element | Convention | Example |
-|---------|------------|---------|
-| Controllers | PascalCase + Controller suffix | EmployeeController |
-| Services | PascalCase + Service suffix | EmployeeService |
-| Repositories | PascalCase + Repository suffix | EmployeeRepository |
-| Models | PascalCase singular | Employee, CareerPath |
-| Database Tables | snake_case plural | employees, career_paths |
-| API Routes | kebab-case | /api/employees, /api/career-paths |
-| React Components | PascalCase | EmployeeList, CareerTimeline |
-| TypeScript Types | PascalCase | EmployeeData, CareerPathEntry |
+| Element          | Convention                     | Example                           |
+| ---------------- | ------------------------------ | --------------------------------- |
+| Controllers      | PascalCase + Controller suffix | EmployeeController                |
+| Services         | PascalCase + Service suffix    | EmployeeService                   |
+| Repositories     | PascalCase + Repository suffix | EmployeeRepository                |
+| Models           | PascalCase singular            | Employee, CareerPath              |
+| Database Tables  | snake_case plural              | employees, career_paths           |
+| API Routes       | kebab-case                     | /api/employees, /api/career-paths |
+| React Components | PascalCase                     | EmployeeList, CareerTimeline      |
+| TypeScript Types | PascalCase                     | EmployeeData, CareerPathEntry     |
 
 ### Critical Rules
 
@@ -837,6 +850,7 @@ Production VPS (Docker Compose)
 - **Coverage Requirement:** 80% minimum for business logic classes
 
 **AI Agent Requirements:**
+
 - Generate tests for all public methods in Services and Repositories
 - Cover edge cases and error conditions (invalid employee data, constraint violations)
 - Follow AAA pattern (Arrange, Act, Assert)
@@ -935,6 +949,7 @@ Production VPS (Docker Compose)
 After completing the architecture:
 
 1. **Begin Implementation:**
+
    - Review with Product Owner and stakeholders
    - Start with database migrations and core models
    - Implement repository and service layers following Clean Architecture
@@ -942,6 +957,7 @@ After completing the architecture:
    - Develop React components with TanStack Query integration
 
 2. **Quality Assurance:**
+
    - Implement comprehensive test coverage as defined in test strategy
    - Set up CI/CD pipeline integration with existing Docker infrastructure
    - Conduct security review of employee data handling

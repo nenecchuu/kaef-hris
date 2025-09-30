@@ -20,9 +20,9 @@ The system needs to reflect PT Kimia Farma's actual organizational structure inc
 
 ### Change Log
 
-| Date       | Version | Description                           | Author     |
-| ---------- | ------- | ------------------------------------- | ---------- |
-| 2025-09-29 | 1.0     | Initial PRD for Employee Master Data  | BMad Core  |
+| Date       | Version | Description                          | Author    |
+| ---------- | ------- | ------------------------------------ | --------- |
+| 2025-09-29 | 1.0     | Initial PRD for Employee Master Data | BMad Core |
 
 ## Requirements
 
@@ -126,15 +126,19 @@ Unit + Integration testing. Extend existing PHPUnit backend tests and add fronte
 ## Epic List
 
 ### Epic 1: Foundation & Employee Core Infrastructure
+
 Establish Employee model separation from User, basic CRUD operations, and HRIS-specific authentication system.
 
 ### Epic 2: Organizational Structure & Division Management
+
 Implement PT Kimia Farma's actual organizational divisions, department hierarchies, and employee-division relationships.
 
 ### Epic 3: Career Path & Professional Development
+
 Create career progression tracking, position history, and professional development planning capabilities.
 
 ### Epic 4: HRD Management Dashboard & Cross-Division Oversight
+
 Build comprehensive management interface for HRD managers to oversee all employee data across divisions with confirmation workflows.
 
 ## Epic 1: Foundation & Employee Core Infrastructure
@@ -150,6 +154,7 @@ so that I can manage comprehensive employee data independently from system acces
 **Acceptance Criteria:**
 
 1. **Main Employee Table Created** with comprehensive fields:
+
    - **Personal Information**: employee_id (unique, auto-generated EMP-YYYY-NNNN), national_id (NIK), full_name, birth_date, birth_place, gender (enum), marital_status (enum), is_indonesian (boolean), nationality (conditional), employee_picture (file path)
    - **Contact Information**: personal_email, work_email (unique), personal_phone, work_phone, emergency_contact_name, emergency_contact_phone, emergency_relationship (enum)
    - **Address Information**: current_address, permanent_address (KTP address), city, province, postal_code, country
@@ -159,11 +164,13 @@ so that I can manage comprehensive employee data independently from system acces
    - **System Fields**: created_by_user_id, updated_by_user_id, is_active, timestamps, soft deletes
 
 2. **Child Tables for Professional Information**:
+
    - **employee_education_history**: employee_id (FK), education_level_id (FK), institution_name, major, graduation_year, gpa, location
    - **employee_certifications**: employee_id (FK), certification_name, issuing_organization, issue_date, expiry_date, certificate_number, location
    - **employee_professional_licenses**: employee_id (FK), license_name, issuing_authority, issue_date, expiry_date, license_number, location
 
 3. **Master Data Tables Created**:
+
    - master_employment_statuses, master_employment_types, master_employee_levels
    - master_work_schedule_types, master_salary_currencies, master_pay_frequencies
    - master_career_levels, master_career_tracks, master_education_levels
@@ -258,10 +265,12 @@ so that employees can be properly categorized according to the real company hier
 **Acceptance Criteria:**
 
 1. **Board Level Structure Models**:
+
    - Board of Commissioners with actual commissioner positions
    - Board of Directors with current director roles: President Director, Director of Finance & Risk Management, Director of Human Resources, Director of Production & Supply Chain, Director of Commerce, Director of Portfolio Products & Services
 
 2. **Director-Level Divisions Created**:
+
    - Directorate of Production & Supply Chain
    - Directorate of Commerce/Business Development
    - Directorate of Finance & Risk Management
@@ -269,12 +278,14 @@ so that employees can be properly categorized according to the real company hier
    - Directorate of Portfolio, Products & Services
 
 3. **Business Unit Divisions Implemented**:
+
    - Manufacturing/Production Division (10 factory locations)
    - Pharmaceutical Distribution Division
    - Retail & Healthcare Services Division
    - International Business Division
 
 4. **Subsidiary Company Structure**:
+
    - PT Kimia Farma Apotek (KFA) - Healthcare services (59.99% ownership)
    - PT Kimia Farma Trading & Distribution (KFTD) - Distribution (99.99% ownership)
    - PT Kimia Farma Sungwun Pharmacopia (KFSP) - Raw materials (80.67% ownership)
@@ -295,6 +306,7 @@ so that I can assign employees to their correct divisions and departments accord
 **Acceptance Criteria:**
 
 1. **Pre-loaded Division Data with Actual Information**:
+
    - Corporate/Head Office (Jakarta headquarters)
    - Manufacturing & Production (10 factory locations with actual addresses)
    - Distribution & Trading (34 provinces coverage through KFTD)
@@ -303,6 +315,7 @@ so that I can assign employees to their correct divisions and departments accord
    - Subsidiary Companies (each subsidiary as separate organizational division)
 
 2. **Pre-loaded Department Data for Each Division**:
+
    - Production departments mapped to actual 10 factory locations
    - Regional distribution centers covering 34 provinces as per KFTD network
    - Pharmacy outlet categories by location and type
@@ -311,6 +324,7 @@ so that I can assign employees to their correct divisions and departments accord
    - International business units by country/region
 
 3. **Location-Based Organization Implementation**:
+
    - Jakarta Head Office (Jl. Veteran No. 9, Jakarta Pusat)
    - Regional offices with actual geographic coverage
    - Factory locations with specific addresses and production capabilities
@@ -330,6 +344,7 @@ so that I can understand and manage the real reporting relationships across the 
 **Acceptance Criteria:**
 
 1. **Multi-Level Interactive Organizational Chart**:
+
    - Board of Commissioners and Directors level with actual names and positions
    - Directorate divisions with current leadership structure
    - Business units and subsidiaries with ownership percentages
@@ -337,6 +352,7 @@ so that I can understand and manage the real reporting relationships across the 
    - Real reporting relationships as per company structure
 
 2. **Interactive Features**:
+
    - Click to expand/collapse organizational levels
    - Employee count display for each organizational unit
    - Vacant position highlighting for succession planning
@@ -344,12 +360,14 @@ so that I can understand and manage the real reporting relationships across the 
    - Direct and dotted-line reporting relationships visualization
 
 3. **Subsidiary Company Integration**:
+
    - Separate organizational charts for each subsidiary company
    - Cross-subsidiary collaboration and reporting relationships
    - Ownership structure visualization with percentages
    - Subsidiary-specific role hierarchies
 
 4. **Geographic Distribution Visualization**:
+
    - Interactive map showing locations of 10 factories
    - Distribution center coverage areas across 34 provinces
    - Retail outlet density by region and type
@@ -366,6 +384,7 @@ so that employee data reflects real organizational placement and reporting relat
 **Acceptance Criteria:**
 
 1. **Employee Assignment Interface**:
+
    - Division assignment dropdown populated with actual PT Kimia Farma divisions
    - Department assignment filtered by selected division
    - Location assignment with address and facility type information
@@ -373,6 +392,7 @@ so that employee data reflects real organizational placement and reporting relat
    - Subsidiary-specific assignment with appropriate role categories
 
 2. **Validation Rules Implementation**:
+
    - Employees can only be assigned to active organizational units
    - Manager assignments must follow established hierarchical rules
    - Subsidiary employees must have subsidiary-appropriate roles and permissions
@@ -380,12 +400,14 @@ so that employee data reflects real organizational placement and reporting relat
    - Location assignments must match division and department capabilities
 
 3. **Bulk Operations for Organizational Management**:
+
    - Mass employee transfer between organizational units
    - Organizational restructuring tools with impact analysis
    - Employee movement history tracking with effective dates
    - Batch updates for location changes (office relocations, store openings/closings)
 
 4. **Integration with Real Business Operations**:
+
    - Link employees to actual factory production lines and shifts
    - Connection to specific retail outlet assignments with coverage areas
    - Distribution center territory and customer assignment
@@ -410,6 +432,7 @@ so that we can maintain complete professional development history and plan futur
 **Acceptance Criteria:**
 
 1. **employee_career_history Table Created** with comprehensive tracking:
+
    - id, employee_id (FK), position_title, division_id (FK), department_id (FK)
    - start_date, end_date, employee_level_id (FK), career_track_id (FK)
    - promotion_type (enum: lateral, vertical, cross-functional, international)
@@ -418,6 +441,7 @@ so that we can maintain complete professional development history and plan futur
    - performance_rating_at_change, achievements, created_at, updated_at
 
 2. **career_progression_plans Table for Future Planning**:
+
    - id, employee_id (FK), target_position, target_division_id (FK), target_level_id (FK)
    - development_areas (JSON), required_skills (JSON), timeline, mentor_employee_id (FK)
    - status (enum: draft, approved, in_progress, completed, cancelled)
@@ -425,12 +449,14 @@ so that we can maintain complete professional development history and plan futur
    - budget_allocated, actual_cost, created_by_user_id, approved_by_user_id
 
 3. **position_requirements Table for Career Planning**:
+
    - id, position_title, division_id (FK), required_education_level_id (FK)
    - required_experience_years, required_certifications (JSON)
    - preferred_skills (JSON), job_family, salary_range_min, salary_range_max
    - reporting_level, team_size_range, location_flexibility
 
 4. **pharmaceutical_career_paths Table for Industry-Specific Paths**:
+
    - id, career_path_name, description, starting_level_id (FK), target_level_id (FK)
    - typical_duration_years, required_rotations (JSON), success_criteria
    - pharmaceutical_specialization (production, R&D, regulatory, commercial, quality)
@@ -448,6 +474,7 @@ so that I can understand my professional development journey and plan next steps
 **Acceptance Criteria:**
 
 1. **Interactive Career Timeline View**:
+
    - Visual timeline showing all position changes with dates and locations
    - Salary progression chart with percentage increases over time
    - Education, certification, and training milestones integrated
@@ -455,6 +482,7 @@ so that I can understand my professional development journey and plan next steps
    - Achievement highlights and recognition events
 
 2. **Career Path Explorer for Pharmaceutical Industry**:
+
    - Interactive career path suggestions based on current position and pharmaceutical specialization
    - Skills gap analysis for target positions with development recommendations
    - Typical career progression examples within PT Kimia Farma divisions
@@ -462,6 +490,7 @@ so that I can understand my professional development journey and plan next steps
    - Time estimates and requirements for achieving target roles
 
 3. **Professional Development Dashboard**:
+
    - Current development plan progress tracking with milestone completion
    - Upcoming certification renewal reminders with priority levels
    - Skill assessment results and development recommendations
@@ -469,6 +498,7 @@ so that I can understand my professional development journey and plan next steps
    - Training program completion and effectiveness metrics
 
 4. **Mobile-Responsive Career Interface**:
+
    - Career information accessible on mobile devices for field employees
    - Offline viewing capability for career plans and development goals
    - Push notifications for development milestones and opportunities
@@ -489,6 +519,7 @@ so that I can support their professional growth and prepare succession plans.
 **Acceptance Criteria:**
 
 1. **Comprehensive Development Plan Creation**:
+
    - Goal setting interface for short-term (1 year) and long-term (3-5 year) career objectives
    - Skills gap identification with pharmaceutical industry competency frameworks
    - Training and certification requirement planning with budget estimates
@@ -496,6 +527,7 @@ so that I can support their professional growth and prepare succession plans.
    - Cross-functional and international assignment planning
 
 2. **Collaboration Tools for Development Planning**:
+
    - Manager-employee discussion forum for development planning with threading
    - Mentor assignment system with pharmaceutical industry expertise matching
    - Cross-functional project assignment for skill development
@@ -503,6 +535,7 @@ so that I can support their professional growth and prepare succession plans.
    - Peer learning group creation and management
 
 3. **Progress Monitoring and Analytics**:
+
    - Development plan progress tracking with visual indicators
    - Milestone achievement notifications to all stakeholders
    - Regular review scheduling with automatic reminder system
@@ -510,6 +543,7 @@ so that I can support their professional growth and prepare succession plans.
    - ROI tracking for training and development investments
 
 4. **Multi-Level Approval Workflows**:
+
    - Manager approval for development plan creation and major changes
    - Budget approval routing for training and certification expenses
    - Position change request workflows with impact analysis
@@ -531,6 +565,7 @@ so that career advancement follows consistent processes and maintains organizati
 **Acceptance Criteria:**
 
 1. **Position Change Request System**:
+
    - Employee-initiated position change requests with justification requirements
    - Manager nomination system for promotion opportunities
    - Internal job posting system with pharmaceutical industry job families
@@ -538,6 +573,7 @@ so that career advancement follows consistent processes and maintains organizati
    - Cross-subsidiary and international position application workflows
 
 2. **Intelligent Approval Workflow Engine**:
+
    - Multi-level approval routing (Direct Manager → Division Head → HRD → Board for senior positions)
    - Automated eligibility checking against promotion criteria and performance history
    - Budget impact assessment for salary changes and organizational restructuring
@@ -545,6 +581,7 @@ so that career advancement follows consistent processes and maintains organizati
    - Pharmaceutical industry compliance checking for regulatory-sensitive positions
 
 3. **Advanced Succession Planning Integration**:
+
    - High-potential employee identification and tracking with pharmaceutical industry competencies
    - Critical position coverage planning with multiple successor scenarios
    - Knowledge transfer planning and documentation for key positions
@@ -552,6 +589,7 @@ so that career advancement follows consistent processes and maintains organizati
    - Emergency succession activation for unexpected departures
 
 4. **Comprehensive Communication and Notification System**:
+
    - Automated notifications for position change milestones with stakeholder-specific messaging
    - Organization-wide announcements for approved changes with appropriate visibility levels
    - Team communication templates for structural changes
@@ -579,6 +617,7 @@ so that I can monitor organizational health and make informed HR decisions.
 **Acceptance Criteria:**
 
 1. **Executive Summary Widgets with Real-Time Data**:
+
    - Total employee count by division (Manufacturing, Distribution, Retail, International), subsidiary, employment status, and employee level
    - New hires, terminations, and position changes in current period with trend indicators
    - Performance rating distribution across organization with division comparisons
@@ -586,6 +625,7 @@ so that I can monitor organizational health and make informed HR decisions.
    - Certification expiry alerts and regulatory compliance status for pharmaceutical industry requirements
 
 2. **Organizational Health Metrics Dashboard**:
+
    - Employee turnover rates by division, subsidiary, and time period with pharmaceutical industry benchmarks
    - Promotion and internal mobility statistics with career path analysis
    - Succession planning coverage and readiness scores for critical positions
@@ -593,6 +633,7 @@ so that I can monitor organizational health and make informed HR decisions.
    - Employee satisfaction and engagement indicators with division-level trending
 
 3. **Financial HR Metrics with Budget Integration**:
+
    - Payroll summary by division and subsidiary with budget variance analysis
    - Training and development expense tracking with ROI metrics
    - Cost per hire and time to fill position metrics by role type and level
@@ -600,6 +641,7 @@ so that I can monitor organizational health and make informed HR decisions.
    - Benefits utilization and cost analysis across employee segments
 
 4. **Interactive Filtering and Advanced Analytics**:
+
    - Multi-dimensional filtering by division, department, subsidiary, employee level, location, career track
    - Time period selection for trend analysis with comparison capabilities
    - Drill-down functionality to detailed employee lists and individual profiles
@@ -621,6 +663,7 @@ so that I can quickly find information and identify patterns for strategic HR pl
 **Acceptance Criteria:**
 
 1. **Advanced Search Interface with AI-Powered Capabilities**:
+
    - Multi-criteria search across all employee fields with Boolean operators
    - Natural language search queries (e.g., "pharmaceutical engineers in manufacturing with 5+ years experience")
    - Saved search templates for common HR scenarios and investigations
@@ -628,6 +671,7 @@ so that I can quickly find information and identify patterns for strategic HR pl
    - Advanced filters for pharmaceutical industry-specific roles and certifications
 
 2. **Comprehensive Employee Analytics and Reporting**:
+
    - Custom report builder with drag-and-drop interface and calculated fields
    - Pre-built report library for common HR needs (headcount, turnover, demographics, compliance)
    - Trend analysis with advanced statistical functions and forecasting
@@ -635,6 +679,7 @@ so that I can quickly find information and identify patterns for strategic HR pl
    - Correlation analysis between employee attributes and performance outcomes
 
 3. **Predictive Analytics for Strategic Planning**:
+
    - Employee retention risk scoring using machine learning models
    - Career progression prediction and high-potential identification
    - Skills demand forecasting by division and pharmaceutical specialization
@@ -642,6 +687,7 @@ so that I can quickly find information and identify patterns for strategic HR pl
    - Workforce planning scenarios with impact modeling
 
 4. **Advanced Export and Sharing Capabilities**:
+
    - Export reports to multiple formats (Excel, PDF, PowerBI, Tableau)
    - Scheduled report generation with automatic email distribution
    - Dashboard sharing with role-based access control
@@ -663,6 +709,7 @@ so that all critical HR operations are properly authorized and documented.
 **Acceptance Criteria:**
 
 1. **Intelligent Multi-Level Approval Workflows**:
+
    - Configurable approval chains based on change type, impact level, and organizational hierarchy
    - Automatic routing with smart escalation rules for overdue approvals
    - Parallel approval processes for cross-functional changes requiring multiple stakeholder input
@@ -670,6 +717,7 @@ so that all critical HR operations are properly authorized and documented.
    - Emergency override procedures with enhanced audit requirements
 
 2. **Critical Change Management with Impact Analysis**:
+
    - Salary changes requiring budget approval with market analysis and equity review
    - Position changes affecting organizational structure with cascade impact assessment
    - Employment status changes (termination, suspension, reactivation) with legal compliance checking
@@ -677,6 +725,7 @@ so that all critical HR operations are properly authorized and documented.
    - Cross-subsidiary transfers with regulatory and compliance implications
 
 3. **Advanced Confirmation Dialog System**:
+
    - Detailed impact summaries with financial, organizational, and legal implications
    - Required comments and justification fields with character limits and templates
    - Change preview with comprehensive before/after comparison views
@@ -684,6 +733,7 @@ so that all critical HR operations are properly authorized and documented.
    - Supporting documentation attachment and verification requirements
 
 4. **Comprehensive Audit Trail and Compliance Documentation**:
+
    - Complete approval history with timestamps, IP addresses, and device information
    - Change justification storage with searchable documentation database
    - Automated notification system for all affected stakeholders with appropriate messaging
@@ -705,6 +755,7 @@ so that I can maintain consistency and optimize human resource allocation organi
 **Acceptance Criteria:**
 
 1. **Organization-Wide Employee Management Platform**:
+
    - Unified employee list view across all divisions, subsidiaries, and international operations
    - Cross-division employee transfer tools with impact analysis and approval workflows
    - Standardized HR policy application across organizational units with exception management
@@ -712,6 +763,7 @@ so that I can maintain consistency and optimize human resource allocation organi
    - Global employee directory with advanced search and collaboration features
 
 2. **Strategic Resource Allocation and Workforce Planning**:
+
    - Headcount planning tools with budget allocation by division and pharmaceutical specialization
    - Skills inventory analysis with optimization recommendations for resource allocation
    - Cross-training opportunity identification and management with skill gap analysis
@@ -719,6 +771,7 @@ so that I can maintain consistency and optimize human resource allocation organi
    - Talent mobility programs for cross-subsidiary and international development
 
 3. **Compliance and Standardization Management**:
+
    - Policy compliance monitoring across divisions with automated violation detection
    - Standardized job descriptions and position requirements with version control
    - Consistent performance evaluation criteria application with calibration tools
@@ -726,6 +779,7 @@ so that I can maintain consistency and optimize human resource allocation organi
    - Audit preparation tools with compliance reporting and documentation management
 
 4. **Strategic HR Analytics and Business Intelligence**:
+
    - Organization-wide talent mapping with succession planning integration
    - Skills gap analysis with pharmaceutical industry benchmarking and development priority identification
    - Diversity and inclusion metrics with improvement tracking and action plan management
@@ -745,6 +799,7 @@ so that I can maintain consistency and optimize human resource allocation organi
 ### PM Checklist Validation Report - Employee Master Data PRD
 
 #### Executive Summary
+
 - **Overall PRD Completeness**: 92%
 - **MVP Scope Appropriateness**: Just Right
 - **Readiness for Architecture Phase**: Ready
@@ -752,31 +807,35 @@ so that I can maintain consistency and optimize human resource allocation organi
 
 #### Category Analysis Table
 
-| Category                         | Status  | Critical Issues |
-| -------------------------------- | ------- | --------------- |
-| 1. Problem Definition & Context  | PASS    | None |
-| 2. MVP Scope Definition          | PASS    | None |
-| 3. User Experience Requirements  | PASS    | None |
-| 4. Functional Requirements       | PASS    | None |
+| Category                         | Status  | Critical Issues                         |
+| -------------------------------- | ------- | --------------------------------------- |
+| 1. Problem Definition & Context  | PASS    | None                                    |
+| 2. MVP Scope Definition          | PASS    | None                                    |
+| 3. User Experience Requirements  | PASS    | None                                    |
+| 4. Functional Requirements       | PASS    | None                                    |
 | 5. Non-Functional Requirements   | PARTIAL | Performance metrics need quantification |
-| 6. Epic & Story Structure        | PASS    | None |
-| 7. Technical Guidance            | PASS    | None |
-| 8. Cross-Functional Requirements | PARTIAL | Testing strategy needs detail |
-| 9. Clarity & Communication       | PASS    | None |
+| 6. Epic & Story Structure        | PASS    | None                                    |
+| 7. Technical Guidance            | PASS    | None                                    |
+| 8. Cross-Functional Requirements | PARTIAL | Testing strategy needs detail           |
+| 9. Clarity & Communication       | PASS    | None                                    |
 
 #### Top Issues by Priority
 
 **HIGH Priority:**
+
 - Performance requirements need specific metrics (response times, throughput)
 - Testing strategy for child tables and complex relationships needs definition
 - Data migration approach from current User model needs planning
 
 **MEDIUM Priority:**
+
 - Backup and recovery procedures for employee data should be specified
 - Error handling for master data dependencies needs documentation
 
 #### MVP Scope Assessment
+
 ✅ **Well-Scoped MVP**:
+
 - Focuses on core Employee Master Data without over-engineering
 - Separates User and Employee concerns appropriately
 - Includes essential PT Kimia Farma organizational structure
@@ -787,6 +846,7 @@ so that I can maintain consistency and optimize human resource allocation organi
 ✅ **Realistic Timeline**: Epic structure supports incremental delivery and testing
 
 #### Technical Readiness
+
 ✅ **Technical Constraints Clear**: Laravel/React architecture well-defined
 ✅ **Integration Approach Solid**: Extends existing brownfield architecture appropriately
 ✅ **Database Design Comprehensive**: Child tables approach for education/certifications is superior
@@ -794,11 +854,13 @@ so that I can maintain consistency and optimize human resource allocation organi
 #### Recommendations
 
 1. **Add Performance Specifications**:
+
    - API response time: < 200ms for employee searches
    - Dashboard load time: < 2 seconds for 10,000+ employees
    - Bulk operations: Support up to 1,000 employee updates
 
 2. **Define Testing Approach**:
+
    - Unit tests for all models and relationships
    - Integration tests for API endpoints with complex filtering
    - UI testing for dashboard and confirmation workflows
@@ -815,7 +877,9 @@ so that I can maintain consistency and optimize human resource allocation organi
 ## Next Steps
 
 ### UX Expert Prompt
+
 Create comprehensive UI/UX design system for Employee Master Data interface including dashboard layouts, master-detail views, career path visualizations, and confirmation workflow patterns. Focus on data-dense interfaces optimized for HRD manager workflows within PT Kimia Farma's organizational context.
 
 ### Architect Prompt
+
 Design technical architecture for Employee Master Data system extending existing Laravel/React brownfield application. Include database schema for employee entities with child tables, API design patterns, master data management system, and integration approach with current authentication/audit systems. Consider PT Kimia Farma's organizational complexity and performance requirements for 10,000+ employees.

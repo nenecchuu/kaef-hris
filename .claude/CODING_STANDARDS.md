@@ -7,6 +7,7 @@
 **RULE:** All code including variables, functions, classes, interfaces, types MUST be in English.
 
 **❌ NEVER DO THIS:**
+
 ```typescript
 // WRONG - Indonesian variable names
 const nama_lengkap = employee.nama_lengkap;
@@ -14,12 +15,13 @@ const tanggal_lahir = data.tanggal_lahir;
 const status_kepegawaian = employee.status_kepegawaian;
 
 interface Employee {
-  nama_lengkap: string;  // ❌ WRONG
-  divisi_id: number;     // ❌ WRONG
+  nama_lengkap: string; // ❌ WRONG
+  divisi_id: number; // ❌ WRONG
 }
 ```
 
 **✅ ALWAYS DO THIS:**
+
 ```typescript
 // CORRECT - English variable names
 const fullName = employee.full_name;
@@ -27,8 +29,8 @@ const birthDate = data.birth_date;
 const employmentStatus = employee.employment_status;
 
 interface Employee {
-  full_name: string;     // ✅ CORRECT
-  division_id: number;   // ✅ CORRECT
+  full_name: string; // ✅ CORRECT
+  division_id: number; // ✅ CORRECT
 }
 ```
 
@@ -37,6 +39,7 @@ interface Employee {
 **RULE:** Only user-visible text (labels, messages, buttons) should be in Indonesian.
 
 **✅ CORRECT:**
+
 ```typescript
 // Code in English, labels in Indonesian
 <Label htmlFor="full_name">Nama Lengkap</Label>
@@ -52,6 +55,7 @@ const errorMessages = {
 ### 3. DATABASE COLUMNS: **ENGLISH (snake_case)**
 
 **✅ CORRECT:**
+
 ```sql
 -- Use English column names
 CREATE TABLE employees (
@@ -62,6 +66,7 @@ CREATE TABLE employees (
 ```
 
 **❌ NEVER:**
+
 ```sql
 -- Don't use Indonesian
 CREATE TABLE employees (
@@ -74,16 +79,19 @@ CREATE TABLE employees (
 ## Current Technical Debt
 
 ### Story 1.1 & 1.2 (Backend)
+
 - **Status:** Already implemented with Indonesian field names
 - **Action:** Document for future refactor (Story 1.4+)
 - **Note:** Do NOT fix now to avoid breaking changes
 
 ### Story 1.3 (Frontend)
+
 - **Status:** Implemented with Indonesian field names (matching backend)
 - **Action:** Keep as-is for now (matches Story 1.2 API)
 - **Future:** Refactor when backend is refactored
 
 ### Going Forward (Story 1.4+)
+
 - **All new code:** MUST use English variable names
 - **All new APIs:** MUST use English field names
 - **Migration plan:** Schedule refactor for Stories 1.1, 1.2, 1.3
@@ -102,11 +110,12 @@ Before committing any code, verify:
 ## Examples Reference
 
 ### API Response Types
+
 ```typescript
 // ✅ CORRECT
 interface ApiResponse<T> {
-  status: 'success' | 'error';
-  message: string;  // Can contain Indonesian text
+  status: "success" | "error";
+  message: string; // Can contain Indonesian text
   data: T;
 }
 
@@ -121,6 +130,7 @@ interface Employee {
 ```
 
 ### React Components
+
 ```typescript
 // ✅ CORRECT
 export function EmployeeForm({ employee, onSubmit }: EmployeeFormProps) {
@@ -140,18 +150,20 @@ export function EmployeeForm({ employee, onSubmit }: EmployeeFormProps) {
 ```
 
 ### Validation Messages
+
 ```typescript
 // ✅ CORRECT - Code in English, messages in Indonesian
 const schema = z.object({
-  full_name: z.string().min(1, 'Nama lengkap wajib diisi'),
-  email: z.string().email('Format email tidak valid'),
-  birth_date: z.string().min(1, 'Tanggal lahir wajib diisi'),
+  full_name: z.string().min(1, "Nama lengkap wajib diisi"),
+  email: z.string().email("Format email tidak valid"),
+  birth_date: z.string().min(1, "Tanggal lahir wajib diisi"),
 });
 ```
 
 ## Violation Consequences
 
 If Indonesian variable names are found in new code:
+
 1. ⚠️ First time: Warning + immediate fix required
 2. ⛔ Second time: Code review fails, must refactor before merge
 3. 🚫 Third time: Pull request rejected

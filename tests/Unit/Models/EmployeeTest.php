@@ -26,14 +26,8 @@ class EmployeeTest extends TestCase
     {
         parent::setUp();
 
-        // Create required divisions and job positions for foreign key constraints
-        // Use first() or create to avoid duplicate key errors
-        if (!Division::find(1)) {
-            Division::factory()->create(['id' => 1, 'name' => 'Test Division']);
-        }
-        if (!JobPosition::find(1)) {
-            JobPosition::factory()->create(['id' => 1, 'name' => 'Test Position']);
-        }
+        // No need to pre-create divisions and job positions
+        // Factory will handle it automatically
     }
 
     /** @test */

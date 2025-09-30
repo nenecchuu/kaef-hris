@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "Bash(php artisan:*)",
-      "Bash(git:*)"
+      "Bash(git:*)",
+      "Bash(git push:*)",
+      "Bash(dir:*)"
     ],
     "deny": [],
     "ask": []

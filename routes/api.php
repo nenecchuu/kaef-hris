@@ -87,3 +87,35 @@ Route::prefix('options')
         Route::get('/divisions', 'divisions');
         Route::get('/job-positions', 'job_positions');
     });
+
+// Employee Management API Routes (Story 1.2)
+Route::middleware(['auth:sanctum', 'as:user', 'guardMFA', 'guardResetPass'])->group(function () {
+
+    // Employee CRUD endpoints
+    Route::apiResource('employees', App\Http\Controllers\Api\EmployeeController::class)->parameters([
+        'employees' => 'employee_id'
+    ]);
+
+    // Additional employee endpoints
+    Route::prefix('employees')->group(function () {
+        Route::get('/active', [App\Http\Controllers\Api\EmployeeController::class, 'getActiveEmployees']);
+        Route::get('/by-division/{division_id}', [App\Http\Controllers\Api\EmployeeController::class, 'getEmployeesByDivision']);
+        Route::get('/subordinates/{manager_id}', [App\Http\Controllers\Api\EmployeeController::class, 'getSubordinates']);
+        Route::post('/bulk-import', [App\Http\Controllers\Api\EmployeeController::class, 'bulkImport']);
+        Route::get('/export', [App\Http\Controllers\Api\EmployeeController::class, 'exportEmployees']);
+    });
+
+    // Employee child resources
+    Route::prefix('employees/{employee_id}')->group(function () {
+        Route::apiResource('education-history', App\Http\Controllers\Api\EmployeeEducationController::class);
+        Route::apiResource('certifications', App\Http\Controllers\Api\EmployeeCertificationController::class);
+        Route::apiResource('professional-licenses', App\Http\Controllers\Api\EmployeeProfessionalLicenseController::class);
+    });
+
+    // Employee reports
+    Route::prefix('employee-reports')->group(function () {
+        Route::get('/demographics', [App\Http\Controllers\Api\EmployeeController::class, 'getDemographicsReport']);
+        Route::get('/tenure', [App\Http\Controllers\Api\EmployeeController::class, 'getTenureReport']);
+        Route::get('/division-distribution', [App\Http\Controllers\Api\EmployeeController::class, 'getDivisionDistributionReport']);
+    });
+});

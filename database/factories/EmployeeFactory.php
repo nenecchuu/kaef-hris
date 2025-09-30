@@ -85,8 +85,8 @@ class EmployeeFactory extends Factory
             'termination_date' => null, // Most employees are still active
             'photo_url' => $this->faker->boolean(60) ? 'storage/photos/employees/' . $this->faker->uuid() . '.jpg' : null,
             'user_id' => null, // Will be set in states if needed
-            'division_id' => 1, // Default to ID 1, can be overridden in tests
-            'job_position_id' => 1, // Default to ID 1, can be overridden in tests
+            'division_id' => Division::factory(), // Create division if not provided
+            'job_position_id' => JobPosition::factory(), // Create job position if not provided
             'manager_id' => null, // Will be set in post-creation callbacks
         ];
     }

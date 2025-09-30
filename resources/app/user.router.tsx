@@ -45,10 +45,38 @@ export const userRouter = createBrowserRouter(
           <Route index={true} element={<HomeRootPage />} />
           <Route element={<AdminGuard requireAdminAccess={true} />}>
             <Route path="employees" key="employees">
-              <Route index={true} element={<EmployeeIndexPage />} />
-              <Route path="new" element={<EmployeeCreatePage />} />
-              <Route path=":id" element={<EmployeeDetailPage />} />
-              <Route path=":id/edit" element={<EmployeeEditPage />} />
+              <Route
+                index={true}
+                element={
+                  <React.Suspense fallback={<div>Loading...</div>}>
+                    <EmployeeIndexPage />
+                  </React.Suspense>
+                }
+              />
+              <Route
+                path="new"
+                element={
+                  <React.Suspense fallback={<div>Loading...</div>}>
+                    <EmployeeCreatePage />
+                  </React.Suspense>
+                }
+              />
+              <Route
+                path=":id"
+                element={
+                  <React.Suspense fallback={<div>Loading...</div>}>
+                    <EmployeeDetailPage />
+                  </React.Suspense>
+                }
+              />
+              <Route
+                path=":id/edit"
+                element={
+                  <React.Suspense fallback={<div>Loading...</div>}>
+                    <EmployeeEditPage />
+                  </React.Suspense>
+                }
+              />
             </Route>
             <Route path="users" key="users">
               <Route index={true} element={<UserRootPage key="users" />} />

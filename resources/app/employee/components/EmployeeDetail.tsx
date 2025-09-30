@@ -20,7 +20,7 @@ import { Link } from "react-router-dom";
 import { Avatar, AvatarFallback, AvatarImage } from "@src/ui/avatar";
 import { Badge } from "@src/ui/badge";
 import { ButtonLink } from "@src/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@src/ui/tabs";
+import { Tabs, TabsContent, TabsList, Tab } from "@src/ui/tabs";
 
 import { EMPLOYMENT_STATUS_LABELS, EMPLOYMENT_TYPE_LABELS } from "../config";
 import type { EmployeeDetail as EmployeeDetailType } from "../types";
@@ -136,31 +136,31 @@ export function EmployeeDetail({
       {/* Tabbed Content */}
       <Tabs defaultValue="personal" className="w-full">
         <TabsList className="grid w-full grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-5">
-          <TabsTrigger value="personal" aria-label="Tab informasi pribadi">
+          <Tab value="personal" aria-label="Tab informasi pribadi">
             <IconUser className="h-4 w-4 sm:mr-2" aria-hidden="true" />
             <span className="hidden sm:inline">Info Pribadi</span>
             <span className="text-xs sm:hidden">Pribadi</span>
-          </TabsTrigger>
-          <TabsTrigger value="employment" aria-label="Tab informasi pekerjaan">
+          </Tab>
+          <Tab value="employment" aria-label="Tab informasi pekerjaan">
             <IconBriefcase className="h-4 w-4 sm:mr-2" aria-hidden="true" />
             <span className="hidden sm:inline">Info Pekerjaan</span>
             <span className="text-xs sm:hidden">Kerja</span>
-          </TabsTrigger>
-          <TabsTrigger value="education" aria-label="Tab riwayat pendidikan">
+          </Tab>
+          <Tab value="education" aria-label="Tab riwayat pendidikan">
             <IconSchool className="h-4 w-4 sm:mr-2" aria-hidden="true" />
             <span className="hidden sm:inline">Pendidikan</span>
             <span className="text-xs sm:hidden">Edu</span>
-          </TabsTrigger>
-          <TabsTrigger value="certifications" aria-label="Tab sertifikasi">
+          </Tab>
+          <Tab value="certifications" aria-label="Tab sertifikasi">
             <IconCertificate className="h-4 w-4 sm:mr-2" aria-hidden="true" />
             <span className="hidden sm:inline">Sertifikasi</span>
             <span className="text-xs sm:hidden">Sertif</span>
-          </TabsTrigger>
-          <TabsTrigger value="licenses" aria-label="Tab lisensi profesional">
+          </Tab>
+          <Tab value="licenses" aria-label="Tab lisensi profesional">
             <IconLicense className="h-4 w-4 sm:mr-2" aria-hidden="true" />
             <span className="hidden sm:inline">Lisensi</span>
             <span className="text-xs sm:hidden">Lisensi</span>
-          </TabsTrigger>
+          </Tab>
         </TabsList>
 
         {/* Personal Information Tab */}

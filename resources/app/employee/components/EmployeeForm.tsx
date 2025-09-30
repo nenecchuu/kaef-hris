@@ -15,13 +15,7 @@ import { SelectJobPosition } from "@src/components/select-job-position";
 import { Button } from "@src/ui/button";
 import { Label } from "@src/ui/field";
 import { Input } from "@src/ui/input";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@src/ui/select";
+import { Select, SelectItem } from "@src/ui/select";
 import { Textarea } from "@src/ui/textarea";
 
 import { EMPLOYMENT_STATUS_LABELS, EMPLOYMENT_TYPE_LABELS } from "../config";

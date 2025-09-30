@@ -23,8 +23,6 @@ import { Header, Title } from "@src/ui/page";
 import { View } from "@src/ui/view";
 
 import { EmployeeCard } from "../components/EmployeeCard";
-import { useRecordSearchParams } from '@src/hooks/use-record';
-import { ButtonLink } from '@src/ui/button';
 import { EmployeeSearch } from "../components/EmployeeSearch";
 import { DEFAULT_PER_PAGE } from "../config";
 import { useEmployees } from "../hooks";

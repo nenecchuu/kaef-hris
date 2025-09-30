@@ -11,13 +11,7 @@ import { SelectDivision } from "@src/components/select-division/select-division"
 import { SelectJobPosition } from "@src/components/select-job-position";
 import { Button } from "@src/ui/button";
 import { Label } from "@src/ui/field";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@src/ui/select";
+import { Select, SelectItem } from "@src/ui/select";
 
 import { EMPLOYMENT_STATUS_LABELS } from "../config";
 import type { EmploymentStatus } from "../types";
@@ -57,22 +51,19 @@ export function EmployeeFilters({
       <div className="min-w-[200px]">
         <Label htmlFor="status-filter">Status Kepegawaian</Label>
         <Select
+          id="status-filter"
+          placeholder="Semua Status"
           value={statusKepegawaian || ""}
           onValueChange={(value) =>
             onStatusChange(value ? (value as EmploymentStatus) : undefined)
           }
         >
-          <SelectTrigger id="status-filter">
-            <SelectValue placeholder="Semua Status" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="">Semua Status</SelectItem>
-            {Object.entries(EMPLOYMENT_STATUS_LABELS).map(([value, label]) => (
-              <SelectItem key={value} value={value}>
-                {label}
-              </SelectItem>
-            ))}
-          </SelectContent>
+          <SelectItem value="">Semua Status</SelectItem>
+          {Object.entries(EMPLOYMENT_STATUS_LABELS).map(([value, label]) => (
+            <SelectItem key={value} value={value}>
+              {label}
+            </SelectItem>
+          ))}
         </Select>
       </div>
 

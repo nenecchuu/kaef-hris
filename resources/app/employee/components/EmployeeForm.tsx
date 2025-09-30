@@ -356,21 +356,18 @@ export function EmployeeForm({
           <div>
             <Label htmlFor="status_kepegawaian">Status Kepegawaian *</Label>
             <Select
+              id="status_kepegawaian"
+              placeholder="Pilih status"
               value={statusKepegawaian}
               onValueChange={(value) => setValue("status_kepegawaian", value)}
             >
-              <SelectTrigger id="status_kepegawaian">
-                <SelectValue placeholder="Pilih status" />
-              </SelectTrigger>
-              <SelectContent>
-                {Object.entries(EMPLOYMENT_STATUS_LABELS).map(
-                  ([value, label]) => (
-                    <SelectItem key={value} value={value}>
-                      {label}
-                    </SelectItem>
-                  ),
-                )}
-              </SelectContent>
+              {Object.entries(EMPLOYMENT_STATUS_LABELS).map(
+                ([value, label]) => (
+                  <SelectItem key={value} value={value}>
+                    {label}
+                  </SelectItem>
+                ),
+              )}
             </Select>
             {errors.status_kepegawaian && (
               <p className="mt-1 text-sm text-red-600">
@@ -382,21 +379,18 @@ export function EmployeeForm({
           <div>
             <Label htmlFor="jenis_kepegawaian">Jenis Kepegawaian *</Label>
             <Select
+              id="jenis_kepegawaian"
+              placeholder="Pilih jenis"
               value={jenisKepegawaian}
               onValueChange={(value) => setValue("jenis_kepegawaian", value)}
             >
-              <SelectTrigger id="jenis_kepegawaian">
-                <SelectValue placeholder="Pilih jenis" />
-              </SelectTrigger>
-              <SelectContent>
-                {Object.entries(EMPLOYMENT_TYPE_LABELS).map(
-                  ([value, label]) => (
-                    <SelectItem key={value} value={value}>
-                      {label}
-                    </SelectItem>
-                  ),
-                )}
-              </SelectContent>
+              {Object.entries(EMPLOYMENT_TYPE_LABELS).map(
+                ([value, label]) => (
+                  <SelectItem key={value} value={value}>
+                    {label}
+                  </SelectItem>
+                ),
+              )}
             </Select>
             {errors.jenis_kepegawaian && (
               <p className="mt-1 text-sm text-red-600">

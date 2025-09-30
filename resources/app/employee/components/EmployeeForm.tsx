@@ -116,6 +116,12 @@ export function EmployeeForm({
   const statusKepegawaian = watch("status_kepegawaian");
   const jenisKepegawaian = watch("jenis_kepegawaian");
 
+  // Register divisi_id and jabatan_id manually since SelectDivision/SelectJobPosition don't use register
+  React.useEffect(() => {
+    register("divisi_id");
+    register("jabatan_id");
+  }, [register]);
+
   const handleFormSubmit = (data: EmployeeFormData) => {
     if (mode === "edit" && employee) {
       const updateData: UpdateEmployeeData = {
@@ -156,7 +162,12 @@ export function EmployeeForm({
   };
 
   return (
-    <form onSubmit={handleSubmit(handleFormSubmit)} className="space-y-6">
+    <form
+      onSubmit={(e) => {
+        void handleSubmit(handleFormSubmit)(e);
+      }}
+      className="space-y-6"
+    >
       {/* Photo Upload Section */}
       <div className="bg-white rounded-lg border p-6 shadow-sm">
         <h3 className="mb-4 text-lg font-semibold">Foto Karyawan</h3>
@@ -384,13 +395,11 @@ export function EmployeeForm({
               value={jenisKepegawaian}
               onValueChange={(value) => setValue("jenis_kepegawaian", value)}
             >
-              {Object.entries(EMPLOYMENT_TYPE_LABELS).map(
-                ([value, label]) => (
-                  <SelectItem key={value} value={value}>
-                    {label}
-                  </SelectItem>
-                ),
-              )}
+              {Object.entries(EMPLOYMENT_TYPE_LABELS).map(([value, label]) => (
+                <SelectItem key={value} value={value}>
+                  {label}
+                </SelectItem>
+              ))}
             </Select>
             {errors.jenis_kepegawaian && (
               <p className="mt-1 text-sm text-red-600">
@@ -402,8 +411,11 @@ export function EmployeeForm({
           <div>
             <Label htmlFor="divisi_id">Divisi *</Label>
             <SelectDivision
-              value={divisiId}
-              onChange={(value) => setValue("divisi_id", value || 0)}
+              value={divisiId?.toString()}
+              onValueChange={(option) => {
+                const value = option ? Number(option.value) : undefined;
+                setValue("divisi_id", value || 0, { shouldValidate: true });
+              }}
               placeholder="Pilih divisi"
             />
             {errors.divisi_id && (
@@ -416,8 +428,11 @@ export function EmployeeForm({
           <div>
             <Label htmlFor="jabatan_id">Jabatan *</Label>
             <SelectJobPosition
-              value={jabatanId}
-              onChange={(value) => setValue("jabatan_id", value || 0)}
+              value={jabatanId?.toString()}
+              onValueChange={(option) => {
+                const value = option ? Number(option.value) : undefined;
+                setValue("jabatan_id", value || 0, { shouldValidate: true });
+              }}
               placeholder="Pilih jabatan"
             />
             {errors.jabatan_id && (

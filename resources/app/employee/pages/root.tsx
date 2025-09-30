@@ -24,6 +24,7 @@ import { View } from "@src/ui/view";
 
 import { EmployeeCard } from "../components/EmployeeCard";
 import { EmployeeFilters } from "../components/EmployeeFilters";
+import { EmployeeList } from "../components/EmployeeList";
 import { EmployeeSearch } from "../components/EmployeeSearch";
 import { DEFAULT_PER_PAGE } from "../config";
 import { useEmployees } from "../hooks";
@@ -40,7 +41,12 @@ export default function EmployeeIndexPage() {
   // Build filters for API
   const apiFilters: FilterType = {
     search: filter.search as string | undefined,
-    status_kepegawaian: filter.status_kepegawaian as any,
+    status_kepegawaian: filter.status_kepegawaian as
+      | "active"
+      | "probation"
+      | "suspended"
+      | "terminated"
+      | undefined,
     divisi_id: filter.divisi_id ? Number(filter.divisi_id) : undefined,
     jabatan_id: filter.jabatan_id ? Number(filter.jabatan_id) : undefined,
     page: filter.page ? Number(filter.page) : 1,
@@ -173,7 +179,14 @@ export default function EmployeeIndexPage() {
       >
         <div className="mb-4">
           <EmployeeFilters
-            statusKepegawaian={filter.status_kepegawaian as any}
+            statusKepegawaian={
+              filter.status_kepegawaian as
+                | "active"
+                | "probation"
+                | "suspended"
+                | "terminated"
+                | undefined
+            }
             divisiId={filter.divisi_id ? Number(filter.divisi_id) : undefined}
             jabatanId={
               filter.jabatan_id ? Number(filter.jabatan_id) : undefined

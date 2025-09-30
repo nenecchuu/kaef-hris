@@ -30,7 +30,7 @@ class EmployeeController extends Controller
     /**
      * Display a listing of employees with pagination and filtering
      */
-    public function index(Request $request): AnonymousResourceCollection
+    public function index(Request $request)
     {
         $filters = [
             'search' => $request->get('search'),

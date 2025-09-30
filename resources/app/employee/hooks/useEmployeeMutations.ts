@@ -4,34 +4,35 @@
  * TanStack Query mutation hooks for create, update, delete operations
  */
 
-import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { employeeKeys, EMPLOYEE_API } from '../config';
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+
+import { EMPLOYEE_API, employeeKeys } from "../config";
 import type {
-  Employee,
-  CreateEmployeeData,
-  UpdateEmployeeData,
   ApiResponse,
-} from '../types';
+  CreateEmployeeData,
+  Employee,
+  UpdateEmployeeData,
+} from "../types";
 
 /**
  * Create new employee
  */
 async function createEmployee(
-  data: CreateEmployeeData
+  data: CreateEmployeeData,
 ): Promise<ApiResponse<Employee>> {
   const response = await fetch(EMPLOYEE_API.base, {
-    method: 'POST',
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json',
-      'Accept': 'application/json',
+      "Content-Type": "application/json",
+      Accept: "application/json",
     },
-    credentials: 'include',
+    credentials: "include",
     body: JSON.stringify(data),
   });
 
   if (!response.ok) {
     const errorData = await response.json();
-    throw new Error(errorData.message || 'Gagal membuat karyawan baru');
+    throw new Error(errorData.message || "Gagal membuat karyawan baru");
   }
 
   return response.json();
@@ -41,23 +42,23 @@ async function createEmployee(
  * Update existing employee
  */
 async function updateEmployee(
-  data: UpdateEmployeeData
+  data: UpdateEmployeeData,
 ): Promise<ApiResponse<Employee>> {
   const { id, ...updateData } = data;
 
   const response = await fetch(EMPLOYEE_API.detail(id), {
-    method: 'PUT',
+    method: "PUT",
     headers: {
-      'Content-Type': 'application/json',
-      'Accept': 'application/json',
+      "Content-Type": "application/json",
+      Accept: "application/json",
     },
-    credentials: 'include',
+    credentials: "include",
     body: JSON.stringify(updateData),
   });
 
   if (!response.ok) {
     const errorData = await response.json();
-    throw new Error(errorData.message || 'Gagal memperbarui data karyawan');
+    throw new Error(errorData.message || "Gagal memperbarui data karyawan");
   }
 
   return response.json();
@@ -68,25 +69,23 @@ async function updateEmployee(
  */
 async function deleteEmployee(id: number): Promise<ApiResponse<void>> {
   const response = await fetch(EMPLOYEE_API.detail(id), {
-    method: 'DELETE',
+    method: "DELETE",
     headers: {
-      'Accept': 'application/json',
+      Accept: "application/json",
     },
-    credentials: 'include',
+    credentials: "include",
   });
 
   if (!response.ok) {
     const errorData = await response.json();
-    throw new Error(
-      errorData.message || 'Gagal menghapus karyawan'
-    );
+    throw new Error(errorData.message || "Gagal menghapus karyawan");
   }
 
   // 204 No Content response
   if (response.status === 204) {
     return {
-      status: 'success',
-      message: 'Karyawan berhasil dihapus',
+      status: "success",
+      message: "Karyawan berhasil dihapus",
       data: undefined as any,
     };
   }

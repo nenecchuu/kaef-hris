@@ -4,16 +4,17 @@
  * Page component for displaying employee detail
  */
 
-import React from 'react';
-import { IconArrowLeft } from '@tabler/icons-react';
-import { useParams, useNavigate, Link } from 'react-router-dom';
+import React from "react";
+import { IconArrowLeft } from "@tabler/icons-react";
+import { useNavigate, useParams } from "react-router-dom";
 
-import { useEmployee } from '../hooks';
-import { EmployeeDetail } from '../components/EmployeeDetail';
-import { LoadingFallback } from '@src/components/fallbacks';
-import { Button, ButtonLink } from '@src/ui/button';
-import { Header, Title } from '@src/ui/page';
-import { useAuth } from '@src/lib/auth';
+import { LoadingFallback } from "@src/components/fallbacks";
+import { useAuth } from "@src/lib/auth";
+import { Button, ButtonLink } from "@src/ui/button";
+import { Header, Title } from "@src/ui/page";
+
+import { EmployeeDetail } from "../components/EmployeeDetail";
+import { useEmployee } from "../hooks";
 
 export default function EmployeeDetailPage() {
   const { id } = useParams<{ id: string }>();
@@ -35,7 +36,9 @@ export default function EmployeeDetailPage() {
       <div className="flex min-h-[60vh] items-center justify-center">
         <div className="text-center">
           <h2 className="text-2xl font-bold text-gray-900">
-            {error?.message.includes('tidak ditemukan') ? 'Karyawan Tidak Ditemukan' : 'Terjadi Kesalahan'}
+            {error?.message.includes("tidak ditemukan")
+              ? "Karyawan Tidak Ditemukan"
+              : "Terjadi Kesalahan"}
           </h2>
           <p className="mt-2 text-gray-600">{error?.message}</p>
           <ButtonLink to="/employees" className="mt-4" variant="default">
@@ -51,7 +54,9 @@ export default function EmployeeDetailPage() {
     return (
       <div className="flex min-h-[60vh] items-center justify-center">
         <div className="text-center">
-          <h2 className="text-2xl font-bold text-gray-900">Data Tidak Tersedia</h2>
+          <h2 className="text-2xl font-bold text-gray-900">
+            Data Tidak Tersedia
+          </h2>
           <ButtonLink to="/employees" className="mt-4" variant="default">
             <IconArrowLeft className="h-4 w-4" />
             Kembali ke Daftar Karyawan
@@ -70,7 +75,7 @@ export default function EmployeeDetailPage() {
           <Button
             variant="ghost"
             size="sm"
-            onClick={() => navigate('/employees')}
+            onClick={() => navigate("/employees")}
             className="gap-2"
           >
             <IconArrowLeft className="h-4 w-4" />

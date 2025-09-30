@@ -4,8 +4,8 @@
  * Barrel file for clean imports
  */
 
-export { useEmployees, fetchEmployees } from './useEmployees';
-export { useEmployee, fetchEmployee } from './useEmployee';
+export { useEmployees, fetchEmployees } from "./useEmployees";
+export { useEmployee, fetchEmployee } from "./useEmployee";
 export {
   useCreateEmployee,
   useUpdateEmployee,
@@ -13,4 +13,4 @@ export {
   createEmployee,
   updateEmployee,
   deleteEmployee,
-} from './useEmployeeMutations';
+} from "./useEmployeeMutations";

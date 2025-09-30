@@ -20,10 +20,18 @@ import { MainLayout } from "@src/components/main-layout";
 import { MfaGuard } from "@src/components/mfa-guard";
 
 // Lazy load employee module for code splitting
-const EmployeeIndexPage = React.lazy(() => import("@src/app/employee/pages/root"));
-const EmployeeDetailPage = React.lazy(() => import("@src/app/employee/pages/detail"));
-const EmployeeCreatePage = React.lazy(() => import("@src/app/employee/pages/new"));
-const EmployeeEditPage = React.lazy(() => import("@src/app/employee/pages/edit"));
+const EmployeeIndexPage = React.lazy(
+  () => import("@src/app/employee/pages/root"),
+);
+const EmployeeDetailPage = React.lazy(
+  () => import("@src/app/employee/pages/detail"),
+);
+const EmployeeCreatePage = React.lazy(
+  () => import("@src/app/employee/pages/new"),
+);
+const EmployeeEditPage = React.lazy(
+  () => import("@src/app/employee/pages/edit"),
+);
 
 export const userRouter = createBrowserRouter(
   createRoutesFromElements(
@@ -32,56 +40,57 @@ export const userRouter = createBrowserRouter(
       element={<MainLayout app="user" />}
       errorElement={<RootFallback />}
     >
-    <Route element={<MfaGuard />}>
-      <Route errorElement={<RootFallback />}>
-        <Route index={true} element={<HomeRootPage />} />
-        <Route element={<AdminGuard requireAdminAccess={true} />}>
-          <Route path="employees" key="employees">
-            <Route index={true} element={<EmployeeIndexPage />} />
-            <Route path="new" element={<EmployeeCreatePage />} />
-            <Route path=":id" element={<EmployeeDetailPage />} />
-            <Route path=":id/edit" element={<EmployeeEditPage />} />
-          </Route>
-          <Route path="users" key="users">
-            <Route index={true} element={<UserRootPage key="users" />} />
-            <Route path="new" element={<UserNewPage />} />
-            <Route path=":userId" element={<UserView />}>
-              <Route index={true} element={<UserDetailsPage />} />
-              <Route path="edit" element={<UserEditPage />} />
+      <Route element={<MfaGuard />}>
+        <Route errorElement={<RootFallback />}>
+          <Route index={true} element={<HomeRootPage />} />
+          <Route element={<AdminGuard requireAdminAccess={true} />}>
+            <Route path="employees" key="employees">
+              <Route index={true} element={<EmployeeIndexPage />} />
+              <Route path="new" element={<EmployeeCreatePage />} />
+              <Route path=":id" element={<EmployeeDetailPage />} />
+              <Route path=":id/edit" element={<EmployeeEditPage />} />
             </Route>
+            <Route path="users" key="users">
+              <Route index={true} element={<UserRootPage key="users" />} />
+              <Route path="new" element={<UserNewPage />} />
+              <Route path=":userId" element={<UserView />}>
+                <Route index={true} element={<UserDetailsPage />} />
+                <Route path="edit" element={<UserEditPage />} />
+              </Route>
+            </Route>
+            <Route path="blocked-users" key="blocked-users">
+              <Route
+                index={true}
+                element={
+                  <UserRootPage isBlockedUserPage={true} key="blocked-users" />
+                }
+              />
+              <Route path="new" element={<UserNewPage />} />
+              <Route path=":userId" element={<UserView />}>
+                <Route index={true} element={<UserDetailsPage />} />
+                <Route path="edit" element={<UserEditPage />} />
+              </Route>
+            </Route>
+            <Route
+              path="password-complexity"
+              element={<PasswordComplexityEditPage />}
+            />
+            <Route path="audit-trail" element={<AuditTrailRootPage />} />
           </Route>
-          <Route path="blocked-users" key="blocked-users">
+          <Route path="profile" element={<UserView isPageProfile={true} />}>
             <Route
               index={true}
-              element={
-                <UserRootPage isBlockedUserPage={true} key="blocked-users" />
-              }
+              element={<UserDetailsPage isPageProfile={true} />}
             />
-            <Route path="new" element={<UserNewPage />} />
-            <Route path=":userId" element={<UserView />}>
-              <Route index={true} element={<UserDetailsPage />} />
-              <Route path="edit" element={<UserEditPage />} />
-            </Route>
+            <Route path="bind-mfa" element={<UserBindMfaPage />} />
+            <Route
+              path="edit"
+              element={<UserEditPage isPageProfile={true} />}
+            />
           </Route>
-          <Route
-            path="password-complexity"
-            element={<PasswordComplexityEditPage />}
-          />
-          <Route path="audit-trail" element={<AuditTrailRootPage />} />
+          <Route path="*" element={<NotFoundFallback />} />
         </Route>
-        <Route path="profile" element={<UserView isPageProfile={true} />}>
-          <Route
-            index={true}
-            element={<UserDetailsPage isPageProfile={true} />}
-          />
-          <Route path="bind-mfa" element={<UserBindMfaPage />} />
-          <Route path="edit" element={<UserEditPage isPageProfile={true} />} />
-        </Route>
-        <Route path="*" element={<NotFoundFallback />} />
       </Route>
-    </Route>
     </Route>,
   ),
 );
-
-

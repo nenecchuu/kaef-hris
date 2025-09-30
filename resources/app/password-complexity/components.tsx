@@ -55,7 +55,7 @@ export function PasswordComplexityForm({
         if (!body.get("is_password_reuse_limit"))
           body.set("is_password_reuse_limit", "0");
         if (!body.get("password_expired_period"))
-            body.set("password_expired_period", "0");
+          body.set("password_expired_period", "0");
         if (!body.get("use_capital_letter"))
           body.set("use_capital_letter", "0");
         if (!body.get("use_small_letter")) body.set("use_small_letter", "0");
@@ -196,21 +196,21 @@ export function PasswordComplexityForm({
               <ErrorMessage>{error?.get("use_symbol")}</ErrorMessage>
             </CheckboxField>
             <Field>
-                <Label withAsterisk={true}>Password Expired (Months)</Label>
-                <InputGroup>
-                    <Input
-                    type="number"
-                    name="password_expired_period"
-                    defaultValue={
-                        paswordComplexity?.password_expired_period ?? undefined
-                    }
-                    placeholder="Masukkan Password Expired"
-                    isInvalid={error?.has("password_expired_period")}
-                    />
-                </InputGroup>
-                <ErrorMessage>
-                    {error?.get("password_expired_period")}
-                </ErrorMessage>
+              <Label withAsterisk={true}>Password Expired (Months)</Label>
+              <InputGroup>
+                <Input
+                  type="number"
+                  name="password_expired_period"
+                  defaultValue={
+                    paswordComplexity?.password_expired_period ?? undefined
+                  }
+                  placeholder="Masukkan Password Expired"
+                  isInvalid={error?.has("password_expired_period")}
+                />
+              </InputGroup>
+              <ErrorMessage>
+                {error?.get("password_expired_period")}
+              </ErrorMessage>
             </Field>
           </div>
         </>

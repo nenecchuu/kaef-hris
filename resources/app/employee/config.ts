@@ -4,17 +4,18 @@
  * Query keys factory and module constants
  */
 
-import type { EmployeeFilters, EmployeeQueryKeys } from './types';
+import type { EmployeeFilters, EmployeeQueryKeys } from "./types";
 
 /**
  * TanStack Query key factory for employee queries
  * Follows existing pattern from user module
  */
 export const employeeKeys: EmployeeQueryKeys = {
-  all: ['employees'] as const,
-  lists: () => [...employeeKeys.all, 'list'] as const,
-  list: (filters: EmployeeFilters) => [...employeeKeys.lists(), filters] as const,
-  details: () => [...employeeKeys.all, 'detail'] as const,
+  all: ["employees"] as const,
+  lists: () => [...employeeKeys.all, "list"] as const,
+  list: (filters: EmployeeFilters) =>
+    [...employeeKeys.lists(), filters] as const,
+  details: () => [...employeeKeys.all, "detail"] as const,
   detail: (id: number) => [...employeeKeys.details(), id] as const,
 };
 
@@ -22,7 +23,7 @@ export const employeeKeys: EmployeeQueryKeys = {
  * API endpoints
  */
 export const EMPLOYEE_API = {
-  base: '/api/employees',
+  base: "/api/employees",
   detail: (id: number) => `/api/employees/${id}`,
   education: (id: number) => `/api/employees/${id}/pendidikan`,
   certifications: (id: number) => `/api/employees/${id}/sertifikasi`,
@@ -44,21 +45,21 @@ export const SEARCH_DEBOUNCE_MS = 500;
  * Employment status labels in Indonesian
  */
 export const EMPLOYMENT_STATUS_LABELS = {
-  active: 'Aktif',
-  inactive: 'Tidak Aktif',
-  terminated: 'Berhenti',
-  on_leave: 'Cuti',
-  probation: 'Masa Percobaan',
-  contract: 'Kontrak',
-  suspended: 'Ditangguhkan',
+  active: "Aktif",
+  inactive: "Tidak Aktif",
+  terminated: "Berhenti",
+  on_leave: "Cuti",
+  probation: "Masa Percobaan",
+  contract: "Kontrak",
+  suspended: "Ditangguhkan",
 } as const;
 
 /**
  * Employment type labels in Indonesian
  */
 export const EMPLOYMENT_TYPE_LABELS = {
-  permanent: 'Tetap',
-  contract: 'Kontrak',
-  intern: 'Magang',
-  consultant: 'Konsultan',
+  permanent: "Tetap",
+  contract: "Kontrak",
+  intern: "Magang",
+  consultant: "Konsultan",
 } as const;

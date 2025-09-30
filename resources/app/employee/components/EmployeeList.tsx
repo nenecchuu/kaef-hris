@@ -5,28 +5,29 @@
  * Follows existing RecordTable pattern from user module
  */
 
-import React from 'react';
+import React from "react";
 import {
   IconDotsVertical,
   IconEdit,
   IconEye,
   IconTrash,
-} from '@tabler/icons-react';
-import type { ColumnDef } from '@tanstack/react-table';
-import { Link } from 'react-router-dom';
+} from "@tabler/icons-react";
+import type { ColumnDef } from "@tanstack/react-table";
+import { Link } from "react-router-dom";
 
-import type { Employee } from '../types';
-import { EMPLOYMENT_STATUS_LABELS } from '../config';
-import { RecordTable, TableHeadSort } from '@src/components/record';
-import { Avatar, AvatarFallback, AvatarImage } from '@src/ui/avatar';
-import { Button } from '@src/ui/button';
+import { RecordTable, TableHeadSort } from "@src/components/record";
+import { Avatar, AvatarFallback, AvatarImage } from "@src/ui/avatar";
+import { Button } from "@src/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@src/ui/dropdown-menu';
-import { TableCell, TableHead } from '@src/ui/table';
+} from "@src/ui/dropdown-menu";
+import { TableCell, TableHead } from "@src/ui/table";
+
+import { EMPLOYMENT_STATUS_LABELS } from "../config";
+import type { Employee } from "../types";
 
 interface EmployeeListProps {
   employees: Employee[];
@@ -42,19 +43,19 @@ interface EmployeeListProps {
 const employeeColumns = (
   from: number,
   onDelete?: (employee: Employee) => void,
-  canEdit: boolean = true,
-  canDelete: boolean = true
+  canEdit = true,
+  canDelete = true,
 ): ColumnDef<Employee>[] => {
   const columns: ColumnDef<Employee>[] = [
     {
-      id: 'no',
+      id: "no",
       cell: (info) => (
         <TableCell data-numeric="">{info.row.index + from}</TableCell>
       ),
       header: () => <TableHead data-slot="no">No</TableHead>,
     },
     {
-      accessorKey: 'foto_url',
+      accessorKey: "foto_url",
       cell: (info) => (
         <TableCell>
           <Avatar className="mx-auto rounded-full">
@@ -71,7 +72,7 @@ const employeeColumns = (
       header: () => <TableHead className="w-16">Foto</TableHead>,
     },
     {
-      accessorKey: 'nomor_karyawan',
+      accessorKey: "nomor_karyawan",
       cell: (info) => (
         <TableCell>
           <Link
@@ -87,44 +88,44 @@ const employeeColumns = (
       ),
     },
     {
-      accessorKey: 'nama_lengkap',
+      accessorKey: "nama_lengkap",
       cell: (info) => <TableCell>{info.row.original.nama_lengkap}</TableCell>,
       header: ({ column }) => (
         <TableHeadSort column={column}>Nama Lengkap</TableHeadSort>
       ),
     },
     {
-      accessorKey: 'email',
+      accessorKey: "email",
       cell: (info) => <TableCell>{info.row.original.email}</TableCell>,
       header: ({ column }) => (
         <TableHeadSort column={column}>Email</TableHeadSort>
       ),
     },
     {
-      accessorKey: 'divisi',
+      accessorKey: "divisi",
       cell: (info) => <TableCell>{info.row.original.divisi.nama}</TableCell>,
       header: ({ column }) => (
         <TableHeadSort column={column}>Divisi</TableHeadSort>
       ),
     },
     {
-      accessorKey: 'jabatan',
+      accessorKey: "jabatan",
       cell: (info) => <TableCell>{info.row.original.jabatan.nama}</TableCell>,
       header: ({ column }) => (
         <TableHeadSort column={column}>Jabatan</TableHeadSort>
       ),
     },
     {
-      accessorKey: 'status_kepegawaian',
+      accessorKey: "status_kepegawaian",
       cell: (info) => (
         <TableCell>
           <span
             className={`inline-flex items-center rounded-full px-2 py-1 text-xs font-medium ${
-              info.row.original.status_kepegawaian === 'active'
-                ? 'bg-green-100 text-green-700'
-                : info.row.original.status_kepegawaian === 'terminated'
-                  ? 'bg-red-100 text-red-700'
-                  : 'bg-gray-100 text-gray-700'
+              info.row.original.status_kepegawaian === "active"
+                ? "bg-green-100 text-green-700"
+                : info.row.original.status_kepegawaian === "terminated"
+                  ? "bg-red-100 text-red-700"
+                  : "bg-gray-100 text-gray-700"
             }`}
           >
             {EMPLOYMENT_STATUS_LABELS[info.row.original.status_kepegawaian]}
@@ -140,11 +141,11 @@ const employeeColumns = (
   // Add actions column if user has edit or delete permissions
   if (canEdit || canDelete) {
     columns.push({
-      id: 'actions',
+      id: "actions",
       cell: (info) => (
         <TableCell>
           <DropdownMenu>
-            <DropdownMenuTrigger asChild>
+            <DropdownMenuTrigger asChild={true}>
               <Button
                 variant="ghost"
                 size="sm"
@@ -156,14 +157,14 @@ const employeeColumns = (
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-              <DropdownMenuItem asChild>
+              <DropdownMenuItem asChild={true}>
                 <Link to={`/employees/${info.row.original.id}`}>
                   <IconEye className="mr-2 h-4 w-4" />
                   Lihat Detail
                 </Link>
               </DropdownMenuItem>
               {canEdit && (
-                <DropdownMenuItem asChild>
+                <DropdownMenuItem asChild={true}>
                   <Link to={`/employees/${info.row.original.id}/edit`}>
                     <IconEdit className="mr-2 h-4 w-4" />
                     Edit
@@ -202,7 +203,7 @@ export function EmployeeList({
 }: EmployeeListProps) {
   const columns = React.useMemo(
     () => employeeColumns(from, onDelete, canEdit, canDelete),
-    [from, onDelete, canEdit, canDelete]
+    [from, onDelete, canEdit, canDelete],
   );
 
   return <RecordTable columns={columns} data={employees} />;

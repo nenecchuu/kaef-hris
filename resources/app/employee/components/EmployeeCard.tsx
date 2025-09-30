@@ -5,29 +5,30 @@
  * Used when viewport is too small for table display
  */
 
-import React from 'react';
+import React from "react";
 import {
+  IconBriefcase,
+  IconBuilding,
   IconDotsVertical,
   IconEdit,
   IconEye,
-  IconTrash,
   IconMail,
   IconPhone,
-  IconBriefcase,
-  IconBuilding,
-} from '@tabler/icons-react';
-import { Link } from 'react-router-dom';
+  IconTrash,
+} from "@tabler/icons-react";
+import { Link } from "react-router-dom";
 
-import type { Employee } from '../types';
-import { EMPLOYMENT_STATUS_LABELS } from '../config';
-import { Avatar, AvatarFallback, AvatarImage } from '@src/ui/avatar';
-import { Button } from '@src/ui/button';
+import { Avatar, AvatarFallback, AvatarImage } from "@src/ui/avatar";
+import { Button } from "@src/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@src/ui/dropdown-menu';
+} from "@src/ui/dropdown-menu";
+
+import { EMPLOYMENT_STATUS_LABELS } from "../config";
+import type { Employee } from "../types";
 
 interface EmployeeCardProps {
   employee: Employee;
@@ -47,13 +48,13 @@ export function EmployeeCard({
 }: EmployeeCardProps) {
   return (
     <div
-      className="rounded-lg border bg-white p-4 shadow-sm hover:shadow-md transition-shadow"
+      className="bg-white rounded-lg border p-4 shadow-sm transition-shadow hover:shadow-md"
       role="article"
       aria-label={`Kartu karyawan ${employee.nama_lengkap}`}
     >
       {/* Header with Avatar and Actions */}
       <div className="flex items-start justify-between gap-4">
-        <div className="flex items-start gap-3 flex-1 min-w-0">
+        <div className="flex min-w-0 flex-1 items-start gap-3">
           <Avatar className="h-12 w-12 flex-shrink-0">
             <AvatarImage
               src={employee.foto_url || undefined}
@@ -64,14 +65,14 @@ export function EmployeeCard({
             </AvatarFallback>
           </Avatar>
 
-          <div className="flex-1 min-w-0">
+          <div className="min-w-0 flex-1">
             <Link
               to={`/employees/${employee.id}`}
-              className="block font-semibold text-gray-900 hover:text-blue-600 truncate"
+              className="block truncate font-semibold text-gray-900 hover:text-blue-600"
             >
               {employee.nama_lengkap}
             </Link>
-            <p className="text-sm text-gray-600 truncate">
+            <p className="truncate text-sm text-gray-600">
               {employee.nomor_karyawan}
             </p>
           </div>
@@ -80,11 +81,11 @@ export function EmployeeCard({
         {/* Actions Dropdown */}
         {(canEdit || canDelete) && (
           <DropdownMenu>
-            <DropdownMenuTrigger asChild>
+            <DropdownMenuTrigger asChild={true}>
               <Button
                 variant="ghost"
                 size="sm"
-                className="h-8 w-8 p-0 flex-shrink-0"
+                className="h-8 w-8 flex-shrink-0 p-0"
                 aria-label={`Menu aksi untuk ${employee.nama_lengkap}`}
               >
                 <span className="sr-only">Buka menu aksi</span>
@@ -92,14 +93,14 @@ export function EmployeeCard({
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-              <DropdownMenuItem asChild>
+              <DropdownMenuItem asChild={true}>
                 <Link to={`/employees/${employee.id}`}>
                   <IconEye className="mr-2 h-4 w-4" aria-hidden="true" />
                   Lihat Detail
                 </Link>
               </DropdownMenuItem>
               {canEdit && (
-                <DropdownMenuItem asChild>
+                <DropdownMenuItem asChild={true}>
                   <Link to={`/employees/${employee.id}/edit`}>
                     <IconEdit className="mr-2 h-4 w-4" aria-hidden="true" />
                     Edit
@@ -124,11 +125,11 @@ export function EmployeeCard({
       <div className="mt-3">
         <span
           className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium ${
-            employee.status_kepegawaian === 'active'
-              ? 'bg-green-100 text-green-700'
-              : employee.status_kepegawaian === 'terminated'
-                ? 'bg-red-100 text-red-700'
-                : 'bg-gray-100 text-gray-700'
+            employee.status_kepegawaian === "active"
+              ? "bg-green-100 text-green-700"
+              : employee.status_kepegawaian === "terminated"
+                ? "bg-red-100 text-red-700"
+                : "bg-gray-100 text-gray-700"
           }`}
           role="status"
           aria-label={`Status: ${EMPLOYMENT_STATUS_LABELS[employee.status_kepegawaian]}`}

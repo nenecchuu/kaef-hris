@@ -4,21 +4,23 @@
  * Filter controls for employee list
  */
 
-import React from 'react';
-import { IconFilter, IconX } from '@tabler/icons-react';
-import { SelectDivision } from '@src/components/select-division/select-division';
-import { SelectJobPosition } from '@src/components/select-job-position';
-import { Button } from '@src/ui/button';
-import { Label } from '@src/ui/field';
+import React from "react";
+import { IconFilter, IconX } from "@tabler/icons-react";
+
+import { SelectDivision } from "@src/components/select-division/select-division";
+import { SelectJobPosition } from "@src/components/select-job-position";
+import { Button } from "@src/ui/button";
+import { Label } from "@src/ui/field";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@src/ui/select';
-import type { EmploymentStatus } from '../types';
-import { EMPLOYMENT_STATUS_LABELS } from '../config';
+} from "@src/ui/select";
+
+import { EMPLOYMENT_STATUS_LABELS } from "../config";
+import type { EmploymentStatus } from "../types";
 
 interface EmployeeFiltersProps {
   statusKepegawaian?: EmploymentStatus;
@@ -55,7 +57,7 @@ export function EmployeeFilters({
       <div className="min-w-[200px]">
         <Label htmlFor="status-filter">Status Kepegawaian</Label>
         <Select
-          value={statusKepegawaian || ''}
+          value={statusKepegawaian || ""}
           onValueChange={(value) =>
             onStatusChange(value ? (value as EmploymentStatus) : undefined)
           }
@@ -81,7 +83,7 @@ export function EmployeeFilters({
           value={divisiId}
           onChange={(value) => onDivisionChange(value)}
           placeholder="Semua Divisi"
-          allowClear
+          allowClear={true}
         />
       </div>
 
@@ -92,7 +94,7 @@ export function EmployeeFilters({
           value={jabatanId}
           onChange={(value) => onJobPositionChange(value)}
           placeholder="Semua Jabatan"
-          allowClear
+          allowClear={true}
         />
       </div>
 

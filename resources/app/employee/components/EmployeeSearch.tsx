@@ -4,8 +4,9 @@
  * Search input with debounce for employee filtering
  */
 
-import React from 'react';
-import { SearchBox } from '@src/components/record';
+import React from "react";
+
+import { SearchBox } from "@src/components/record";
 
 interface EmployeeSearchProps {
   value: string;
@@ -19,14 +20,10 @@ interface EmployeeSearchProps {
 export function EmployeeSearch({
   value,
   onChange,
-  placeholder = 'Cari nama atau nomor karyawan...',
+  placeholder = "Cari nama atau nomor karyawan...",
 }: EmployeeSearchProps) {
   return (
-    <SearchBox
-      value={value}
-      onChange={onChange}
-      placeholder={placeholder}
-    />
+    <SearchBox value={value} onChange={onChange} placeholder={placeholder} />
   );
 }
 

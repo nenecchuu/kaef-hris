@@ -4,41 +4,39 @@
  * Main employee management page with list, search, and filters
  */
 
-import React from 'react';
-import { IconPlus, IconFilter } from '@tabler/icons-react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { IconPlus } from "@tabler/icons-react";
 
-import { useEmployees } from '../hooks';
-import { EmployeeList } from '../components/EmployeeList';
-import { EmployeeCard } from '../components/EmployeeCard';
-import { EmployeeSearch } from '../components/EmployeeSearch';
-import { EmployeeFilters } from '../components/EmployeeFilters';
-import { DEFAULT_PER_PAGE } from '../config';
-import type { EmployeeFilters as FilterType } from '../types';
-import { LoadingFallback } from '@src/components/fallbacks';
+import { LoadingFallback } from "@src/components/fallbacks";
 import {
+  LimitSelector,
   Record,
   RecordInfo,
   RecordPagination,
-  LimitSelector,
-} from '@src/components/record';
-import { useRecord, useRecordSearchParams } from '@src/hooks/use-record';
-import { Button, ButtonLink } from '@src/ui/button';
-import { Header, Title } from '@src/ui/page';
-import { View } from '@src/ui/view';
-import { useAuth } from '@src/lib/auth';
-import { alertToast } from '@src/ui/alert-toast';
-import { useDeleteEmployee } from '../hooks/useEmployeeMutations';
-import {
-  ConfirmDialog,
-  ConfirmRemoval,
-} from '@src/ui/confirm-dialog';
-import type { Employee } from '../types';
+} from "@src/components/record";
+import { useRecordSearchParams } from "@src/hooks/use-record";
+import { useAuth } from "@src/lib/auth";
+import { alertToast } from "@src/ui/alert-toast";
+import { ButtonLink } from "@src/ui/button";
+import { ConfirmDialog, ConfirmRemoval } from "@src/ui/confirm-dialog";
+import { Header, Title } from "@src/ui/page";
+import { View } from "@src/ui/view";
+
+import { EmployeeCard } from "../components/EmployeeCard";
+import { useRecordSearchParams } from '@src/hooks/use-record';
+import { ButtonLink } from '@src/ui/button';
+import { EmployeeSearch } from "../components/EmployeeSearch";
+import { DEFAULT_PER_PAGE } from "../config";
+import { useEmployees } from "../hooks";
+import { useDeleteEmployee } from "../hooks/useEmployeeMutations";
+import type { Employee, EmployeeFilters as FilterType } from "../types";
 
 export default function EmployeeIndexPage() {
   const { user } = useAuth();
   const [filter, setFilter] = useRecordSearchParams();
-  const [deleteEmployee, setDeleteEmployee] = React.useState<Employee | null>(null);
+  const [deleteEmployee, setDeleteEmployee] = React.useState<Employee | null>(
+    null,
+  );
 
   // Build filters for API
   const apiFilters: FilterType = {
@@ -62,12 +60,12 @@ export default function EmployeeIndexPage() {
 
   // Handle search change
   const handleSearchChange = (search: string) => {
-    setFilter({ ...filter, search, page: '1' });
+    setFilter({ ...filter, search, page: "1" });
   };
 
   // Handle status filter change
   const handleStatusChange = (status_kepegawaian?: string) => {
-    setFilter({ ...filter, status_kepegawaian, page: '1' });
+    setFilter({ ...filter, status_kepegawaian, page: "1" });
   };
 
   // Handle division filter change
@@ -75,7 +73,7 @@ export default function EmployeeIndexPage() {
     setFilter({
       ...filter,
       divisi_id: divisi_id?.toString(),
-      page: '1',
+      page: "1",
     });
   };
 
@@ -84,14 +82,14 @@ export default function EmployeeIndexPage() {
     setFilter({
       ...filter,
       jabatan_id: jabatan_id?.toString(),
-      page: '1',
+      page: "1",
     });
   };
 
   // Handle filter reset
   const handleResetFilters = () => {
     setFilter({
-      page: '1',
+      page: "1",
       limit: filter.limit,
     });
   };
@@ -103,17 +101,17 @@ export default function EmployeeIndexPage() {
     handleDelete(deleteEmployee.id, {
       onSuccess: () => {
         alertToast({
-          title: 'Berhasil',
+          title: "Berhasil",
           description: `Karyawan ${deleteEmployee.nama_lengkap} berhasil dihapus`,
-          variant: 'success',
+          variant: "success",
         });
         setDeleteEmployee(null);
       },
       onError: (error) => {
         alertToast({
-          title: 'Gagal menghapus karyawan',
+          title: "Gagal menghapus karyawan",
           description: error.message,
-          variant: 'destructive',
+          variant: "destructive",
         });
       },
     });
@@ -160,7 +158,7 @@ export default function EmployeeIndexPage() {
             <div className="flex w-full flex-col gap-4 lg:flex-row lg:items-end">
               <div className="flex-1">
                 <EmployeeSearch
-                  value={(filter.search as string) || ''}
+                  value={(filter.search as string) || ""}
                   onChange={handleSearchChange}
                 />
               </div>
@@ -178,7 +176,9 @@ export default function EmployeeIndexPage() {
           <EmployeeFilters
             statusKepegawaian={filter.status_kepegawaian as any}
             divisiId={filter.divisi_id ? Number(filter.divisi_id) : undefined}
-            jabatanId={filter.jabatan_id ? Number(filter.jabatan_id) : undefined}
+            jabatanId={
+              filter.jabatan_id ? Number(filter.jabatan_id) : undefined
+            }
             onStatusChange={handleStatusChange}
             onDivisionChange={handleDivisionChange}
             onJobPositionChange={handleJobPositionChange}
@@ -194,9 +194,11 @@ export default function EmployeeIndexPage() {
                   Tidak ada data karyawan
                 </p>
                 <p className="mt-2 text-sm text-gray-500">
-                  {filter.search || filter.status_kepegawaian || filter.divisi_id
-                    ? 'Coba ubah filter pencarian Anda'
-                    : 'Mulai dengan menambahkan karyawan baru'}
+                  {filter.search ||
+                  filter.status_kepegawaian ||
+                  filter.divisi_id
+                    ? "Coba ubah filter pencarian Anda"
+                    : "Mulai dengan menambahkan karyawan baru"}
                 </p>
               </div>
             </div>
@@ -214,7 +216,7 @@ export default function EmployeeIndexPage() {
               </div>
 
               {/* Mobile: Card View (visible on mobile only) */}
-              <div className="block md:hidden space-y-4">
+              <div className="block space-y-4 md:hidden">
                 {employees.map((employee) => (
                   <EmployeeCard
                     key={employee.id}

@@ -102,7 +102,4 @@ export const SupervisorSiteNavigation = pickMenus([
   MENU_PROFILE,
 ]);
 
-export const UserSiteNavigation = pickMenus([
-  MENU_HOME,
-  MENU_PROFILE,
-]);
+export const UserSiteNavigation = pickMenus([MENU_HOME, MENU_PROFILE]);

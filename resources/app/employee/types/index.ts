@@ -21,4 +21,4 @@ export type {
   CreateEmployeeData,
   UpdateEmployeeData,
   EmployeeQueryKeys,
-} from './employee';
+} from "./employee";

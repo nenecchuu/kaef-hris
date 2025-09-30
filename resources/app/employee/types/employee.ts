@@ -7,19 +7,15 @@
 
 // Employee status enums
 export type EmploymentStatus =
-  | 'active'
-  | 'inactive'
-  | 'terminated'
-  | 'on_leave'
-  | 'probation'
-  | 'contract'
-  | 'suspended';
+  | "active"
+  | "inactive"
+  | "terminated"
+  | "on_leave"
+  | "probation"
+  | "contract"
+  | "suspended";
 
-export type EmploymentType =
-  | 'permanent'
-  | 'contract'
-  | 'intern'
-  | 'consultant';
+export type EmploymentType = "permanent" | "contract" | "intern" | "consultant";
 
 // Division interface
 export interface Division {
@@ -79,7 +75,7 @@ export interface ProfessionalLicense {
   issuing_authority: string;
   issue_date: string;
   expiry_date: string;
-  license_status: 'active' | 'expired' | 'suspended' | 'revoked';
+  license_status: "active" | "expired" | "suspended" | "revoked";
   created_at: string;
   updated_at: string;
 }
@@ -118,7 +114,7 @@ export interface EmployeeDetail extends Employee {
 
 // API Response Format
 export interface ApiResponse<T> {
-  status: 'success' | 'error';
+  status: "success" | "error";
   message: string;
   data: T;
   meta?: PaginationMeta;
@@ -144,7 +140,7 @@ export interface EmployeeFilters {
   page?: number;
   per_page?: number;
   sort_by?: string;
-  sort_order?: 'asc' | 'desc';
+  sort_order?: "asc" | "desc";
 }
 
 // Form data for creating employee
@@ -175,9 +171,11 @@ export interface UpdateEmployeeData extends Partial<CreateEmployeeData> {
 
 // Query key factory type
 export interface EmployeeQueryKeys {
-  all: readonly ['employees'];
-  lists: () => readonly ['employees', 'list'];
-  list: (filters: EmployeeFilters) => readonly ['employees', 'list', EmployeeFilters];
-  details: () => readonly ['employees', 'detail'];
-  detail: (id: number) => readonly ['employees', 'detail', number];
+  all: readonly ["employees"];
+  lists: () => readonly ["employees", "list"];
+  list: (
+    filters: EmployeeFilters,
+  ) => readonly ["employees", "list", EmployeeFilters];
+  details: () => readonly ["employees", "detail"];
+  detail: (id: number) => readonly ["employees", "detail", number];
 }

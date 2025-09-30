@@ -4,7 +4,11 @@
       "Bash(php artisan:*)",
       "Bash(git:*)",
       "Bash(git push:*)",
-      "Bash(dir:*)"
+      "Bash(dir:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run test:*)",
+      "Bash(npm run lint:*)",
+      "Bash(npx prettier:*)"
     ],
     "deny": [],
     "ask": []

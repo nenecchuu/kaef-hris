@@ -4,16 +4,17 @@
  * Page for creating new employee
  */
 
-import React from 'react';
-import { IconArrowLeft } from '@tabler/icons-react';
-import { useNavigate } from 'react-router-dom';
+import React from "react";
+import { IconArrowLeft } from "@tabler/icons-react";
+import { useNavigate } from "react-router-dom";
 
-import { useCreateEmployee } from '../hooks';
-import { EmployeeForm } from '../components/EmployeeForm';
-import type { CreateEmployeeData } from '../types';
-import { Button } from '@src/ui/button';
-import { Header, Title } from '@src/ui/page';
-import { alertToast } from '@src/ui/alert-toast';
+import { alertToast } from "@src/ui/alert-toast";
+import { Button } from "@src/ui/button";
+import { Header, Title } from "@src/ui/page";
+
+import { EmployeeForm } from "../components/EmployeeForm";
+import { useCreateEmployee } from "../hooks";
+import type { CreateEmployeeData } from "../types";
 
 export default function EmployeeCreatePage() {
   const navigate = useNavigate();
@@ -23,25 +24,25 @@ export default function EmployeeCreatePage() {
     createEmployee(data, {
       onSuccess: (response) => {
         alertToast({
-          title: 'Berhasil',
+          title: "Berhasil",
           description: `Karyawan ${data.nama_lengkap} berhasil ditambahkan`,
-          variant: 'success',
+          variant: "success",
         });
         // Navigate to detail page
         navigate(`/employees/${response.data.id}`);
       },
       onError: (error) => {
         alertToast({
-          title: 'Gagal menambahkan karyawan',
+          title: "Gagal menambahkan karyawan",
           description: error.message,
-          variant: 'destructive',
+          variant: "destructive",
         });
       },
     });
   };
 
   const handleCancel = () => {
-    navigate('/employees');
+    navigate("/employees");
   };
 
   return (

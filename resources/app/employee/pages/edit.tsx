@@ -4,17 +4,18 @@
  * Page for editing existing employee
  */
 
-import React from 'react';
-import { IconArrowLeft } from '@tabler/icons-react';
-import { useParams, useNavigate } from 'react-router-dom';
+import React from "react";
+import { IconArrowLeft } from "@tabler/icons-react";
+import { useNavigate, useParams } from "react-router-dom";
 
-import { useEmployee, useUpdateEmployee } from '../hooks';
-import { EmployeeForm } from '../components/EmployeeForm';
-import type { UpdateEmployeeData } from '../types';
-import { LoadingFallback } from '@src/components/fallbacks';
-import { Button, ButtonLink } from '@src/ui/button';
-import { Header, Title } from '@src/ui/page';
-import { alertToast } from '@src/ui/alert-toast';
+import { LoadingFallback } from "@src/components/fallbacks";
+import { alertToast } from "@src/ui/alert-toast";
+import { Button, ButtonLink } from "@src/ui/button";
+import { Header, Title } from "@src/ui/page";
+
+import { EmployeeForm } from "../components/EmployeeForm";
+import { useEmployee, useUpdateEmployee } from "../hooks";
+import type { UpdateEmployeeData } from "../types";
 
 export default function EmployeeEditPage() {
   const { id } = useParams<{ id: string }>();
@@ -28,18 +29,18 @@ export default function EmployeeEditPage() {
     updateEmployee(data, {
       onSuccess: () => {
         alertToast({
-          title: 'Berhasil',
-          description: 'Data karyawan berhasil diperbarui',
-          variant: 'success',
+          title: "Berhasil",
+          description: "Data karyawan berhasil diperbarui",
+          variant: "success",
         });
         // Navigate back to detail page
         navigate(`/employees/${employeeId}`);
       },
       onError: (error) => {
         alertToast({
-          title: 'Gagal memperbarui data karyawan',
+          title: "Gagal memperbarui data karyawan",
           description: error.message,
-          variant: 'destructive',
+          variant: "destructive",
         });
       },
     });
@@ -58,7 +59,9 @@ export default function EmployeeEditPage() {
       <div className="flex min-h-[60vh] items-center justify-center">
         <div className="text-center">
           <h2 className="text-2xl font-bold text-gray-900">
-            {error?.message.includes('tidak ditemukan') ? 'Karyawan Tidak Ditemukan' : 'Terjadi Kesalahan'}
+            {error?.message.includes("tidak ditemukan")
+              ? "Karyawan Tidak Ditemukan"
+              : "Terjadi Kesalahan"}
           </h2>
           <p className="mt-2 text-gray-600">{error?.message}</p>
           <ButtonLink to="/employees" className="mt-4" variant="default">
@@ -74,7 +77,9 @@ export default function EmployeeEditPage() {
     return (
       <div className="flex min-h-[60vh] items-center justify-center">
         <div className="text-center">
-          <h2 className="text-2xl font-bold text-gray-900">Data Tidak Tersedia</h2>
+          <h2 className="text-2xl font-bold text-gray-900">
+            Data Tidak Tersedia
+          </h2>
           <ButtonLink to="/employees" className="mt-4" variant="default">
             <IconArrowLeft className="h-4 w-4" />
             Kembali ke Daftar Karyawan

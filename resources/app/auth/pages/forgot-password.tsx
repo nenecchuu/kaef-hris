@@ -4,7 +4,10 @@ import { REGEXP_ONLY_DIGITS } from "input-otp";
 import { Link } from "react-router-dom";
 
 import { AuthLayout } from "@src/app/auth/auth-layout";
-import { postForgotPassword, postVerifyForgotPasswordMFA } from "@src/app/auth/requests";
+import {
+  postForgotPassword,
+  postVerifyForgotPasswordMFA,
+} from "@src/app/auth/requests";
 import { useDocumentTitle } from "@src/hooks/use-document-title";
 import { useMutation } from "@src/hooks/use-mutation";
 import { Button, ButtonPrimitive } from "@src/ui/button";
@@ -121,7 +124,11 @@ function ForgotPasswordForm() {
         <p className="mb-4 text-sm text-gray-600">
           Masukkan OTP yang dikirimkan pada akun Microsoft Authenticator Anda
         </p>
-        <InputOTP name="otp" maxLength={6} pattern={REGEXP_ONLY_DIGITS as string}>
+        <InputOTP
+          name="otp"
+          maxLength={6}
+          pattern={REGEXP_ONLY_DIGITS as string}
+        >
           <InputOTPGroup>
             <InputOTPSlot index={0} />
             <InputOTPSlot index={1} />

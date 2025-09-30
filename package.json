@@ -63,7 +63,7 @@
   },
   "dependencies": {
     "@floating-ui/react": "^0.16.0",
-    "@hookform/resolvers": "^5.2.2",
+    "@hookform/resolvers": "^3.10.0",
     "@radix-ui/react-avatar": "^1.1.1",
     "@radix-ui/react-checkbox": "^1.1.2",
     "@radix-ui/react-dialog": "^1.1.2",
@@ -84,6 +84,7 @@
     "@tanstack/react-table": "^8.20.5",
     "@total-typescript/ts-reset": "^0.6.1",
     "axios": "^1.7.7",
+    "class-variance-authority": "^0.7.1",
     "clsx": "^1.2.1",
     "cmdk": "^1.0.0",
     "date-fns": "^2.29.3",

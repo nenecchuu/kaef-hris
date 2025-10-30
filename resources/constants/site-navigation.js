@@ -1,23 +1,24 @@
 import {
   IconBook,
   IconBriefcase,
-  IconClock,
   IconCreditCard,
-  IconExternalLink,
+  IconDashboard,
   IconFileReport,
   IconHeadset,
   IconHome,
-  IconKey,
   IconSettings,
+  IconUserCheck,
   IconUsers,
   IconUsersGroup,
-  IconUserX,
 } from "@tabler/icons-react";
 
 import { EMPLOYEE_TYPE_INHOUSE, EMPLOYEE_TYPE_OUTSOURCED } from "./user";
 
 // Menu constants
 const MENU_HOME = "home";
+const MENU_DASHBOARD_BOD = "dashboard_bod";
+const MENU_EMPLOYEE = "sub_menu_employee";
+const MENU_EMPLOYEE_OVERVIEW = "employee_overview";
 const MENU_USER_MANAGEMENT = "sub_menu_user_management";
 const MENU_MANAGEMENT_USER = "management_user";
 const MENU_BLOCKED_USER = "blocked_user";
@@ -46,6 +47,24 @@ const SHARED_MENUS = {
     pathname: "/",
     icon: IconHome,
     allow: [EMPLOYEE_TYPE_INHOUSE, EMPLOYEE_TYPE_OUTSOURCED],
+  },
+  [MENU_DASHBOARD_BOD]: {
+    name: "Dashboard Eksekutif",
+    pathname: "/dashboard",
+    icon: IconDashboard,
+    allow: [EMPLOYEE_TYPE_INHOUSE, EMPLOYEE_TYPE_OUTSOURCED],
+  },
+  [MENU_EMPLOYEE]: {
+    name: "Karyawan",
+    icon: IconUserCheck,
+    pathnames: ["/employees"],
+    menu: {
+      [MENU_EMPLOYEE_OVERVIEW]: {
+        name: "Ringkasan Karyawan",
+        pathname: "/employees",
+        allow: [EMPLOYEE_TYPE_INHOUSE, EMPLOYEE_TYPE_OUTSOURCED],
+      },
+    },
   },
   [MENU_USER_MANAGEMENT]: {
     name: "User",
@@ -83,7 +102,8 @@ const SHARED_MENUS = {
   },
   [MENU_BIJPEDIA]: {
     name: "BIJPedia",
-    pathname: "https://chatgpt.com/g/g-68b8e26233d48191ad8cdaedcebcfe19-ojekapedia",
+    pathname:
+      "https://chatgpt.com/g/g-68b8e26233d48191ad8cdaedcebcfe19-ojekapedia",
     icon: IconBook,
     allow: [EMPLOYEE_TYPE_INHOUSE, EMPLOYEE_TYPE_OUTSOURCED],
     isOnHold: true, // External link
@@ -198,33 +218,21 @@ function pickMenus(menuKeys) {
 
 export const AdminSiteNavigation = pickMenus([
   MENU_HOME,
+  MENU_DASHBOARD_BOD,
+  MENU_EMPLOYEE,
   MENU_USER_MANAGEMENT,
   MENU_SETTINGS,
-  MENU_BIJPEDIA,
-  MENU_FINANCING,
-  MENU_GENERAL_AFFAIR,
-  MENU_HUMAN_RESOURCE,
-  MENU_REPORTING,
-  MENU_HELP_DESK,
 ]);
 
 export const SupervisorSiteNavigation = pickMenus([
   MENU_HOME,
-  MENU_BIJPEDIA,
-  MENU_FINANCING,
-  MENU_GENERAL_AFFAIR,
-  MENU_HUMAN_RESOURCE,
-  MENU_REPORTING,
-  MENU_HELP_DESK,
+  MENU_DASHBOARD_BOD,
+  MENU_EMPLOYEE,
 ]);
 
 export const UserSiteNavigation = pickMenus([
   MENU_HOME,
-  MENU_BIJPEDIA,
-  MENU_FINANCING,
-  MENU_GENERAL_AFFAIR,
-  MENU_HUMAN_RESOURCE,
-  MENU_REPORTING,
-  MENU_HELP_DESK,
+  MENU_DASHBOARD_BOD,
+  MENU_EMPLOYEE,
   MENU_PROFILE,
 ]);

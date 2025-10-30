@@ -2,7 +2,7 @@ name: 🚀 Deploy to VPS
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   workflow_dispatch: # Allow manual triggering
 
 # Add package write permissions
@@ -33,34 +33,34 @@ jobs:
           - 5432:5432
 
     steps:
-    - name: 📥 Checkout code
-      uses: actions/checkout@v4
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
 
-    - name: 🐘 Setup PHP
-      uses: shivammathur/setup-php@v2
-      with:
-        php-version: '8.2'
-        extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, bcmath, soap, intl, gd, exif, iconv, imagick
-        coverage: none
+      - name: 🐘 Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.2"
+          extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, bcmath, soap, intl, gd, exif, iconv, imagick
+          coverage: none
 
-    - name: 📦 Install Composer dependencies
-      run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+      - name: 📦 Install Composer dependencies
+        run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
 
-    - name: 🔧 Copy environment file
-      run: cp .env.example .env
+      - name: 🔧 Copy environment file
+        run: cp .env.example .env
 
-    - name: 🔑 Generate application key
-      run: php artisan key:generate
+      - name: 🔑 Generate application key
+        run: php artisan key:generate
 
-    - name: 🗄️ Run database migrations
-      run: php artisan migrate --force
-      env:
-        DB_CONNECTION: pgsql
-        DB_HOST: localhost
-        DB_PORT: 5432
-        DB_DATABASE: testing
-        DB_USERNAME: postgres
-        DB_PASSWORD: postgres
+      - name: 🗄️ Run database migrations
+        run: php artisan migrate --force
+        env:
+          DB_CONNECTION: pgsql
+          DB_HOST: localhost
+          DB_PORT: 5432
+          DB_DATABASE: testing
+          DB_USERNAME: postgres
+          DB_PASSWORD: postgres
 
   build-and-deploy:
     needs: test
@@ -68,99 +68,98 @@ jobs:
     if: github.ref == 'refs/heads/main'
 
     steps:
-    - name: 📥 Checkout code
-      uses: actions/checkout@v4
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
 
-    - name: 🐳 Set up Docker Buildx
-      uses: docker/setup-buildx-action@v3
+      - name: 🐳 Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
 
-    - name: 🔐 Log in to Container Registry
-      uses: docker/login-action@v3
-      with:
-        registry: ${{ env.REGISTRY }}
-        username: ${{ github.actor }}
-        password: ${{ secrets.GITHUB_TOKEN }}
+      - name: 🔐 Log in to Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: 🏷️ Extract metadata
-      id: meta
-      uses: docker/metadata-action@v5
-      with:
-        images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-        tags: |
-          type=ref,event=branch
-          type=ref,event=pr
-          type=sha,prefix={{branch}}-
-          type=raw,value=latest,enable={{is_default_branch}}
+      - name: 🏷️ Extract metadata
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=ref,event=branch
+            type=ref,event=pr
+            type=sha,prefix={{branch}}-
+            type=raw,value=latest,enable={{is_default_branch}}
 
+      - name: 🚀 Deploy to VPS
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USERNAME }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          port: ${{ secrets.VPS_PORT }}
+          script: |
+            # Navigate to app directory
+            cd ~/luminakra-sample-app
 
-    - name: 🚀 Deploy to VPS
-      uses: appleboy/ssh-action@v1.0.3
-      with:
-        host: ${{ secrets.VPS_HOST }}
-        username: ${{ secrets.VPS_USERNAME }}
-        key: ${{ secrets.VPS_SSH_KEY }}
-        port: ${{ secrets.VPS_PORT }}
-        script: |
-          # Navigate to app directory
-          cd ~/luminakra-sample-app
+            # Pull latest code
+            echo "📥 Pulling latest code..."
+            git pull origin main
 
-          # Pull latest code
-          echo "📥 Pulling latest code..."
-          git pull origin main
+            # Create production environment file if it doesn't exist
+            if [ ! -f .env.production ]; then
+                echo "📝 Creating .env.production from template..."
+                cp env.production.template .env.production
+                echo "⚠️  Please update .env.production with your actual values!"
+            fi
 
-          # Create production environment file if it doesn't exist
-          if [ ! -f .env.production ]; then
-              echo "📝 Creating .env.production from template..."
-              cp env.production.template .env.production
-              echo "⚠️  Please update .env.production with your actual values!"
-          fi
+            # Stop current containers
+            echo "⏹️ Stopping current containers..."
+            docker compose -f docker-compose.prod.yml down
 
-          # Stop current containers
-          echo "⏹️ Stopping current containers..."
-          docker compose -f docker-compose.prod.yml down
+            # Build Docker image locally (where .env.production exists)
+            echo "🏗️ Building Docker image locally..."
+            docker build -f dockerfile.prod -t ghcr.io/nenecchuu/luminakra-sample-app:latest .
 
-          # Build Docker image locally (where .env.production exists)
-          echo "🏗️ Building Docker image locally..."
-          docker build -f dockerfile.prod -t ghcr.io/nenecchuu/luminakra-sample-app:latest .
+            # Start new containers
+            echo "▶️ Starting new containers..."
+            docker compose -f docker-compose.prod.yml up -d
 
-          # Start new containers
-          echo "▶️ Starting new containers..."
-          docker compose -f docker-compose.prod.yml up -d
+            # Wait for containers to be ready
+            echo "⏳ Waiting for containers to be ready..."
+            sleep 15
 
-          # Wait for containers to be ready
-          echo "⏳ Waiting for containers to be ready..."
-          sleep 15
+            # Generate app key if needed
+            if ! grep -q "APP_KEY=base64:" .env.production; then
+                echo "🔑 Generating application key..."
+                docker compose -f docker-compose.prod.yml exec -T app php artisan key:generate --env=production --force
+            fi
 
-          # Generate app key if needed
-          if ! grep -q "APP_KEY=base64:" .env.production; then
-              echo "🔑 Generating application key..."
-              docker compose -f docker-compose.prod.yml exec -T app php artisan key:generate --env=production --force
-          fi
+            # Generate Passport keys if needed
+            echo "🔐 Setting up Passport keys..."
+            docker compose -f docker-compose.prod.yml exec -T app php artisan passport:keys --force
 
-          # Generate Passport keys if needed
-          echo "🔐 Setting up Passport keys..."
-          docker compose -f docker-compose.prod.yml exec -T app php artisan passport:keys --force
+            # Run database migrations
+            echo "🗄️ Running database migrations..."
+            docker compose -f docker-compose.prod.yml exec -T app php artisan migrate --force
 
-          # Run database migrations
-          echo "🗄️ Running database migrations..."
-          docker compose -f docker-compose.prod.yml exec -T app php artisan migrate --force
+            # Clear and cache configurations
+            echo "🧹 Clearing and caching configurations..."
+            docker compose -f docker-compose.prod.yml exec -T app php artisan cache:clear
+            docker compose -f docker-compose.prod.yml exec -T app php artisan optimize:clear
+            docker compose -f docker-compose.prod.yml exec -T app php artisan config:cache
+            docker compose -f docker-compose.prod.yml exec -T app php artisan route:cache
+            docker compose -f docker-compose.prod.yml exec -T app php artisan view:cache
 
-          # Clear and cache configurations
-          echo "🧹 Clearing and caching configurations..."
-          docker compose -f docker-compose.prod.yml exec -T app php artisan cache:clear
-          docker compose -f docker-compose.prod.yml exec -T app php artisan optimize:clear
-          docker compose -f docker-compose.prod.yml exec -T app php artisan config:cache
-          docker compose -f docker-compose.prod.yml exec -T app php artisan route:cache
-          docker compose -f docker-compose.prod.yml exec -T app php artisan view:cache
+            # Set storage permissions
+            echo "🔐 Setting storage permissions..."
+            docker compose -f docker-compose.prod.yml exec -T app chown -R www-data:www-data /var/www/html/storage
+            docker compose -f docker-compose.prod.yml exec -T app chmod -R 775 /var/www/html/storage
 
-          # Set storage permissions
-          echo "🔐 Setting storage permissions..."
-          docker compose -f docker-compose.prod.yml exec -T app chown -R www-data:www-data /var/www/html/storage
-          docker compose -f docker-compose.prod.yml exec -T app chmod -R 775 /var/www/html/storage
+            # Clean up old images
+            echo "🧹 Cleaning up old Docker images..."
+            docker image prune -f
 
-          # Clean up old images
-          echo "🧹 Cleaning up old Docker images..."
-          docker image prune -f
-
-          echo "✅ Deployment completed successfully!"
-          echo "Application should be running at: $(grep APP_URL .env.production | cut -d '=' -f2)"
+            echo "✅ Deployment completed successfully!"
+            echo "Application should be running at: $(grep APP_URL .env.production | cut -d '=' -f2)"

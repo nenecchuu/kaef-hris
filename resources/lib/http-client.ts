@@ -42,7 +42,7 @@ httpClient.interceptors.response.use(
     return response;
   },
   (error: AxiosError) => {
-    if (error.response && error.response.status === 401) {
+    if (error.response?.status === 401) {
       // Token has expired
       window.location.assign("/");
     }
@@ -87,9 +87,10 @@ export function arrayBufferResponse(
   const byteArray = new Uint8Array(response);
 
   // Convert to ArrayBuffer to ensure compatibility with Blob constructor
-  const arrayBuffer = byteArray.buffer instanceof ArrayBuffer
-    ? byteArray.buffer
-    : byteArray.buffer.slice(0);
+  const arrayBuffer =
+    byteArray.buffer instanceof ArrayBuffer
+      ? byteArray.buffer
+      : byteArray.buffer.slice(0);
 
   // It is necessary to create a new blob object with mime-type explicitly set
   // otherwise only Chrome works like it should

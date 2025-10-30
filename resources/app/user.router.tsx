@@ -5,6 +5,9 @@ import {
 } from "react-router-dom";
 
 import { AuditTrailRootPage } from "@src/app/audit-trail/pages/root";
+import { BODDashboardPage } from "@src/app/dashboard/pages/bod-dashboard";
+import { EmployeeListPage } from "@src/app/dashboard/pages/employee-list";
+import { EmployeeOverviewPage } from "@src/app/dashboard/pages/employee-overview";
 import { HomeRootPage } from "@src/app/home/pages/root";
 import { PasswordComplexityEditPage } from "@src/app/password-complexity/pages/edit";
 import { UserView } from "@src/app/user/main/components";
@@ -25,50 +28,56 @@ export const userRouter = createBrowserRouter(
       element={<MainLayout app="user" />}
       errorElement={<RootFallback />}
     >
-    <Route element={<MfaGuard />}>
-      <Route errorElement={<RootFallback />}>
-        <Route index={true} element={<HomeRootPage />} />
-        <Route element={<AdminGuard requireAdminAccess={true} />}>
-          <Route path="users" key="users">
-            <Route index={true} element={<UserRootPage key="users" />} />
-            <Route path="new" element={<UserNewPage />} />
-            <Route path=":userId" element={<UserView />}>
-              <Route index={true} element={<UserDetailsPage />} />
-              <Route path="edit" element={<UserEditPage />} />
-            </Route>
+      <Route element={<MfaGuard />}>
+        <Route errorElement={<RootFallback />}>
+          <Route index={true} element={<HomeRootPage />} />
+          <Route path="dashboard" element={<BODDashboardPage />} />
+          <Route path="employees">
+            <Route index={true} element={<EmployeeOverviewPage />} />
+            <Route path=":divisionCode" element={<EmployeeListPage />} />
           </Route>
-          <Route path="blocked-users" key="blocked-users">
+          <Route element={<AdminGuard requireAdminAccess={true} />}>
+            <Route path="users" key="users">
+              <Route index={true} element={<UserRootPage key="users" />} />
+              <Route path="new" element={<UserNewPage />} />
+              <Route path=":userId" element={<UserView />}>
+                <Route index={true} element={<UserDetailsPage />} />
+                <Route path="edit" element={<UserEditPage />} />
+              </Route>
+            </Route>
+            <Route path="blocked-users" key="blocked-users">
+              <Route
+                index={true}
+                element={
+                  <UserRootPage isBlockedUserPage={true} key="blocked-users" />
+                }
+              />
+              <Route path="new" element={<UserNewPage />} />
+              <Route path=":userId" element={<UserView />}>
+                <Route index={true} element={<UserDetailsPage />} />
+                <Route path="edit" element={<UserEditPage />} />
+              </Route>
+            </Route>
+            <Route
+              path="password-complexity"
+              element={<PasswordComplexityEditPage />}
+            />
+            <Route path="audit-trail" element={<AuditTrailRootPage />} />
+          </Route>
+          <Route path="profile" element={<UserView isPageProfile={true} />}>
             <Route
               index={true}
-              element={
-                <UserRootPage isBlockedUserPage={true} key="blocked-users" />
-              }
+              element={<UserDetailsPage isPageProfile={true} />}
             />
-            <Route path="new" element={<UserNewPage />} />
-            <Route path=":userId" element={<UserView />}>
-              <Route index={true} element={<UserDetailsPage />} />
-              <Route path="edit" element={<UserEditPage />} />
-            </Route>
+            <Route path="bind-mfa" element={<UserBindMfaPage />} />
+            <Route
+              path="edit"
+              element={<UserEditPage isPageProfile={true} />}
+            />
           </Route>
-          <Route
-            path="password-complexity"
-            element={<PasswordComplexityEditPage />}
-          />
-          <Route path="audit-trail" element={<AuditTrailRootPage />} />
+          <Route path="*" element={<NotFoundFallback />} />
         </Route>
-        <Route path="profile" element={<UserView isPageProfile={true} />}>
-          <Route
-            index={true}
-            element={<UserDetailsPage isPageProfile={true} />}
-          />
-          <Route path="bind-mfa" element={<UserBindMfaPage />} />
-          <Route path="edit" element={<UserEditPage isPageProfile={true} />} />
-        </Route>
-        <Route path="*" element={<NotFoundFallback />} />
       </Route>
-    </Route>
     </Route>,
   ),
 );
-
-

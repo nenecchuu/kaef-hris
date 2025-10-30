@@ -142,9 +142,9 @@
     --color-pink-800: 330 53% 33%;
     --color-pink-900: 330 53% 25%;
 
-    --color-base-primary: 216 100% 48%;
-    --color-base-light-primary: var(--color-blue-50);
-    --color-base-darker-primary: 216 100% 13%;
+    --color-base-primary: 24 52% 24%;
+    --color-base-light-primary: 31 100% 95%;
+    --color-base-darker-primary: 24 52% 15%;
     --color-base-info: var(--color-blue-500);
     --color-base-success: var(--color-green-500);
     --color-base-warning: var(--color-yellow-500);
@@ -196,22 +196,27 @@
     --color-outline-warning: var(--color-base-warning);
     --color-outline-error: var(--color-base-error);
 
-    /* Brand Color */
-    --brand-primary: var(--color-base-primary);
-    --brand-primary-light: var(--color-base-light-primary);
-    --brand-primary-dark: var(--color-base-darker-primary);
+    /* Brand Color - Kimia Farma */
+    /* Primary: Metallic Bronze #54361e */
+    --brand-primary: 24 52% 24%;
+    --brand-primary-light: 31 100% 95%;
+    --brand-primary-dark: 24 52% 15%;
+    /* Accent: Sunglow Gold #fed235 and Tangerine #f39200 */
+    --brand-accent-gold: 48 100% 62%;
+    --brand-accent-orange: 32 100% 50%;
+    /* Status Colors */
     --brand-success: var(--color-green-500);
     --brand-success-dark: var(--color-green-600);
     --brand-success-light: var(--color-green-50);
     --brand-danger: var(--color-red-600);
     --brand-danger-dark: var(--color-red-700);
     --brand-danger-light: var(--color-red-50);
-    --brand-warning: var(--color-yellow-500);
-    --brand-warning-dark: var(--color-yellow-600);
-    --brand-warning-light: var(--color-yellow-50);
-    --brand-notice: var(--color-orange-500);
-    --brand-notice-dark: var(--color-orange-600);
-    --brand-notice-light: var(--color-orange-50);
+    --brand-warning: 48 100% 50%;
+    --brand-warning-dark: 48 100% 40%;
+    --brand-warning-light: 48 100% 95%;
+    --brand-notice: 32 100% 50%;
+    --brand-notice-dark: 32 100% 45%;
+    --brand-notice-light: 32 100% 95%;
     --brand-info: var(--color-blue-500);
     --brand-info-dark: var(--color-blue-600);
     --brand-info-light: var(--color-blue-50);

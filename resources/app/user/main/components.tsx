@@ -15,8 +15,8 @@ import {
   deleteUser,
   fetchUser,
   getUserEntryRelatedData,
-  updateUser,
   postForgotPasswordWithUserId,
+  updateUser,
 } from "@src/app/user/main/requests";
 import { SelectOptionListSchema } from "@src/app/user/main/schemas";
 import type { SelectUserSchema, User } from "@src/app/user/main/schemas";

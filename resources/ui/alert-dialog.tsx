@@ -62,8 +62,8 @@ export function AlertDialog({
       <DialogContent
         className="w-100 p-6"
         onInteractOutside={
-            preventOutsideClose ? (e) => e.preventDefault() : undefined
-          }
+          preventOutsideClose ? (e) => e.preventDefault() : undefined
+        }
         {...(!description && { "aria-describedby": undefined })}
       >
         <div

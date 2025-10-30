@@ -7,13 +7,13 @@ import {
   EDIT_PAGE_BREADCRUMBS,
 } from "@src/app/user/main/config";
 import { useUser } from "@src/app/user/main/hooks";
+import { useAuth } from "@src/lib/auth";
 import { Button } from "@src/ui/button";
 import {
   ConfirmSubmitTrigger,
   MutationFormProvider,
 } from "@src/ui/mutation-form";
 import { Header, Title } from "@src/ui/page";
-import { useAuth } from "@src/lib/auth";
 
 interface UserEditPageProps {
   isPageProfile?: boolean;
@@ -21,7 +21,7 @@ interface UserEditPageProps {
 
 export function UserEditPage({ isPageProfile }: UserEditPageProps) {
   const { user } = useUser();
-  const { user : authUser } = useAuth();
+  const { user: authUser } = useAuth();
   const breadcrumb = !isPageProfile ? EDIT_PAGE_BREADCRUMBS : undefined;
   const title = !isPageProfile ? user.name : "Profile";
   if (user.is_administrator && !isPageProfile && !authUser.is_superadmin) {

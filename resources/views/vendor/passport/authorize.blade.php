@@ -14,7 +14,7 @@
     <div class="bg-white shadow-lg rounded-lg p-8 w-full max-w-md">
         <!-- Logo -->
         <div class="flex justify-center mb-6">
-            <img src="{{ asset('app-logo.png') }}" alt="Logo" class="h-32">
+            <img src="{{ asset('app-logo.svg') }}" alt="Logo" class="h-32">
         </div>
 
         <!-- Form -->

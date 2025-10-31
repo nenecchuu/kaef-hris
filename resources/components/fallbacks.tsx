@@ -8,7 +8,7 @@ import { QueryErrorResetBoundary } from "@tanstack/react-query";
 import { ErrorBoundary, type FallbackProps } from "react-error-boundary";
 import { useLocation, useRouteError } from "react-router-dom";
 
-import appLogo from "@src/assets/app-logo.png";
+import appLogo from "@src/assets/app-logo.svg";
 import { useDocumentTitle } from "@src/hooks/use-document-title";
 import { isHTTPErrorResponse } from "@src/lib/http-client";
 import { Button } from "@src/ui/button";

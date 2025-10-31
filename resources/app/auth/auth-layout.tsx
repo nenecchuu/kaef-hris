@@ -1,6 +1,6 @@
 import { Toaster } from "sonner";
 
-import appLogo from "@src/assets/app-logo.png";
+import appLogo from "@src/assets/app-logo.svg";
 import bgAuth from "@src/assets/bg-auth.jpg";
 import { env } from "@src/env";
 import { useDocumentTitle } from "@src/hooks/use-document-title";

@@ -1,4 +1,4 @@
-import appLogo from "@src/assets/app-logo.png";
+import appLogo from "@src/assets/app-logo.svg";
 import { SCREEN_SIZE_MEDIUM } from "@src/constants/theme";
 import { useWindowDimensions } from "@src/hooks/use-window-dimensions";
 

@@ -1,4 +1,4 @@
-import appLogo from "@src/assets/app-logo.png";
+import appLogo from "@src/assets/app-logo.svg";
 import { env } from "@src/env";
 
 export function LogoNavItem() {

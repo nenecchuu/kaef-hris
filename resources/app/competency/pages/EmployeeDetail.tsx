@@ -40,6 +40,8 @@ export function EmployeeDetail() {
     assessment_results,
     work_history,
     education,
+    training,
+    personal_qualification,
     achievement,
     kpi_personal,
   } = data;
@@ -271,22 +273,148 @@ export function EmployeeDetail() {
             </div>
           </TabsContent>
 
-          {/* Placeholder tabs */}
+          {/* Training Tab - Populated with Real Data */}
           <TabsContent value="training" className="p-4">
-            <div className="bg-white rounded-lg p-8 text-center text-gray-500 shadow-sm">
-              Data Training akan ditampilkan di sini
+            <div className="space-y-3">
+              {training && training.length > 0 ? (
+                training.map((item) => (
+                  <div
+                    key={item.id}
+                    className="bg-white rounded-lg border border-gray-200 p-4 shadow-sm"
+                  >
+                    <div className="flex items-start justify-between">
+                      <div className="flex-1">
+                        <div className="font-semibold text-gray-900">{item.title}</div>
+                        <div className="text-sm text-gray-600">
+                          {item.provider}
+                        </div>
+                      </div>
+                      <span
+                        className={cn(
+                          "rounded-full px-3 py-1 text-xs font-semibold",
+                          item.status === "Completed"
+                            ? "bg-green-100 text-green-800"
+                            : "bg-yellow-100 text-yellow-800"
+                        )}
+                      >
+                        {item.status}
+                      </span>
+                    </div>
+                    <div className="mt-2 text-sm text-gray-700">
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Tanggal:</span>
+                        <span className="font-medium">{item.date}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Durasi:</span>
+                        <span className="font-medium">{item.duration}</span>
+                      </div>
+                      {item.certificate_number && (
+                        <div className="mt-2 text-xs text-gray-500">
+                          Certificate: {item.certificate_number}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                ))
+              ) : (
+                <div className="bg-white rounded-lg p-8 text-center text-gray-500">
+                  Tidak ada data training
+                </div>
+              )}
             </div>
           </TabsContent>
 
+          {/* Competency Tab - Reference to Assessment */}
           <TabsContent value="competency" className="p-4">
-            <div className="bg-white rounded-lg p-8 text-center text-gray-500 shadow-sm">
-              Data Kompetensi akan ditampilkan di sini
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg border border-blue-200 p-6 shadow-sm">
+              <div className="mb-4 text-center">
+                <div className="text-lg font-semibold text-blue-900">
+                  Kompetensi Terkini
+                </div>
+                <div className="text-sm text-blue-700">
+                  Berdasarkan assessment terakhir: {assessment_results.assessed_date}
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-white rounded-lg p-4 text-center">
+                  <div className="text-3xl font-bold text-blue-600">
+                    {employee.fit_rate_overall}%
+                  </div>
+                  <div className="text-sm text-gray-600">Overall Fit Rate</div>
+                </div>
+                <div className="bg-white rounded-lg p-4 text-center">
+                  <div className="text-3xl font-bold">
+                    <StatusBadge status={employee.status_kompetensi} />
+                  </div>
+                  <div className="text-sm text-gray-600 mt-2">Status Kompetensi</div>
+                </div>
+              </div>
+              <div className="mt-4 text-center">
+                <button
+                  onClick={() => {
+                    // Navigate to assessment tab
+                    const assessmentTab = document.querySelector('[value="assessment"]') as HTMLElement;
+                    assessmentTab?.click();
+                  }}
+                  className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-4 py-2 text-white transition-colors hover:bg-blue-700"
+                >
+                  <IconChartBar size={18} />
+                  <span>Lihat Detail Assessment</span>
+                </button>
+              </div>
             </div>
           </TabsContent>
 
+          {/* Qualification Tab - Populated with Real Data */}
           <TabsContent value="qualification" className="p-4">
-            <div className="bg-white rounded-lg p-8 text-center text-gray-500 shadow-sm">
-              Data Kualifikasi akan ditampilkan di sini
+            <div className="space-y-3">
+              {personal_qualification && personal_qualification.length > 0 ? (
+                personal_qualification.map((item) => (
+                  <div
+                    key={item.id}
+                    className="bg-white rounded-lg border border-gray-200 p-4 shadow-sm"
+                  >
+                    <div className="flex items-start justify-between">
+                      <div className="flex-1">
+                        <div className="font-semibold text-gray-900">{item.name}</div>
+                        <div className="text-sm text-gray-600">{item.issuer}</div>
+                      </div>
+                      <span className="rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-blue-800">
+                        {item.type}
+                      </span>
+                    </div>
+                    <div className="mt-2 text-sm text-gray-700">
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Issued:</span>
+                        <span className="font-medium">{item.issued_date}</span>
+                      </div>
+                      {item.expiry_date && (
+                        <div className="flex justify-between">
+                          <span className="text-gray-600">Expires:</span>
+                          <span className={cn(
+                            "font-medium",
+                            new Date(item.expiry_date) < new Date()
+                              ? "text-red-600"
+                              : "text-gray-900"
+                          )}>
+                            {item.expiry_date}
+                          </span>
+                        </div>
+                      )}
+                      {item.credential_id && (
+                        <div className="mt-2 text-xs text-gray-500">
+                          ID: {item.credential_id}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                ))
+              ) : (
+                <div className="bg-white rounded-lg p-8 text-center text-gray-500">
+                  Tidak ada data kualifikasi
+                </div>
+              )}
             </div>
           </TabsContent>
         </Tabs>

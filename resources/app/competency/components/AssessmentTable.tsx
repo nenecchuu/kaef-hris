@@ -1,4 +1,3 @@
-import { useState } from "react";
 import clsx from "clsx";
 
 import type { CompetencyCategory } from "@src/types/competency";
@@ -9,130 +8,125 @@ interface AssessmentTableProps {
   assessments: CompetencyCategory[];
 }
 
+/**
+ * AssessmentTable Component - Auto-Expanded Assessment Display
+ *
+ * DESIGN DECISION: Show all detail items by default (no click-to-expand)
+ * REASONING: BOD doesn't have time to click around. They need instant insight.
+ * UX IMPROVEMENT: Eliminates unnecessary interaction, provides complete view immediately
+ *
+ * Changed from previous version:
+ * - Removed expandedRow state
+ * - Removed onClick handler
+ * - All category details are always visible
+ * - Better visual grouping with card-based layout
+ */
 export const AssessmentTable = ({ assessments }: AssessmentTableProps) => {
-  const [expandedRow, setExpandedRow] = useState<string | null>(null);
-
   return (
-    <div className="bg-white overflow-x-auto rounded-lg border border-gray-200">
-      <table className="w-full border-collapse">
-        <thead>
-          <tr className="border-b-2 border-kf-blue bg-gray-50">
-            <th className="p-3 text-left font-semibold text-gray-900">
-              Kategori Kompetensi
-            </th>
-            <th className="p-3 text-center font-semibold text-gray-900">
-              Expected
-            </th>
-            <th className="p-3 text-center font-semibold text-gray-900">
-              Actual (Avg)
-            </th>
-            <th className="p-3 text-center font-semibold text-gray-900">
-              Fit Rate
-            </th>
-            <th className="p-3 text-center font-semibold text-gray-900">Gap</th>
-            <th className="p-3 text-center font-semibold text-gray-900">
-              Status
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          {assessments.map((item) => (
-            <>
-              <tr
-                key={item.kategori}
-                onClick={() =>
-                  setExpandedRow(
-                    expandedRow === item.kategori ? null : item.kategori,
-                  )
-                }
-                className="cursor-pointer border-b transition hover:bg-gray-50"
-              >
-                <td className="p-3 font-medium text-gray-900">
-                  {item.kategori}
-                </td>
-                <td className="p-3 text-center text-gray-900">
-                  {item.expected.toFixed(1)}
-                </td>
-                <td className="p-3 text-center font-semibold text-gray-900">
-                  {item.actual_avg.toFixed(1)}
-                </td>
-                <td className="p-3 text-center">
-                  <span className="rounded-full border border-gray-300 bg-gray-50 px-2 py-1 text-sm text-gray-900">
-                    {item.fit_rate}%
-                  </span>
-                </td>
-                <td className="p-3 text-center">
-                  <span
-                    className={clsx(
-                      "font-semibold",
-                      item.gap < 0 && "text-orange-600",
-                      item.gap === 0 && "text-green-600",
-                      item.gap > 0 && "text-blue-600",
-                    )}
-                  >
-                    {item.gap > 0 && "+"}
-                    {item.gap}
-                  </span>
-                </td>
-                <td className="p-3 text-center">
-                  <StatusBadge status={item.status} />
-                </td>
-              </tr>
+    <div className="space-y-4">
+      {assessments.map((category) => (
+        <div
+          key={category.kategori}
+          className="bg-white overflow-hidden rounded-lg border-2 border-gray-200 shadow-sm"
+        >
+          {/* Category Header - Always Visible */}
+          <div className="bg-gradient-to-r from-kf-blue to-kf-blue-light p-4 text-white">
+            <div className="flex items-center justify-between">
+              <h3 className="text-lg font-bold">{category.kategori}</h3>
+              <StatusBadge status={category.status} />
+            </div>
+            <div className="mt-2 flex gap-6 text-sm">
+              <div>
+                <span className="text-white/70">Expected: </span>
+                <span className="font-semibold">{category.expected.toFixed(1)}</span>
+              </div>
+              <div>
+                <span className="text-white/70">Actual: </span>
+                <span className="font-semibold">{category.actual_avg.toFixed(1)}</span>
+              </div>
+              <div>
+                <span className="text-white/70">Fit Rate: </span>
+                <span className="font-semibold">{category.fit_rate}%</span>
+              </div>
+              <div>
+                <span className="text-white/70">Gap: </span>
+                <span className={clsx(
+                  "font-semibold",
+                  category.gap < 0 && "text-orange-300",
+                  category.gap === 0 && "text-green-300",
+                  category.gap > 0 && "text-blue-300",
+                )}>
+                  {category.gap > 0 && "+"}{category.gap}
+                </span>
+              </div>
+            </div>
+          </div>
 
-              {/* Expanded Row */}
-              {expandedRow === item.kategori && item.items && (
-                <tr>
-                  <td colSpan={6} className="bg-gray-50 p-4">
-                    <div className="mb-2 text-sm font-semibold">
-                      Detail Item Kompetensi:
-                    </div>
-                    <table className="w-full text-sm">
-                      <thead>
-                        <tr className="border-b">
-                          <th className="p-2 text-left">Item</th>
-                          <th className="p-2 text-center">Expected</th>
-                          <th className="p-2 text-center">Actual</th>
-                          <th className="p-2 text-center">Gap</th>
-                          <th className="p-2 text-center">Status</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {item.items.map((subItem) => (
-                          <tr key={subItem.nama} className="border-b">
-                            <td className="p-2">{subItem.nama}</td>
-                            <td className="p-2 text-center">
-                              {subItem.expected}
-                            </td>
-                            <td className="p-2 text-center">
-                              {subItem.actual}
-                            </td>
-                            <td className="p-2 text-center">
-                              <span
-                                className={clsx(
-                                  "font-semibold",
-                                  subItem.gap < 0 && "text-orange-600",
-                                  subItem.gap === 0 && "text-green-600",
-                                  subItem.gap > 0 && "text-blue-600",
-                                )}
-                              >
-                                {subItem.gap > 0 && "+"}
-                                {subItem.gap}
-                              </span>
-                            </td>
-                            <td className="p-2 text-center">
-                              <StatusBadge status={subItem.status} />
-                            </td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </td>
-                </tr>
-              )}
-            </>
-          ))}
-        </tbody>
-      </table>
+          {/* Detail Items - Always Expanded */}
+          {category.items && category.items.length > 0 && (
+            <div className="p-4">
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="border-b-2 border-gray-200">
+                      <th className="p-2 text-left font-semibold text-gray-700">
+                        Item Kompetensi
+                      </th>
+                      <th className="p-2 text-center font-semibold text-gray-700">
+                        Expected
+                      </th>
+                      <th className="p-2 text-center font-semibold text-gray-700">
+                        Actual
+                      </th>
+                      <th className="p-2 text-center font-semibold text-gray-700">
+                        Gap
+                      </th>
+                      <th className="p-2 text-center font-semibold text-gray-700">
+                        Status
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {category.items.map((item, idx) => (
+                      <tr
+                        key={item.nama}
+                        className={clsx(
+                          "border-b border-gray-100",
+                          idx % 2 === 0 ? "bg-white" : "bg-gray-50"
+                        )}
+                      >
+                        <td className="p-2 font-medium text-gray-900">{item.nama}</td>
+                        <td className="p-2 text-center text-gray-700">
+                          {item.expected}
+                        </td>
+                        <td className="p-2 text-center font-semibold text-gray-900">
+                          {item.actual}
+                        </td>
+                        <td className="p-2 text-center">
+                          <span
+                            className={clsx(
+                              "font-semibold",
+                              item.gap < 0 && "text-orange-600",
+                              item.gap === 0 && "text-green-600",
+                              item.gap > 0 && "text-blue-600",
+                            )}
+                          >
+                            {item.gap > 0 && "+"}
+                            {item.gap}
+                          </span>
+                        </td>
+                        <td className="p-2 text-center">
+                          <StatusBadge status={item.status} />
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
+        </div>
+      ))}
     </div>
   );
 };

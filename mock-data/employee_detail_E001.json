@@ -2,236 +2,236 @@
   "employee": {
     "id": "E001",
     "nama": "Budi Santoso",
-    "jabatan": "Operator Produksi",
-    "fungsi": "Operasi / Produksi",
-    "level": "Staf (Pelaksana)",
+    "jabatan": "HR Manager - Recruitment & Selection",
+    "fungsi": "Human Resources / Recruitment",
+    "level": "Manager",
     "photo": "https://i.pravatar.cc/150?u=E001",
     "email": "budi.santoso@kimiafarma.co.id",
     "phone": "+62 812-3456-7890",
-    "department": "Produksi Solid",
-    "join_date": "2020-01-15",
-    "status_kompetensi": "⚠️ Gap",
-    "fit_rate_overall": 58
+    "department": "Human Resources - Recruitment & Selection",
+    "join_date": "2018-03-01",
+    "status_kompetensi": "gap",
+    "fit_rate_overall": 68
   },
   "assessment_results": {
     "assessed_date": "2024-10-15",
-    "assessor": "Lina Sari",
+    "assessor": "Dr. Andini Kusuma",
     "assessments": [
       {
         "kategori": "Core Values",
-        "expected": 3.0,
-        "actual_avg": 2.4,
-        "fit_rate": 40,
+        "expected": 4.0,
+        "actual_avg": 3.4,
+        "fit_rate": 60,
         "gap": -1,
-        "status": "⚠️ Gap",
+        "status": "gap",
         "items": [
           {
             "nama": "Professional",
-            "expected": 3,
-            "actual": 2,
+            "expected": 4,
+            "actual": 3,
             "gap": -1,
-            "status": "⚠️ Gap"
+            "status": "gap"
           },
           {
             "nama": "Integrity",
-            "expected": 3,
-            "actual": 3,
+            "expected": 4,
+            "actual": 4,
             "gap": 0,
-            "status": "✅ Fit"
+            "status": "fit"
           },
           {
             "nama": "Teamwork",
-            "expected": 3,
-            "actual": 3,
+            "expected": 4,
+            "actual": 4,
             "gap": 0,
-            "status": "✅ Fit"
+            "status": "fit"
           },
           {
             "nama": "Innovation",
-            "expected": 3,
-            "actual": 2,
+            "expected": 4,
+            "actual": 3,
             "gap": -1,
-            "status": "⚠️ Gap"
+            "status": "gap"
           },
           {
             "nama": "Customer Oriented",
-            "expected": 3,
-            "actual": 2,
+            "expected": 4,
+            "actual": 3,
             "gap": -1,
-            "status": "⚠️ Gap"
+            "status": "gap"
           }
         ]
       },
       {
         "kategori": "Generic",
-        "expected": 3.0,
-        "actual_avg": 3.0,
-        "fit_rate": 100,
+        "expected": 4.0,
+        "actual_avg": 3.67,
+        "fit_rate": 67,
         "gap": 0,
-        "status": "✅ Fit",
+        "status": "gap",
         "items": [
           {
             "nama": "Concern for Order",
-            "expected": 3,
-            "actual": 3,
+            "expected": 4,
+            "actual": 4,
             "gap": 0,
-            "status": "✅ Fit"
+            "status": "fit"
           },
           {
             "nama": "Thinking Ability",
-            "expected": 3,
+            "expected": 4,
             "actual": 3,
-            "gap": 0,
-            "status": "✅ Fit"
+            "gap": -1,
+            "status": "gap"
           },
           {
             "nama": "Empathy & Interpersonal Skill",
-            "expected": 3,
-            "actual": 3,
+            "expected": 4,
+            "actual": 4,
             "gap": 0,
-            "status": "✅ Fit"
+            "status": "fit"
           }
         ]
       },
       {
         "kategori": "Management",
-        "expected": 3.0,
-        "actual_avg": 3.25,
+        "expected": 4.0,
+        "actual_avg": 3.75,
         "fit_rate": 75,
-        "gap": 1,
-        "status": "⬆️ Exceed",
+        "gap": 0,
+        "status": "gap",
         "items": [
           {
             "nama": "Time Management",
-            "expected": 3,
+            "expected": 4,
             "actual": 4,
-            "gap": 1,
-            "status": "⬆️ Exceed"
+            "gap": 0,
+            "status": "fit"
           },
           {
             "nama": "Organizational Awareness",
-            "expected": 3,
-            "actual": 3,
+            "expected": 4,
+            "actual": 4,
             "gap": 0,
-            "status": "✅ Fit"
+            "status": "fit"
           },
           {
             "nama": "Managing Work & Performance",
-            "expected": 3,
+            "expected": 4,
             "actual": 3,
-            "gap": 0,
-            "status": "✅ Fit"
+            "gap": -1,
+            "status": "gap"
           },
           {
             "nama": "Business Acumen",
-            "expected": 3,
-            "actual": 3,
+            "expected": 4,
+            "actual": 4,
             "gap": 0,
-            "status": "✅ Fit"
+            "status": "fit"
           }
         ]
       },
       {
         "kategori": "Leadership",
-        "expected": 2.0,
-        "actual_avg": 2.0,
-        "fit_rate": 100,
+        "expected": 3.0,
+        "actual_avg": 2.67,
+        "fit_rate": 50,
         "gap": 0,
-        "status": "✅ Fit",
+        "status": "gap",
         "items": [
           {
             "nama": "Problem Solving",
-            "expected": 2,
-            "actual": 2,
+            "expected": 3,
+            "actual": 3,
             "gap": 0,
-            "status": "✅ Fit"
+            "status": "fit"
           },
           {
             "nama": "Strategic Thinking",
-            "expected": 2,
+            "expected": 3,
             "actual": 2,
-            "gap": 0,
-            "status": "✅ Fit"
+            "gap": -1,
+            "status": "gap"
           },
           {
             "nama": "Visionary",
-            "expected": 2,
+            "expected": 3,
             "actual": 2,
-            "gap": 0,
-            "status": "✅ Fit"
+            "gap": -1,
+            "status": "gap"
           },
           {
             "nama": "Building Team",
-            "expected": 2,
-            "actual": 2,
+            "expected": 3,
+            "actual": 3,
             "gap": 0,
-            "status": "✅ Fit"
+            "status": "fit"
           },
           {
             "nama": "Change",
-            "expected": 2,
-            "actual": 2,
+            "expected": 3,
+            "actual": 3,
             "gap": 0,
-            "status": "✅ Fit"
+            "status": "fit"
           },
           {
             "nama": "Empowerment",
-            "expected": 2,
-            "actual": 2,
+            "expected": 3,
+            "actual": 3,
             "gap": 0,
-            "status": "✅ Fit"
+            "status": "fit"
           }
         ]
       },
       {
-        "kategori": "Technical (Farmasi)",
+        "kategori": "Technical (HR Recruitment)",
         "expected": 4.0,
-        "actual_avg": 3.0,
+        "actual_avg": 3.17,
         "fit_rate": 50,
         "gap": -1,
-        "status": "⚠️ Gap",
+        "status": "gap",
         "items": [
           {
-            "nama": "QMS (Quality Management System)",
+            "nama": "Talent Acquisition Strategy",
             "expected": 4,
             "actual": 3,
             "gap": -1,
-            "status": "⚠️ Gap"
+            "status": "gap"
           },
           {
-            "nama": "Risk Management",
-            "expected": 4,
-            "actual": 3,
-            "gap": -1,
-            "status": "⚠️ Gap"
-          },
-          {
-            "nama": "Documentation",
+            "nama": "Interview & Assessment Techniques",
             "expected": 4,
             "actual": 4,
             "gap": 0,
-            "status": "✅ Fit"
+            "status": "fit"
           },
           {
-            "nama": "HC Planning",
+            "nama": "Employer Branding",
             "expected": 4,
             "actual": 3,
             "gap": -1,
-            "status": "⚠️ Gap"
+            "status": "gap"
           },
           {
-            "nama": "Learning Management",
+            "nama": "Recruitment Analytics & Metrics",
             "expected": 4,
             "actual": 2,
             "gap": -2,
-            "status": "⚠️ Gap"
+            "status": "gap"
           },
           {
-            "nama": "Knowledge Management",
+            "nama": "HRIS & ATS (Applicant Tracking System)",
             "expected": 4,
             "actual": 3,
             "gap": -1,
-            "status": "⚠️ Gap"
+            "status": "gap"
+          },
+          {
+            "nama": "Employment Law & Compliance",
+            "expected": 4,
+            "actual": 4,
+            "gap": 0,
+            "status": "fit"
           }
         ]
       }
@@ -240,46 +240,63 @@
   "work_history": [
     {
       "id": "WH001",
-      "position": "Operator Produksi",
-      "department": "Produksi Solid",
-      "start_date": "2020-01-15",
+      "position": "HR Manager - Recruitment & Selection",
+      "department": "Human Resources - Recruitment",
+      "start_date": "2022-01-01",
       "end_date": null,
       "is_current": true,
-      "description": "Bertanggung jawab dalam proses produksi obat bentuk solid (tablet, kaplet). Memastikan kepatuhan terhadap CPOB dan SOP yang berlaku.",
+      "description": "Memimpin tim rekrutmen untuk seluruh posisi di Kimia Farma. Mengembangkan strategi talent acquisition dan memastikan proses rekrutmen yang efisien dan berkualitas.",
       "achievements": [
-        "0 defect selama Q3 2024",
-        "Pencapaian target output 105% dari target"
+        "Menurunkan time-to-hire dari 60 hari menjadi 45 hari (25% improvement)",
+        "Meningkatkan quality of hire score dari 72% menjadi 85%",
+        "Implementasi ATS baru untuk meningkatkan efisiensi screening kandidat"
       ]
     },
     {
       "id": "WH002",
-      "position": "Operator Produksi (Trainee)",
-      "department": "Produksi Liquid",
-      "start_date": "2019-07-01",
-      "end_date": "2019-12-31",
+      "position": "Senior Recruitment Specialist",
+      "department": "Human Resources - Recruitment",
+      "start_date": "2019-06-01",
+      "end_date": "2021-12-31",
       "is_current": false,
-      "description": "Program training selama 6 bulan di bagian produksi liquid sebelum dipindahkan ke solid.",
-      "achievements": []
+      "description": "Bertanggung jawab untuk rekrutmen posisi managerial dan specialist. Melakukan full-cycle recruitment dari sourcing hingga onboarding.",
+      "achievements": [
+        "Successfully hired 120+ candidates dalam 2.5 tahun",
+        "Membangun talent pipeline untuk posisi kritikal (QC, Production, R&D)"
+      ]
+    },
+    {
+      "id": "WH003",
+      "position": "Recruitment Specialist",
+      "department": "Human Resources - Recruitment",
+      "start_date": "2018-03-01",
+      "end_date": "2019-05-31",
+      "is_current": false,
+      "description": "Fokus pada rekrutmen posisi staff dan operator. Melakukan screening, interview, dan koordinasi dengan hiring manager.",
+      "achievements": [
+        "Successfully hired 80+ candidates untuk posisi operasional",
+        "Develop structured interview guide untuk berbagai posisi"
+      ]
     }
   ],
   "education": [
     {
       "id": "EDU001",
-      "degree": "D3 Teknik Kimia",
-      "institution": "Politeknik Negeri Jakarta",
-      "major": "Teknik Kimia",
-      "year_start": "2016",
-      "year_end": "2019",
-      "gpa": 3.45,
-      "description": "Fokus pada proses produksi dan quality control di industri kimia dan farmasi"
+      "degree": "S1 Psikologi",
+      "institution": "Universitas Indonesia",
+      "major": "Psikologi Industri & Organisasi",
+      "year_start": "2013",
+      "year_end": "2017",
+      "gpa": 3.65,
+      "description": "Fokus pada assessment, selection, dan organizational behavior"
     },
     {
       "id": "EDU002",
-      "degree": "SMA IPA",
-      "institution": "SMA Negeri 1 Jakarta",
-      "major": "Ilmu Pengetahuan Alam",
-      "year_start": "2013",
-      "year_end": "2016",
+      "degree": "SMA IPS",
+      "institution": "SMA Negeri 8 Jakarta",
+      "major": "Ilmu Pengetahuan Sosial",
+      "year_start": "2010",
+      "year_end": "2013",
       "gpa": null,
       "description": null
     }
@@ -287,29 +304,47 @@
   "training": [
     {
       "id": "TRN001",
-      "title": "CPOB (Cara Pembuatan Obat yang Baik) - Refreshment",
-      "provider": "Internal Training - Kimia Farma",
-      "date": "2024-03-15",
-      "duration": "2 hari",
-      "certificate_number": "KF-CPOB-2024-0315",
+      "title": "Advanced Recruitment Analytics & Data-Driven Hiring",
+      "provider": "External - SHRM (Society for Human Resource Management)",
+      "date": "2024-06-20",
+      "duration": "3 hari",
+      "certificate_number": "SHRM-ARA-2024-0620",
       "status": "Completed"
     },
     {
       "id": "TRN002",
-      "title": "Good Documentation Practice (GDP)",
-      "provider": "External - BPOM RI",
-      "date": "2023-11-20",
-      "duration": "3 hari",
-      "certificate_number": "BPOM-GDP-2023-1120",
+      "title": "Behavioral Event Interview (BEI) Certification",
+      "provider": "External - DDI (Development Dimensions International)",
+      "date": "2023-09-15",
+      "duration": "4 hari",
+      "certificate_number": "DDI-BEI-2023-0915",
       "status": "Completed"
     },
     {
       "id": "TRN003",
-      "title": "Basic Leadership Skills",
+      "title": "Employer Branding & Talent Marketing",
+      "provider": "External - LinkedIn Learning",
+      "date": "2023-03-10",
+      "duration": "2 hari (online)",
+      "certificate_number": "LI-EBTM-2023-0310",
+      "status": "Completed"
+    },
+    {
+      "id": "TRN004",
+      "title": "Leadership Development Program for Managers",
       "provider": "Internal Training - Kimia Farma",
-      "date": "2023-06-10",
-      "duration": "1 hari",
-      "certificate_number": "KF-LEAD-2023-0610",
+      "date": "2022-11-05",
+      "duration": "5 hari",
+      "certificate_number": "KF-LDP-2022-1105",
+      "status": "Completed"
+    },
+    {
+      "id": "TRN005",
+      "title": "Employment Law & Compliance for HR Professionals",
+      "provider": "External - KADIN Indonesia",
+      "date": "2022-04-18",
+      "duration": "2 hari",
+      "certificate_number": "KADIN-ELC-2022-0418",
       "status": "Completed"
     }
   ],
@@ -317,80 +352,88 @@
     {
       "id": "QUAL001",
       "type": "Sertifikasi",
-      "name": "Sertifikat Kompetensi Operator Produksi Farmasi",
-      "issuer": "BNSP (Badan Nasional Sertifikasi Profesi)",
-      "issued_date": "2020-08-15",
-      "expiry_date": "2025-08-15",
-      "credential_id": "BNSP-OP-2020-08150001"
+      "name": "Certified Professional in Talent Acquisition (CPTA)",
+      "issuer": "SHRM (Society for Human Resource Management)",
+      "issued_date": "2021-08-10",
+      "expiry_date": "2026-08-10",
+      "credential_id": "SHRM-CPTA-2021-08100145"
     },
     {
       "id": "QUAL002",
-      "type": "License",
-      "name": "License Forklift Operator",
-      "issuer": "KEMNAKER RI",
-      "issued_date": "2021-02-10",
-      "expiry_date": "2026-02-10",
-      "credential_id": "FORK-2021-02100234"
+      "type": "Sertifikasi",
+      "name": "BNSP - Manajer Sumber Daya Manusia",
+      "issuer": "BNSP (Badan Nasional Sertifikasi Profesi)",
+      "issued_date": "2022-02-20",
+      "expiry_date": "2027-02-20",
+      "credential_id": "BNSP-MSDM-2022-02200089"
     }
   ],
   "achievement": [
     {
       "id": "ACH001",
-      "title": "Best Operator Q3 2023",
-      "date": "2023-09-30",
+      "title": "Best HR Manager 2023",
+      "date": "2023-12-20",
       "category": "Performance Award",
-      "description": "Pencapaian 0 defect selama 3 bulan berturut-turut (Juli - September 2023)",
-      "awarded_by": "Direktur Produksi dan Supply Chain"
+      "description": "Penghargaan atas kontribusi luar biasa dalam meningkatkan kualitas rekrutmen dan efisiensi proses hiring di Kimia Farma",
+      "awarded_by": "Direktur Human Capital"
     },
     {
       "id": "ACH002",
-      "title": "Perfect Attendance Award 2022",
-      "date": "2022-12-31",
-      "category": "Attendance Award",
-      "description": "Kehadiran 100% sepanjang tahun 2022 tanpa izin atau sakit",
-      "awarded_by": "HR Department"
+      "title": "Innovation Award - ATS Implementation",
+      "date": "2023-07-15",
+      "category": "Innovation Award",
+      "description": "Keberhasilan implementasi Applicant Tracking System yang meningkatkan efisiensi screening kandidat sebesar 40%",
+      "awarded_by": "Management Board"
+    },
+    {
+      "id": "ACH003",
+      "title": "HR Excellence Award Q2 2022",
+      "date": "2022-06-30",
+      "category": "Performance Award",
+      "description": "Pencapaian target rekrutmen 100% dengan quality of hire score tertinggi (88%) di tahun 2022",
+      "awarded_by": "Direktur Human Capital"
     }
   ],
   "kpi_personal": [
     {
       "id": "KPI001",
-      "name": "Kepatuhan terhadap CPOB & SOP",
-      "category": "Compliance",
-      "target": "100%",
-      "actual": "98%",
+      "name": "Time to Hire",
+      "category": "Efficiency",
+      "target": "45 hari",
+      "actual": "47 hari",
       "period": "Q3 2024",
-      "status": "Achieved",
-      "notes": "2 minor deviation di bulan Agustus (sudah diperbaiki)"
+      "status": "Near Target",
+      "notes": "Sedikit di atas target karena proses approval yang lebih panjang untuk posisi senior"
     },
     {
       "id": "KPI002",
-      "name": "Pencapaian Target Output Harian/Mingguan",
-      "category": "Productivity",
-      "target": "100%",
-      "actual": "105%",
+      "name": "Quality of Hire Score",
+      "category": "Quality",
+      "target": "85%",
+      "actual": "82%",
       "period": "Q3 2024",
-      "status": "Exceed",
-      "notes": "Rata-rata produksi melebihi target 5% karena efficiency improvement"
+      "status": "Near Target",
+      "notes": "Berdasarkan performance review karyawan baru setelah 6 bulan masa percobaan"
     },
     {
       "id": "KPI003",
-      "name": "Tingkat Kerusakan Produk (Defect Rate)",
-      "category": "Quality",
-      "target": "< 1%",
-      "actual": "0.3%",
+      "name": "Offer Acceptance Rate",
+      "category": "Effectiveness",
+      "target": "80%",
+      "actual": "88%",
       "period": "Q3 2024",
       "status": "Exceed",
-      "notes": "Sangat baik, di bawah target yang ditetapkan"
+      "notes": "Excellent! Strategi employer branding berhasil meningkatkan daya tarik Kimia Farma"
     },
     {
       "id": "KPI004",
-      "name": "Kelengkapan Pengisian Batch Record",
-      "category": "Documentation",
-      "target": "100%",
-      "actual": "100%",
+      "name": "Recruitment Cost per Hire",
+      "category": "Efficiency",
+      "target": "< Rp 5.000.000",
+      "actual": "Rp 4.800.000",
       "period": "Q3 2024",
       "status": "Achieved",
-      "notes": "Semua batch record terisi lengkap dan tepat waktu"
+      "notes": "Efisiensi biaya melalui optimalisasi sourcing channels dan referral program"
     }
   ]
 }

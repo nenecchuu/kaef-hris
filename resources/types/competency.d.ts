@@ -1,4 +1,5 @@
-export type CompetencyStatus = "✅ Fit" | "⚠️ Gap" | "⬆️ Exceed";
+// Status values without emojis for cleaner code and better icon rendering
+export type CompetencyStatus = "fit" | "gap" | "exceed";
 
 export interface Employee {
   id: string;
@@ -106,7 +107,10 @@ export interface LeaderTeamData {
   leader_name: string;
   leader_position: string;
   leader_function?: string;
+  leader_division?: string;
   leader_email?: string;
+  leader_photo?: string;
+  leader_phone?: string;
   team_kpi: {
     total_members: number;
     avg_fit_rate: number;

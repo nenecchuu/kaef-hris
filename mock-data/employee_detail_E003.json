@@ -1,0 +1,441 @@
+{
+  "employee": {
+    "id": "E003",
+    "nama": "Ahmad Fauzi",
+    "jabatan": "HR Supervisor - Compensation & Benefits",
+    "fungsi": "Human Resources / C&B",
+    "level": "Supervisor",
+    "photo": "https://i.pravatar.cc/150?u=E003",
+    "email": "ahmad.fauzi@kimiafarma.co.id",
+    "phone": "+62 814-7890-1234",
+    "department": "Human Resources - Compensation & Benefits",
+    "join_date": "2018-06-15",
+    "status_kompetensi": "exceed",
+    "fit_rate_overall": 105
+  },
+  "assessment_results": {
+    "assessed_date": "2024-10-12",
+    "assessor": "Dr. Andini Kusuma",
+    "assessments": [
+      {
+        "kategori": "Core Values",
+        "expected": 3.0,
+        "actual_avg": 3.6,
+        "fit_rate": 100,
+        "gap": 1,
+        "status": "exceed",
+        "items": [
+          {
+            "nama": "Professional",
+            "expected": 3,
+            "actual": 4,
+            "gap": 1,
+            "status": "exceed"
+          },
+          {
+            "nama": "Integrity",
+            "expected": 3,
+            "actual": 4,
+            "gap": 1,
+            "status": "exceed"
+          },
+          {
+            "nama": "Teamwork",
+            "expected": 3,
+            "actual": 4,
+            "gap": 1,
+            "status": "exceed"
+          },
+          {
+            "nama": "Innovation",
+            "expected": 3,
+            "actual": 3,
+            "gap": 0,
+            "status": "fit"
+          },
+          {
+            "nama": "Customer Oriented",
+            "expected": 3,
+            "actual": 3,
+            "gap": 0,
+            "status": "fit"
+          }
+        ]
+      },
+      {
+        "kategori": "Generic",
+        "expected": 3.0,
+        "actual_avg": 3.67,
+        "fit_rate": 100,
+        "gap": 1,
+        "status": "exceed",
+        "items": [
+          {
+            "nama": "Concern for Order",
+            "expected": 3,
+            "actual": 4,
+            "gap": 1,
+            "status": "exceed"
+          },
+          {
+            "nama": "Thinking Ability",
+            "expected": 3,
+            "actual": 4,
+            "gap": 1,
+            "status": "exceed"
+          },
+          {
+            "nama": "Empathy & Interpersonal Skill",
+            "expected": 3,
+            "actual": 3,
+            "gap": 0,
+            "status": "fit"
+          }
+        ]
+      },
+      {
+        "kategori": "Management",
+        "expected": 3.0,
+        "actual_avg": 3.75,
+        "fit_rate": 100,
+        "gap": 1,
+        "status": "exceed",
+        "items": [
+          {
+            "nama": "Time Management",
+            "expected": 3,
+            "actual": 4,
+            "gap": 1,
+            "status": "exceed"
+          },
+          {
+            "nama": "Organizational Awareness",
+            "expected": 3,
+            "actual": 4,
+            "gap": 1,
+            "status": "exceed"
+          },
+          {
+            "nama": "Managing Work & Performance",
+            "expected": 3,
+            "actual": 4,
+            "gap": 1,
+            "status": "exceed"
+          },
+          {
+            "nama": "Business Acumen",
+            "expected": 3,
+            "actual": 3,
+            "gap": 0,
+            "status": "fit"
+          }
+        ]
+      },
+      {
+        "kategori": "Leadership",
+        "expected": 2.0,
+        "actual_avg": 2.83,
+        "fit_rate": 100,
+        "gap": 1,
+        "status": "exceed",
+        "items": [
+          {
+            "nama": "Problem Solving",
+            "expected": 2,
+            "actual": 3,
+            "gap": 1,
+            "status": "exceed"
+          },
+          {
+            "nama": "Strategic Thinking",
+            "expected": 2,
+            "actual": 3,
+            "gap": 1,
+            "status": "exceed"
+          },
+          {
+            "nama": "Visionary",
+            "expected": 2,
+            "actual": 3,
+            "gap": 1,
+            "status": "exceed"
+          },
+          {
+            "nama": "Building Team",
+            "expected": 2,
+            "actual": 3,
+            "gap": 1,
+            "status": "exceed"
+          },
+          {
+            "nama": "Change",
+            "expected": 2,
+            "actual": 3,
+            "gap": 1,
+            "status": "exceed"
+          },
+          {
+            "nama": "Empowerment",
+            "expected": 2,
+            "actual": 2,
+            "gap": 0,
+            "status": "fit"
+          }
+        ]
+      },
+      {
+        "kategori": "Technical (HR Compensation & Benefits)",
+        "expected": 3.0,
+        "actual_avg": 3.83,
+        "fit_rate": 100,
+        "gap": 1,
+        "status": "exceed",
+        "items": [
+          {
+            "nama": "Compensation Structure & Grading",
+            "expected": 3,
+            "actual": 4,
+            "gap": 1,
+            "status": "exceed"
+          },
+          {
+            "nama": "Salary Benchmarking & Market Survey",
+            "expected": 3,
+            "actual": 4,
+            "gap": 1,
+            "status": "exceed"
+          },
+          {
+            "nama": "Benefits Administration (BPJS, Insurance, Pension)",
+            "expected": 3,
+            "actual": 4,
+            "gap": 1,
+            "status": "exceed"
+          },
+          {
+            "nama": "Payroll Processing & Tax Compliance",
+            "expected": 3,
+            "actual": 4,
+            "gap": 1,
+            "status": "exceed"
+          },
+          {
+            "nama": "Job Evaluation & Job Analysis",
+            "expected": 3,
+            "actual": 3,
+            "gap": 0,
+            "status": "fit"
+          },
+          {
+            "nama": "HR Analytics & Compensation Report",
+            "expected": 3,
+            "actual": 4,
+            "gap": 1,
+            "status": "exceed"
+          }
+        ]
+      }
+    ]
+  },
+  "work_history": [
+    {
+      "id": "WH001",
+      "position": "HR Supervisor - Compensation & Benefits",
+      "department": "Human Resources - C&B",
+      "start_date": "2021-07-01",
+      "end_date": null,
+      "is_current": true,
+      "description": "Memimpin tim C&B untuk mengelola seluruh proses compensation & benefits di Kimia Farma. Bertanggung jawab atas salary structure, benefits administration, payroll, dan compliance.",
+      "achievements": [
+        "Develop new salary grading system yang lebih kompetitif dan fair",
+        "Successfully implement automated payroll system yang mengurangi error rate 90%",
+        "Conduct market survey dan adjust compensation strategy untuk meningkatkan retention",
+        "Zero compliance issue dalam BPJS & tax audit selama 3 tahun"
+      ]
+    },
+    {
+      "id": "WH002",
+      "position": "C&B Specialist",
+      "department": "Human Resources - C&B",
+      "start_date": "2019-08-01",
+      "end_date": "2021-06-30",
+      "is_current": false,
+      "description": "Bertanggung jawab untuk payroll processing, benefits administration, dan coordination dengan finance untuk payment. Melakukan market survey dan job evaluation.",
+      "achievements": [
+        "Implement payroll automation project",
+        "Reduce payroll processing time dari 5 hari menjadi 2 hari",
+        "Successfully complete salary review untuk 500+ employees"
+      ]
+    },
+    {
+      "id": "WH003",
+      "position": "HR Staff - C&B",
+      "department": "Human Resources - C&B",
+      "start_date": "2018-06-15",
+      "end_date": "2019-07-31",
+      "is_current": false,
+      "description": "Support C&B team dalam payroll administration, benefits enrollment, dan data maintenance. Handle employee inquiries terkait salary & benefits.",
+      "achievements": [
+        "Perfect accuracy dalam payroll processing (0 error)",
+        "Best New Employee 2018"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": "EDU001",
+      "degree": "S1 Manajemen",
+      "institution": "Universitas Gadjah Mada",
+      "major": "Manajemen Sumber Daya Manusia",
+      "year_start": "2014",
+      "year_end": "2018",
+      "gpa": 3.72,
+      "description": "Fokus pada compensation management, HR analytics, dan organizational behavior"
+    },
+    {
+      "id": "EDU002",
+      "degree": "SMA IPS",
+      "institution": "SMA Negeri 3 Yogyakarta",
+      "major": "Ilmu Pengetahuan Sosial",
+      "year_start": "2011",
+      "year_end": "2014",
+      "gpa": 3.65,
+      "description": null
+    }
+  ],
+  "training": [
+    {
+      "id": "TRN001",
+      "title": "Certified Compensation Professional (CCP)",
+      "provider": "External - WorldatWork",
+      "date": "2024-04-15",
+      "duration": "10 hari (preparation + exam)",
+      "certificate_number": "WAW-CCP-2024-0415",
+      "status": "Completed"
+    },
+    {
+      "id": "TRN002",
+      "title": "Advanced Salary Structure Design & Job Grading",
+      "provider": "External - Mercer Indonesia",
+      "date": "2023-11-20",
+      "duration": "3 hari",
+      "certificate_number": "MERC-ASSD-2023-1120",
+      "status": "Completed"
+    },
+    {
+      "id": "TRN003",
+      "title": "BPJS Ketenagakerjaan & Kesehatan Compliance",
+      "provider": "External - BPJS Ketenagakerjaan",
+      "date": "2023-06-10",
+      "duration": "2 hari",
+      "certificate_number": "BPJS-COMP-2023-0610",
+      "status": "Completed"
+    },
+    {
+      "id": "TRN004",
+      "title": "Payroll Tax Compliance & PPh 21 Calculation",
+      "provider": "External - DDTC (Danny Darussalam Tax Center)",
+      "date": "2022-09-15",
+      "duration": "3 hari",
+      "certificate_number": "DDTC-PTC-2022-0915",
+      "status": "Completed"
+    },
+    {
+      "id": "TRN005",
+      "title": "HR Analytics & Data Visualization",
+      "provider": "External - LinkedIn Learning",
+      "date": "2022-03-20",
+      "duration": "2 hari (online)",
+      "certificate_number": "LI-HRAD-2022-0320",
+      "status": "Completed"
+    }
+  ],
+  "personal_qualification": [
+    {
+      "id": "QUAL001",
+      "type": "Sertifikasi",
+      "name": "Certified Compensation Professional (CCP)",
+      "issuer": "WorldatWork",
+      "issued_date": "2024-05-15",
+      "expiry_date": "2027-05-15",
+      "credential_id": "WAW-CCP-2024-051500234"
+    },
+    {
+      "id": "QUAL002",
+      "type": "Sertifikasi",
+      "name": "BNSP - Spesialis Kompensasi dan Benefit",
+      "issuer": "BNSP (Badan Nasional Sertifikasi Profesi)",
+      "issued_date": "2023-08-10",
+      "expiry_date": "2028-08-10",
+      "credential_id": "BNSP-SCB-2023-08100145"
+    }
+  ],
+  "achievement": [
+    {
+      "id": "ACH001",
+      "title": "Best HR Supervisor 2024 - C&B Excellence",
+      "date": "2024-07-15",
+      "category": "Performance Award",
+      "description": "Penghargaan atas kontribusi luar biasa dalam develop salary grading system baru dan zero compliance issue",
+      "awarded_by": "Direktur Human Capital"
+    },
+    {
+      "id": "ACH002",
+      "title": "Innovation Award - Payroll Automation",
+      "date": "2023-12-20",
+      "category": "Innovation Award",
+      "description": "Keberhasilan implementasi automated payroll system yang mengurangi error rate 90% dan processing time 60%",
+      "awarded_by": "Management Board"
+    },
+    {
+      "id": "ACH003",
+      "title": "HR Excellence Award Q2 2022",
+      "date": "2022-06-30",
+      "category": "Performance Award",
+      "description": "Perfect execution dalam salary review project untuk 500+ employees tanpa komplain",
+      "awarded_by": "Direktur Human Capital"
+    }
+  ],
+  "kpi_personal": [
+    {
+      "id": "KPI001",
+      "name": "Payroll Accuracy Rate",
+      "category": "Quality",
+      "target": "99%",
+      "actual": "100%",
+      "period": "Q3 2024",
+      "status": "Exceed",
+      "notes": "Zero error dalam payroll processing, automated system berjalan perfect"
+    },
+    {
+      "id": "KPI002",
+      "name": "Compliance Rate (BPJS, Tax, Benefits)",
+      "category": "Compliance",
+      "target": "100%",
+      "actual": "100%",
+      "period": "Q3 2024",
+      "status": "Achieved",
+      "notes": "Zero finding dalam audit BPJS dan tax compliance"
+    },
+    {
+      "id": "KPI003",
+      "name": "Payroll Processing Time",
+      "category": "Efficiency",
+      "target": "< 3 hari",
+      "actual": "2 hari",
+      "period": "Q3 2024",
+      "status": "Exceed",
+      "notes": "Automated system significantly meningkatkan efisiensi"
+    },
+    {
+      "id": "KPI004",
+      "name": "Employee Satisfaction - C&B Services",
+      "category": "Service Quality",
+      "target": "80%",
+      "actual": "92%",
+      "period": "Q3 2024",
+      "status": "Exceed",
+      "notes": "Survey menunjukkan employee sangat puas dengan C&B services dan responsiveness"
+    }
+  ]
+}

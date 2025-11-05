@@ -1,96 +1,132 @@
 {
   "leader_id": "L001",
-  "leader_name": "Lina Sari",
-  "leader_position": "Direktur Keuangan dan Manajemen Risiko",
-  "leader_function": "Keuangan",
-  "leader_email": "lina.sari@kimiafarma.co.id",
+  "leader_name": "Dr. Andini Kusuma",
+  "leader_position": "Direktur Human Capital",
+  "leader_function": "Human Resources",
+  "leader_division": "Divisi Human Capital",
+  "leader_email": "andini.kusuma@kimiafarma.co.id",
+  "leader_photo": "https://i.pravatar.cc/150?u=L001",
+  "leader_phone": "+62 811-2200-3344",
   "team_kpi": {
-    "total_members": 24,
-    "avg_fit_rate": 62,
-    "critical_gaps": 5,
+    "total_members": 10,
+    "avg_fit_rate": 78,
+    "critical_gaps": 2,
     "status_distribution": {
-      "fit": 15,
-      "gap": 7,
-      "exceed": 2
+      "fit": 6,
+      "gap": 3,
+      "exceed": 1
     }
   },
   "team_members": [
     {
       "id": "E001",
       "nama": "Budi Santoso",
-      "jabatan": "Operator Produksi",
-      "fungsi": "Operasi / Produksi",
-      "level": "Staf (Pelaksana)",
+      "jabatan": "HR Manager - Recruitment & Selection",
+      "fungsi": "Human Resources / Recruitment",
+      "level": "Manager",
       "photo": "https://i.pravatar.cc/150?u=E001",
       "email": "budi.santoso@kimiafarma.co.id",
-      "status_kompetensi": "⚠️ Gap",
-      "fit_rate_overall": 58
+      "status_kompetensi": "gap",
+      "fit_rate_overall": 68
     },
     {
       "id": "E002",
       "nama": "Siti Nurhaliza",
-      "jabatan": "Analis Quality Control",
-      "fungsi": "Operasi / QA/QC",
-      "level": "Staf (Teknis)",
+      "jabatan": "HR Manager - Learning & Development",
+      "fungsi": "Human Resources / L&D",
+      "level": "Manager",
       "photo": "https://i.pravatar.cc/150?u=E002",
       "email": "siti.nurhaliza@kimiafarma.co.id",
-      "status_kompetensi": "✅ Fit",
+      "status_kompetensi": "fit",
       "fit_rate_overall": 92
     },
     {
       "id": "E003",
       "nama": "Ahmad Fauzi",
-      "jabatan": "Staf PPIC",
-      "fungsi": "Operasi / PPIC",
-      "level": "Staf (Spesialis)",
+      "jabatan": "HR Supervisor - Compensation & Benefits",
+      "fungsi": "Human Resources / C&B",
+      "level": "Supervisor",
       "photo": "https://i.pravatar.cc/150?u=E003",
       "email": "ahmad.fauzi@kimiafarma.co.id",
-      "status_kompetensi": "⬆️ Exceed",
+      "status_kompetensi": "exceed",
       "fit_rate_overall": 105
     },
     {
       "id": "E004",
       "nama": "Rina Wijaya",
-      "jabatan": "Staf Gudang Farmasi",
-      "fungsi": "Operasi / Supply Chain",
-      "level": "Staf (Pelaksana)",
+      "jabatan": "HR Staff - Employee Relations",
+      "fungsi": "Human Resources / ER",
+      "level": "Staff",
       "photo": "https://i.pravatar.cc/150?u=E004",
       "email": "rina.wijaya@kimiafarma.co.id",
-      "status_kompetensi": "⚠️ Gap",
-      "fit_rate_overall": 67
+      "status_kompetensi": "fit",
+      "fit_rate_overall": 75
     },
     {
       "id": "E005",
       "nama": "Joko Widodo",
-      "jabatan": "Operator Mesin",
-      "fungsi": "Operasi / Produksi",
-      "level": "Staf (Pelaksana)",
+      "jabatan": "HR Staff - Performance Management",
+      "fungsi": "Human Resources / Performance",
+      "level": "Staff",
       "photo": "https://i.pravatar.cc/150?u=E005",
       "email": "joko.widodo@kimiafarma.co.id",
-      "status_kompetensi": "✅ Fit",
+      "status_kompetensi": "fit",
       "fit_rate_overall": 83
     },
     {
       "id": "E006",
       "nama": "Dewi Lestari",
-      "jabatan": "Staff Analis Microbiology",
-      "fungsi": "Operasi / QA/QC",
-      "level": "Staf (Teknis)",
+      "jabatan": "HR Staff - HRIS & Analytics",
+      "fungsi": "Human Resources / HRIS",
+      "level": "Staff",
       "photo": "https://i.pravatar.cc/150?u=E006",
       "email": "dewi.lestari@kimiafarma.co.id",
-      "status_kompetensi": "✅ Fit",
+      "status_kompetensi": "fit",
       "fit_rate_overall": 88
     },
     {
       "id": "E007",
       "nama": "Rudi Hartono",
-      "jabatan": "Staf Logistik",
-      "fungsi": "Operasi / Supply Chain",
-      "level": "Staf (Pelaksana)",
+      "jabatan": "HR Staff - Payroll",
+      "fungsi": "Human Resources / Payroll",
+      "level": "Staff",
       "photo": "https://i.pravatar.cc/150?u=E007",
       "email": "rudi.hartono@kimiafarma.co.id",
-      "status_kompetensi": "⚠️ Gap",
-      "fit_rate_overall": 54
+      "status_kompetensi": "gap",
+      "fit_rate_overall": 62
+    },
+    {
+      "id": "E008",
+      "nama": "Maya Angelina",
+      "jabatan": "Training Coordinator",
+      "fungsi": "Human Resources / Training",
+      "level": "Coordinator",
+      "photo": "https://i.pravatar.cc/150?u=E008",
+      "email": "maya.angelina@kimiafarma.co.id",
+      "status_kompetensi": "fit",
+      "fit_rate_overall": 85
+    },
+    {
+      "id": "E009",
+      "nama": "Rizky Pratama",
+      "jabatan": "Recruitment Specialist",
+      "fungsi": "Human Resources / Recruitment",
+      "level": "Specialist",
+      "photo": "https://i.pravatar.cc/150?u=E009",
+      "email": "rizky.pratama@kimiafarma.co.id",
+      "status_kompetensi": "fit",
+      "fit_rate_overall": 78
+    },
+    {
+      "id": "E010",
+      "nama": "Ani Susanti",
+      "jabatan": "HR Admin",
+      "fungsi": "Human Resources / Admin",
+      "level": "Staff",
+      "photo": "https://i.pravatar.cc/150?u=E010",
+      "email": "ani.susanti@kimiafarma.co.id",
+      "status_kompetensi": "gap",
+      "fit_rate_overall": 65
     }
   ]
 }

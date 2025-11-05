@@ -1,0 +1,432 @@
+{
+  "employee": {
+    "id": "E002",
+    "nama": "Siti Nurhaliza",
+    "jabatan": "HR Manager - Learning & Development",
+    "fungsi": "Human Resources / L&D",
+    "level": "Manager",
+    "photo": "https://i.pravatar.cc/150?u=E002",
+    "email": "siti.nurhaliza@kimiafarma.co.id",
+    "phone": "+62 813-5678-9012",
+    "department": "Human Resources - Learning & Development",
+    "join_date": "2019-03-10",
+    "status_kompetensi": "fit",
+    "fit_rate_overall": 92
+  },
+  "assessment_results": {
+    "assessed_date": "2024-10-20",
+    "assessor": "Dr. Andini Kusuma",
+    "assessments": [
+      {
+        "kategori": "Core Values",
+        "expected": 4.0,
+        "actual_avg": 4.2,
+        "fit_rate": 100,
+        "gap": 0,
+        "status": "fit",
+        "items": [
+          {
+            "nama": "Professional",
+            "expected": 4,
+            "actual": 5,
+            "gap": 1,
+            "status": "exceed"
+          },
+          {
+            "nama": "Integrity",
+            "expected": 4,
+            "actual": 4,
+            "gap": 0,
+            "status": "fit"
+          },
+          {
+            "nama": "Teamwork",
+            "expected": 4,
+            "actual": 4,
+            "gap": 0,
+            "status": "fit"
+          },
+          {
+            "nama": "Innovation",
+            "expected": 4,
+            "actual": 4,
+            "gap": 0,
+            "status": "fit"
+          },
+          {
+            "nama": "Customer Oriented",
+            "expected": 4,
+            "actual": 4,
+            "gap": 0,
+            "status": "fit"
+          }
+        ]
+      },
+      {
+        "kategori": "Generic",
+        "expected": 4.0,
+        "actual_avg": 4.33,
+        "fit_rate": 100,
+        "gap": 1,
+        "status": "exceed",
+        "items": [
+          {
+            "nama": "Concern for Order",
+            "expected": 4,
+            "actual": 5,
+            "gap": 1,
+            "status": "exceed"
+          },
+          {
+            "nama": "Thinking Ability",
+            "expected": 4,
+            "actual": 4,
+            "gap": 0,
+            "status": "fit"
+          },
+          {
+            "nama": "Empathy & Interpersonal Skill",
+            "expected": 4,
+            "actual": 4,
+            "gap": 0,
+            "status": "fit"
+          }
+        ]
+      },
+      {
+        "kategori": "Management",
+        "expected": 4.0,
+        "actual_avg": 4.0,
+        "fit_rate": 100,
+        "gap": 0,
+        "status": "fit",
+        "items": [
+          {
+            "nama": "Time Management",
+            "expected": 4,
+            "actual": 4,
+            "gap": 0,
+            "status": "fit"
+          },
+          {
+            "nama": "Organizational Awareness",
+            "expected": 4,
+            "actual": 4,
+            "gap": 0,
+            "status": "fit"
+          },
+          {
+            "nama": "Managing Work & Performance",
+            "expected": 4,
+            "actual": 4,
+            "gap": 0,
+            "status": "fit"
+          },
+          {
+            "nama": "Business Acumen",
+            "expected": 4,
+            "actual": 4,
+            "gap": 0,
+            "status": "fit"
+          }
+        ]
+      },
+      {
+        "kategori": "Leadership",
+        "expected": 3.0,
+        "actual_avg": 3.17,
+        "fit_rate": 100,
+        "gap": 0,
+        "status": "fit",
+        "items": [
+          {
+            "nama": "Problem Solving",
+            "expected": 3,
+            "actual": 4,
+            "gap": 1,
+            "status": "exceed"
+          },
+          {
+            "nama": "Strategic Thinking",
+            "expected": 3,
+            "actual": 3,
+            "gap": 0,
+            "status": "fit"
+          },
+          {
+            "nama": "Visionary",
+            "expected": 3,
+            "actual": 3,
+            "gap": 0,
+            "status": "fit"
+          },
+          {
+            "nama": "Building Team",
+            "expected": 3,
+            "actual": 3,
+            "gap": 0,
+            "status": "fit"
+          },
+          {
+            "nama": "Change",
+            "expected": 3,
+            "actual": 3,
+            "gap": 0,
+            "status": "fit"
+          },
+          {
+            "nama": "Empowerment",
+            "expected": 3,
+            "actual": 3,
+            "gap": 0,
+            "status": "fit"
+          }
+        ]
+      },
+      {
+        "kategori": "Technical (HR Learning & Development)",
+        "expected": 4.0,
+        "actual_avg": 4.17,
+        "fit_rate": 100,
+        "gap": 0,
+        "status": "fit",
+        "items": [
+          {
+            "nama": "Training Needs Analysis (TNA)",
+            "expected": 4,
+            "actual": 5,
+            "gap": 1,
+            "status": "exceed"
+          },
+          {
+            "nama": "Learning Program Design & Development",
+            "expected": 4,
+            "actual": 4,
+            "gap": 0,
+            "status": "fit"
+          },
+          {
+            "nama": "Training Delivery & Facilitation",
+            "expected": 4,
+            "actual": 4,
+            "gap": 0,
+            "status": "fit"
+          },
+          {
+            "nama": "Learning Management System (LMS)",
+            "expected": 4,
+            "actual": 4,
+            "gap": 0,
+            "status": "fit"
+          },
+          {
+            "nama": "Talent Development & Succession Planning",
+            "expected": 4,
+            "actual": 4,
+            "gap": 0,
+            "status": "fit"
+          },
+          {
+            "nama": "Learning Evaluation & ROI Measurement",
+            "expected": 4,
+            "actual": 4,
+            "gap": 0,
+            "status": "fit"
+          }
+        ]
+      }
+    ]
+  },
+  "work_history": [
+    {
+      "id": "WH001",
+      "position": "HR Manager - Learning & Development",
+      "department": "Human Resources - L&D",
+      "start_date": "2022-06-01",
+      "end_date": null,
+      "is_current": true,
+      "description": "Memimpin fungsi Learning & Development untuk seluruh karyawan Kimia Farma. Mengembangkan strategi pembelajaran organisasi, mendesain program pengembangan talent, dan memastikan ROI dari setiap investasi training.",
+      "achievements": [
+        "Meningkatkan training satisfaction score dari 78% menjadi 92%",
+        "Mengimplementasikan LMS baru yang meningkatkan aksesibilitas training 300%",
+        "Develop competency-based training curriculum untuk 15 job families",
+        "Menurunkan training cost per employee sebesar 20% melalui optimalisasi vendor"
+      ]
+    },
+    {
+      "id": "WH002",
+      "position": "Senior Learning Specialist",
+      "department": "Human Resources - L&D",
+      "start_date": "2020-04-01",
+      "end_date": "2022-05-31",
+      "is_current": false,
+      "description": "Bertanggung jawab untuk mendesain dan mengimplementasikan program training untuk posisi managerial dan technical specialist. Melakukan training needs analysis dan evaluation.",
+      "achievements": [
+        "Develop Leadership Development Program yang diikuti 80+ managers",
+        "Design competency framework untuk technical roles (QC, Production, R&D)",
+        "Implementasi Kirkpatrick's 4-Level Training Evaluation model"
+      ]
+    },
+    {
+      "id": "WH003",
+      "position": "Learning Specialist",
+      "department": "Human Resources - L&D",
+      "start_date": "2019-03-10",
+      "end_date": "2020-03-31",
+      "is_current": false,
+      "description": "Fokus pada program training untuk karyawan operational level. Melakukan coordination dengan internal/external training providers dan mengukur efektivitas program.",
+      "achievements": [
+        "Successfully deliver 150+ training sessions dengan satisfaction rate 85%",
+        "Develop standard training evaluation framework"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": "EDU001",
+      "degree": "S2 Manajemen Sumber Daya Manusia",
+      "institution": "Universitas Indonesia",
+      "major": "Human Resource Management",
+      "year_start": "2017",
+      "year_end": "2019",
+      "gpa": 3.82,
+      "description": "Fokus pada organizational learning, talent development, dan training evaluation"
+    },
+    {
+      "id": "EDU002",
+      "degree": "S1 Psikologi",
+      "institution": "Universitas Padjadjaran",
+      "major": "Psikologi Industri & Organisasi",
+      "year_start": "2013",
+      "year_end": "2017",
+      "gpa": 3.68,
+      "description": "Fokus pada organizational behavior dan human performance"
+    }
+  ],
+  "training": [
+    {
+      "id": "TRN001",
+      "title": "Certified Professional in Learning and Performance (CPLP)",
+      "provider": "External - ATD (Association for Talent Development)",
+      "date": "2024-05-10",
+      "duration": "10 hari (preparation + exam)",
+      "certificate_number": "ATD-CPLP-2024-0510",
+      "status": "Completed"
+    },
+    {
+      "id": "TRN002",
+      "title": "Learning Experience Design (LXD) Masterclass",
+      "provider": "External - LinkedIn Learning",
+      "date": "2024-01-15",
+      "duration": "5 hari (online)",
+      "certificate_number": "LI-LXD-2024-0115",
+      "status": "Completed"
+    },
+    {
+      "id": "TRN003",
+      "title": "Advanced Facilitation Skills for Trainers",
+      "provider": "External - Dale Carnegie Indonesia",
+      "date": "2023-08-20",
+      "duration": "4 hari",
+      "certificate_number": "DC-AFS-2023-0820",
+      "status": "Completed"
+    },
+    {
+      "id": "TRN004",
+      "title": "Kirkpatrick's Four Levels of Training Evaluation",
+      "provider": "External - Kirkpatrick Partners",
+      "date": "2022-11-10",
+      "duration": "3 hari",
+      "certificate_number": "KP-4L-2022-1110",
+      "status": "Completed"
+    }
+  ],
+  "personal_qualification": [
+    {
+      "id": "QUAL001",
+      "type": "Sertifikasi",
+      "name": "Certified Professional in Learning and Performance (CPLP)",
+      "issuer": "ATD (Association for Talent Development)",
+      "issued_date": "2024-06-01",
+      "expiry_date": "2027-06-01",
+      "credential_id": "ATD-CPLP-2024-06010089"
+    },
+    {
+      "id": "QUAL002",
+      "type": "Sertifikasi",
+      "name": "BNSP - Asesor Kompetensi",
+      "issuer": "BNSP (Badan Nasional Sertifikasi Profesi)",
+      "issued_date": "2023-03-15",
+      "expiry_date": "2028-03-15",
+      "credential_id": "BNSP-ASES-2023-03150234"
+    }
+  ],
+  "achievement": [
+    {
+      "id": "ACH001",
+      "title": "Best HR Manager 2024 - Learning & Development",
+      "date": "2024-08-20",
+      "category": "Performance Award",
+      "description": "Penghargaan atas kontribusi luar biasa dalam meningkatkan efektivitas learning programs dan implementasi LMS yang sukses",
+      "awarded_by": "Direktur Human Capital"
+    },
+    {
+      "id": "ACH002",
+      "title": "Innovation Award - LMS Implementation",
+      "date": "2023-12-15",
+      "category": "Innovation Award",
+      "description": "Keberhasilan implementasi Learning Management System yang meningkatkan aksesibilitas training dari 2,000 ke 8,000 learning hours per year",
+      "awarded_by": "Management Board"
+    },
+    {
+      "id": "ACH003",
+      "title": "Learning Excellence Award 2023",
+      "date": "2023-06-30",
+      "category": "Performance Award",
+      "description": "Pencapaian training satisfaction score tertinggi (92%) dan development of competency-based curriculum",
+      "awarded_by": "Direktur Human Capital"
+    }
+  ],
+  "kpi_personal": [
+    {
+      "id": "KPI001",
+      "name": "Training Satisfaction Score",
+      "category": "Quality",
+      "target": "85%",
+      "actual": "92%",
+      "period": "Q3 2024",
+      "status": "Exceed",
+      "notes": "Excellent! Satisfaction rate melebihi target dengan signifikan"
+    },
+    {
+      "id": "KPI002",
+      "name": "Learning Hours per Employee",
+      "category": "Productivity",
+      "target": "40 jam/tahun",
+      "actual": "45 jam/tahun",
+      "period": "2024 (YTD)",
+      "status": "Exceed",
+      "notes": "Berhasil meningkatkan aksesibilitas training melalui LMS"
+    },
+    {
+      "id": "KPI003",
+      "name": "Training ROI",
+      "category": "Effectiveness",
+      "target": "3:1",
+      "actual": "3.5:1",
+      "period": "2024 (YTD)",
+      "status": "Exceed",
+      "notes": "ROI measurement berdasarkan Kirkpatrick Level 4 evaluation"
+    },
+    {
+      "id": "KPI004",
+      "name": "Training Cost per Employee",
+      "category": "Efficiency",
+      "target": "< Rp 2.500.000",
+      "actual": "Rp 2.200.000",
+      "period": "2024 (YTD)",
+      "status": "Achieved",
+      "notes": "Efisiensi melalui optimalisasi vendor dan internal facilitators"
+    }
+  ]
+}

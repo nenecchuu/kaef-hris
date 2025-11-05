@@ -25,5 +25,7 @@ export function postVerifyLoginMFA(body: FormData) {
 }
 
 export function postVerifyForgotPasswordMFA(body: FormData) {
-  return artificialDelay(httpClient.postForm("/verify-forgot-password-mfa", body));
+  return artificialDelay(
+    httpClient.postForm("/verify-forgot-password-mfa", body),
+  );
 }

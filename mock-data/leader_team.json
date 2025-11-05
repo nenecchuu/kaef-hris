@@ -1,0 +1,96 @@
+{
+  "leader_id": "L001",
+  "leader_name": "Lina Sari",
+  "leader_position": "Direktur Keuangan dan Manajemen Risiko",
+  "leader_function": "Keuangan",
+  "leader_email": "lina.sari@kimiafarma.co.id",
+  "team_kpi": {
+    "total_members": 24,
+    "avg_fit_rate": 62,
+    "critical_gaps": 5,
+    "status_distribution": {
+      "fit": 15,
+      "gap": 7,
+      "exceed": 2
+    }
+  },
+  "team_members": [
+    {
+      "id": "E001",
+      "nama": "Budi Santoso",
+      "jabatan": "Operator Produksi",
+      "fungsi": "Operasi / Produksi",
+      "level": "Staf (Pelaksana)",
+      "photo": "https://i.pravatar.cc/150?u=E001",
+      "email": "budi.santoso@kimiafarma.co.id",
+      "status_kompetensi": "⚠️ Gap",
+      "fit_rate_overall": 58
+    },
+    {
+      "id": "E002",
+      "nama": "Siti Nurhaliza",
+      "jabatan": "Analis Quality Control",
+      "fungsi": "Operasi / QA/QC",
+      "level": "Staf (Teknis)",
+      "photo": "https://i.pravatar.cc/150?u=E002",
+      "email": "siti.nurhaliza@kimiafarma.co.id",
+      "status_kompetensi": "✅ Fit",
+      "fit_rate_overall": 92
+    },
+    {
+      "id": "E003",
+      "nama": "Ahmad Fauzi",
+      "jabatan": "Staf PPIC",
+      "fungsi": "Operasi / PPIC",
+      "level": "Staf (Spesialis)",
+      "photo": "https://i.pravatar.cc/150?u=E003",
+      "email": "ahmad.fauzi@kimiafarma.co.id",
+      "status_kompetensi": "⬆️ Exceed",
+      "fit_rate_overall": 105
+    },
+    {
+      "id": "E004",
+      "nama": "Rina Wijaya",
+      "jabatan": "Staf Gudang Farmasi",
+      "fungsi": "Operasi / Supply Chain",
+      "level": "Staf (Pelaksana)",
+      "photo": "https://i.pravatar.cc/150?u=E004",
+      "email": "rina.wijaya@kimiafarma.co.id",
+      "status_kompetensi": "⚠️ Gap",
+      "fit_rate_overall": 67
+    },
+    {
+      "id": "E005",
+      "nama": "Joko Widodo",
+      "jabatan": "Operator Mesin",
+      "fungsi": "Operasi / Produksi",
+      "level": "Staf (Pelaksana)",
+      "photo": "https://i.pravatar.cc/150?u=E005",
+      "email": "joko.widodo@kimiafarma.co.id",
+      "status_kompetensi": "✅ Fit",
+      "fit_rate_overall": 83
+    },
+    {
+      "id": "E006",
+      "nama": "Dewi Lestari",
+      "jabatan": "Staff Analis Microbiology",
+      "fungsi": "Operasi / QA/QC",
+      "level": "Staf (Teknis)",
+      "photo": "https://i.pravatar.cc/150?u=E006",
+      "email": "dewi.lestari@kimiafarma.co.id",
+      "status_kompetensi": "✅ Fit",
+      "fit_rate_overall": 88
+    },
+    {
+      "id": "E007",
+      "nama": "Rudi Hartono",
+      "jabatan": "Staf Logistik",
+      "fungsi": "Operasi / Supply Chain",
+      "level": "Staf (Pelaksana)",
+      "photo": "https://i.pravatar.cc/150?u=E007",
+      "email": "rudi.hartono@kimiafarma.co.id",
+      "status_kompetensi": "⚠️ Gap",
+      "fit_rate_overall": 54
+    }
+  ]
+}

@@ -39,6 +39,7 @@ import {
 import { SelectDivision } from "@src/components/select-division/select-division";
 import { SelectJobPosition } from "@src/components/select-job-position";
 import { useRecord, useRecordSearchParams } from "@src/hooks/use-record";
+import { useAuth } from "@src/lib/auth";
 import { alertToast } from "@src/ui/alert-toast";
 import { Avatar, AvatarFallback, AvatarImage } from "@src/ui/avatar";
 import { Button, ButtonLink } from "@src/ui/button";
@@ -58,7 +59,6 @@ import { Header, Title } from "@src/ui/page";
 import { Switch } from "@src/ui/switch";
 import { TableCell, TableHead, TableHeadVisuallyHidden } from "@src/ui/table";
 import { View } from "@src/ui/view";
-import { useAuth } from "@src/lib/auth";
 
 const userColumns = (
   from: number,
@@ -109,12 +109,16 @@ const userColumns = (
       ),
     },
     {
-        accessorKey: "is_administrator",
-        cell: (info) => <TableCell>{info.row.original.is_administrator == true ? 'User UMS' : 'User'}</TableCell>,
-        header: ({ column }) => (
-          <TableHeadSort column={column}>Role</TableHeadSort>
-        ),
-      },
+      accessorKey: "is_administrator",
+      cell: (info) => (
+        <TableCell>
+          {info.row.original.is_administrator == true ? "User UMS" : "User"}
+        </TableCell>
+      ),
+      header: ({ column }) => (
+        <TableHeadSort column={column}>Role</TableHeadSort>
+      ),
+    },
     {
       accessorKey: "job_position_name",
       cell: (info) => (
@@ -359,7 +363,7 @@ export function UserUnblock({ userId }: UserConfirmUnblockProps) {
 }
 
 function UserItemMenu({ user, isBlockedUserPage }: UserItemMenuProps) {
-    const { user : authUser } = useAuth();
+  const { user: authUser } = useAuth();
   return (
     <ConfirmDialog>
       <DropdownMenu>

@@ -135,9 +135,12 @@ export function unblockUser(userId: number) {
   return () => artificialDelay(httpClient.put(`/users/${userId}/unblock`));
 }
 
-export function postForgotPasswordWithUserId(userId: number | null | undefined) {
+export function postForgotPasswordWithUserId(
+  userId: number | null | undefined,
+) {
   const body = new FormData();
   if (userId) body.set("id", userId.toString());
 
-  return () => artificialDelay(httpClient.postForm("users/forgot-password", body));
+  return () =>
+    artificialDelay(httpClient.postForm("users/forgot-password", body));
 }

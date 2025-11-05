@@ -1,0 +1,396 @@
+{
+  "employee": {
+    "id": "E001",
+    "nama": "Budi Santoso",
+    "jabatan": "Operator Produksi",
+    "fungsi": "Operasi / Produksi",
+    "level": "Staf (Pelaksana)",
+    "photo": "https://i.pravatar.cc/150?u=E001",
+    "email": "budi.santoso@kimiafarma.co.id",
+    "phone": "+62 812-3456-7890",
+    "department": "Produksi Solid",
+    "join_date": "2020-01-15",
+    "status_kompetensi": "⚠️ Gap",
+    "fit_rate_overall": 58
+  },
+  "assessment_results": {
+    "assessed_date": "2024-10-15",
+    "assessor": "Lina Sari",
+    "assessments": [
+      {
+        "kategori": "Core Values",
+        "expected": 3.0,
+        "actual_avg": 2.4,
+        "fit_rate": 40,
+        "gap": -1,
+        "status": "⚠️ Gap",
+        "items": [
+          {
+            "nama": "Professional",
+            "expected": 3,
+            "actual": 2,
+            "gap": -1,
+            "status": "⚠️ Gap"
+          },
+          {
+            "nama": "Integrity",
+            "expected": 3,
+            "actual": 3,
+            "gap": 0,
+            "status": "✅ Fit"
+          },
+          {
+            "nama": "Teamwork",
+            "expected": 3,
+            "actual": 3,
+            "gap": 0,
+            "status": "✅ Fit"
+          },
+          {
+            "nama": "Innovation",
+            "expected": 3,
+            "actual": 2,
+            "gap": -1,
+            "status": "⚠️ Gap"
+          },
+          {
+            "nama": "Customer Oriented",
+            "expected": 3,
+            "actual": 2,
+            "gap": -1,
+            "status": "⚠️ Gap"
+          }
+        ]
+      },
+      {
+        "kategori": "Generic",
+        "expected": 3.0,
+        "actual_avg": 3.0,
+        "fit_rate": 100,
+        "gap": 0,
+        "status": "✅ Fit",
+        "items": [
+          {
+            "nama": "Concern for Order",
+            "expected": 3,
+            "actual": 3,
+            "gap": 0,
+            "status": "✅ Fit"
+          },
+          {
+            "nama": "Thinking Ability",
+            "expected": 3,
+            "actual": 3,
+            "gap": 0,
+            "status": "✅ Fit"
+          },
+          {
+            "nama": "Empathy & Interpersonal Skill",
+            "expected": 3,
+            "actual": 3,
+            "gap": 0,
+            "status": "✅ Fit"
+          }
+        ]
+      },
+      {
+        "kategori": "Management",
+        "expected": 3.0,
+        "actual_avg": 3.25,
+        "fit_rate": 75,
+        "gap": 1,
+        "status": "⬆️ Exceed",
+        "items": [
+          {
+            "nama": "Time Management",
+            "expected": 3,
+            "actual": 4,
+            "gap": 1,
+            "status": "⬆️ Exceed"
+          },
+          {
+            "nama": "Organizational Awareness",
+            "expected": 3,
+            "actual": 3,
+            "gap": 0,
+            "status": "✅ Fit"
+          },
+          {
+            "nama": "Managing Work & Performance",
+            "expected": 3,
+            "actual": 3,
+            "gap": 0,
+            "status": "✅ Fit"
+          },
+          {
+            "nama": "Business Acumen",
+            "expected": 3,
+            "actual": 3,
+            "gap": 0,
+            "status": "✅ Fit"
+          }
+        ]
+      },
+      {
+        "kategori": "Leadership",
+        "expected": 2.0,
+        "actual_avg": 2.0,
+        "fit_rate": 100,
+        "gap": 0,
+        "status": "✅ Fit",
+        "items": [
+          {
+            "nama": "Problem Solving",
+            "expected": 2,
+            "actual": 2,
+            "gap": 0,
+            "status": "✅ Fit"
+          },
+          {
+            "nama": "Strategic Thinking",
+            "expected": 2,
+            "actual": 2,
+            "gap": 0,
+            "status": "✅ Fit"
+          },
+          {
+            "nama": "Visionary",
+            "expected": 2,
+            "actual": 2,
+            "gap": 0,
+            "status": "✅ Fit"
+          },
+          {
+            "nama": "Building Team",
+            "expected": 2,
+            "actual": 2,
+            "gap": 0,
+            "status": "✅ Fit"
+          },
+          {
+            "nama": "Change",
+            "expected": 2,
+            "actual": 2,
+            "gap": 0,
+            "status": "✅ Fit"
+          },
+          {
+            "nama": "Empowerment",
+            "expected": 2,
+            "actual": 2,
+            "gap": 0,
+            "status": "✅ Fit"
+          }
+        ]
+      },
+      {
+        "kategori": "Technical (Farmasi)",
+        "expected": 4.0,
+        "actual_avg": 3.0,
+        "fit_rate": 50,
+        "gap": -1,
+        "status": "⚠️ Gap",
+        "items": [
+          {
+            "nama": "QMS (Quality Management System)",
+            "expected": 4,
+            "actual": 3,
+            "gap": -1,
+            "status": "⚠️ Gap"
+          },
+          {
+            "nama": "Risk Management",
+            "expected": 4,
+            "actual": 3,
+            "gap": -1,
+            "status": "⚠️ Gap"
+          },
+          {
+            "nama": "Documentation",
+            "expected": 4,
+            "actual": 4,
+            "gap": 0,
+            "status": "✅ Fit"
+          },
+          {
+            "nama": "HC Planning",
+            "expected": 4,
+            "actual": 3,
+            "gap": -1,
+            "status": "⚠️ Gap"
+          },
+          {
+            "nama": "Learning Management",
+            "expected": 4,
+            "actual": 2,
+            "gap": -2,
+            "status": "⚠️ Gap"
+          },
+          {
+            "nama": "Knowledge Management",
+            "expected": 4,
+            "actual": 3,
+            "gap": -1,
+            "status": "⚠️ Gap"
+          }
+        ]
+      }
+    ]
+  },
+  "work_history": [
+    {
+      "id": "WH001",
+      "position": "Operator Produksi",
+      "department": "Produksi Solid",
+      "start_date": "2020-01-15",
+      "end_date": null,
+      "is_current": true,
+      "description": "Bertanggung jawab dalam proses produksi obat bentuk solid (tablet, kaplet). Memastikan kepatuhan terhadap CPOB dan SOP yang berlaku.",
+      "achievements": [
+        "0 defect selama Q3 2024",
+        "Pencapaian target output 105% dari target"
+      ]
+    },
+    {
+      "id": "WH002",
+      "position": "Operator Produksi (Trainee)",
+      "department": "Produksi Liquid",
+      "start_date": "2019-07-01",
+      "end_date": "2019-12-31",
+      "is_current": false,
+      "description": "Program training selama 6 bulan di bagian produksi liquid sebelum dipindahkan ke solid.",
+      "achievements": []
+    }
+  ],
+  "education": [
+    {
+      "id": "EDU001",
+      "degree": "D3 Teknik Kimia",
+      "institution": "Politeknik Negeri Jakarta",
+      "major": "Teknik Kimia",
+      "year_start": "2016",
+      "year_end": "2019",
+      "gpa": 3.45,
+      "description": "Fokus pada proses produksi dan quality control di industri kimia dan farmasi"
+    },
+    {
+      "id": "EDU002",
+      "degree": "SMA IPA",
+      "institution": "SMA Negeri 1 Jakarta",
+      "major": "Ilmu Pengetahuan Alam",
+      "year_start": "2013",
+      "year_end": "2016",
+      "gpa": null,
+      "description": null
+    }
+  ],
+  "training": [
+    {
+      "id": "TRN001",
+      "title": "CPOB (Cara Pembuatan Obat yang Baik) - Refreshment",
+      "provider": "Internal Training - Kimia Farma",
+      "date": "2024-03-15",
+      "duration": "2 hari",
+      "certificate_number": "KF-CPOB-2024-0315",
+      "status": "Completed"
+    },
+    {
+      "id": "TRN002",
+      "title": "Good Documentation Practice (GDP)",
+      "provider": "External - BPOM RI",
+      "date": "2023-11-20",
+      "duration": "3 hari",
+      "certificate_number": "BPOM-GDP-2023-1120",
+      "status": "Completed"
+    },
+    {
+      "id": "TRN003",
+      "title": "Basic Leadership Skills",
+      "provider": "Internal Training - Kimia Farma",
+      "date": "2023-06-10",
+      "duration": "1 hari",
+      "certificate_number": "KF-LEAD-2023-0610",
+      "status": "Completed"
+    }
+  ],
+  "personal_qualification": [
+    {
+      "id": "QUAL001",
+      "type": "Sertifikasi",
+      "name": "Sertifikat Kompetensi Operator Produksi Farmasi",
+      "issuer": "BNSP (Badan Nasional Sertifikasi Profesi)",
+      "issued_date": "2020-08-15",
+      "expiry_date": "2025-08-15",
+      "credential_id": "BNSP-OP-2020-08150001"
+    },
+    {
+      "id": "QUAL002",
+      "type": "License",
+      "name": "License Forklift Operator",
+      "issuer": "KEMNAKER RI",
+      "issued_date": "2021-02-10",
+      "expiry_date": "2026-02-10",
+      "credential_id": "FORK-2021-02100234"
+    }
+  ],
+  "achievement": [
+    {
+      "id": "ACH001",
+      "title": "Best Operator Q3 2023",
+      "date": "2023-09-30",
+      "category": "Performance Award",
+      "description": "Pencapaian 0 defect selama 3 bulan berturut-turut (Juli - September 2023)",
+      "awarded_by": "Direktur Produksi dan Supply Chain"
+    },
+    {
+      "id": "ACH002",
+      "title": "Perfect Attendance Award 2022",
+      "date": "2022-12-31",
+      "category": "Attendance Award",
+      "description": "Kehadiran 100% sepanjang tahun 2022 tanpa izin atau sakit",
+      "awarded_by": "HR Department"
+    }
+  ],
+  "kpi_personal": [
+    {
+      "id": "KPI001",
+      "name": "Kepatuhan terhadap CPOB & SOP",
+      "category": "Compliance",
+      "target": "100%",
+      "actual": "98%",
+      "period": "Q3 2024",
+      "status": "Achieved",
+      "notes": "2 minor deviation di bulan Agustus (sudah diperbaiki)"
+    },
+    {
+      "id": "KPI002",
+      "name": "Pencapaian Target Output Harian/Mingguan",
+      "category": "Productivity",
+      "target": "100%",
+      "actual": "105%",
+      "period": "Q3 2024",
+      "status": "Exceed",
+      "notes": "Rata-rata produksi melebihi target 5% karena efficiency improvement"
+    },
+    {
+      "id": "KPI003",
+      "name": "Tingkat Kerusakan Produk (Defect Rate)",
+      "category": "Quality",
+      "target": "< 1%",
+      "actual": "0.3%",
+      "period": "Q3 2024",
+      "status": "Exceed",
+      "notes": "Sangat baik, di bawah target yang ditetapkan"
+    },
+    {
+      "id": "KPI004",
+      "name": "Kelengkapan Pengisian Batch Record",
+      "category": "Documentation",
+      "target": "100%",
+      "actual": "100%",
+      "period": "Q3 2024",
+      "status": "Achieved",
+      "notes": "Semua batch record terisi lengkap dan tepat waktu"
+    }
+  ]
+}

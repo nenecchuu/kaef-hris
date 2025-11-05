@@ -1,17 +1,13 @@
 import {
   IconBook,
   IconBriefcase,
-  IconClock,
   IconCreditCard,
-  IconExternalLink,
   IconFileReport,
   IconHeadset,
   IconHome,
-  IconKey,
   IconSettings,
   IconUsers,
   IconUsersGroup,
-  IconUserX,
 } from "@tabler/icons-react";
 
 import { EMPLOYEE_TYPE_INHOUSE, EMPLOYEE_TYPE_OUTSOURCED } from "./user";
@@ -83,7 +79,8 @@ const SHARED_MENUS = {
   },
   [MENU_BIJPEDIA]: {
     name: "BIJPedia",
-    pathname: "https://chatgpt.com/g/g-68b8e26233d48191ad8cdaedcebcfe19-ojekapedia",
+    pathname:
+      "https://chatgpt.com/g/g-68b8e26233d48191ad8cdaedcebcfe19-ojekapedia",
     icon: IconBook,
     allow: [EMPLOYEE_TYPE_INHOUSE, EMPLOYEE_TYPE_OUTSOURCED],
     isOnHold: true, // External link

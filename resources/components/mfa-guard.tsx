@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { Outlet, useNavigate, useLocation } from "react-router-dom";
+import { Outlet, useLocation, useNavigate } from "react-router-dom";
+
 import { useAuth } from "@src/lib/auth";
 import { AlertDialog } from "@src/ui/alert-dialog";
 
@@ -14,19 +15,19 @@ export function MfaGuard() {
     !user?.is_mfa_enabled &&
     !location.pathname.startsWith("/profile/bind-mfa");
 
-    useEffect(() => {
-        if (!user?.is_use_mfa) return;
+  useEffect(() => {
+    if (!user?.is_use_mfa) return;
 
-        if (!user.is_mfa_enabled) {
-          if (!location.pathname.startsWith("/profile/bind-mfa")) {
-            setShowDialog(true);
-          }
-        } else {
-          if (location.pathname.startsWith("/profile/bind-mfa")) {
-            navigate("/", { replace: true });
-          }
-        }
-      }, [shouldBlock, user]);
+    if (!user.is_mfa_enabled) {
+      if (!location.pathname.startsWith("/profile/bind-mfa")) {
+        setShowDialog(true);
+      }
+    } else {
+      if (location.pathname.startsWith("/profile/bind-mfa")) {
+        navigate("/", { replace: true });
+      }
+    }
+  }, [shouldBlock, user]);
 
   const handleClose = () => {
     setShowDialog(false);

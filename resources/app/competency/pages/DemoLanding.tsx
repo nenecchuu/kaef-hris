@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 import { Button } from "@src/ui/button";
 
-export function HomeRootPage() {
+export function DemoLanding() {
   const navigate = useNavigate();
 
   return (
@@ -17,7 +17,7 @@ export function HomeRootPage() {
           <h1 className="mb-2 text-2xl font-bold text-gray-100">
             Aplikasi Manajemen Kompetensi
           </h1>
-          <p className="text-sm text-gray-100">Kimia Farma - Demo MVP</p>
+          <p className="text-sm text-gray-600">Kimia Farma - Demo MVP</p>
         </div>
 
         <div className="space-y-4">

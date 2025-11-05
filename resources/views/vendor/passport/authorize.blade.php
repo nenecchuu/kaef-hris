@@ -43,7 +43,7 @@
             <input type="hidden" name="auth_token" value="{{ $authToken }}">
             <button
                 type="submit"
-                class="w-full bg-blue-600 text-white font-medium py-2 rounded-lg hover:bg-blue-700 transition">
+                class="w-full bg-blue-600 text-gray-100 font-medium py-2 rounded-lg hover:bg-blue-700 transition">
                 Authorize
             </button>
         </form>

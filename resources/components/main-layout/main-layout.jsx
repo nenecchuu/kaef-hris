@@ -24,13 +24,23 @@ import { Sidebar } from "./sidebar";
 export function MainLayout({ app }) {
   const location = useLocation();
 
+  // Check if current route is competency module (hide sidebar/header for mobile-first design)
+  const isCompetencyRoute =
+    location.pathname.startsWith("/leader") || location.pathname === "/demo";
+  const isHomePage = location.pathname === "/";
+
   return (
     <AuthProvider app={app}>
       <SkipToMainContent />
-      <Navbar />
-      <Sidebar />
-      <div className="flex h-full flex-col bg-background-default md:ml-61">
-        <Header />
+      {!isCompetencyRoute && !isHomePage && <Navbar />}
+      {!isCompetencyRoute && !isHomePage && <Sidebar />}
+      <div
+        className={cn(
+          "flex h-full flex-col",
+          !isCompetencyRoute && !isHomePage && "bg-background-default md:ml-61",
+        )}
+      >
+        {!isCompetencyRoute && !isHomePage && <Header />}
         <MainContent>
           <QueryErrorResetBoundary>
             {({ reset }) => (

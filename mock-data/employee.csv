@@ -1,0 +1,23 @@
+Jabatan,Level,Fungsi,Deskripsi Tanggung Jawab,Kualifikasi Umum,Contoh KPI
+Operator Produksi,Staf (Pelaksana),Operasi / Produksi,"Memahami dan melaksanakan prinsip-prinsip CPOB di area kerja.",Pendidikan Minimal SMA/SMK,Kepatuhan terhadap CPOB & SOP
+Operator Produksi,Staf (Pelaksana),Operasi / Produksi,"Melaksanakan proses produksi sesuai prosedur kerja (SOP) yang berlaku.",Pengalaman sebagai operator di industri farmasi (nilai tambah),Pencapaian Target Output Harian/Mingguan
+Operator Produksi Mixing Solid,Staf (Pelaksana),Operasi / Produksi,"Memastikan area dan peralatan produksi bersih sebelum digunakan.",Penguasaan CPOB,Tingkat Kerusakan Produk (Defect Rate)
+Operator Mesin,Staf (Pelaksana),Operasi / Produksi,"Menyeting mesin untuk penandaan no batch, mfg & exp di kemasan strip.",Memiliki pengetahuan GMP/CPOB,Kelengkapan Pengisian Batch Record
+Operator Produksi,Staf (Pelaksana),Operasi / Produksi,"Menulis batch record dari awal produksi hingga akhir produksi.",Pendidikan D3/S1 Teknik Mesin/Elektro (untuk operator mesin),Overall Equipment Effectiveness (OEE) (terkait mesin)
+Operator Produksi,Staf (Pelaksana),Operasi / Produksi,"Memantau proses produksi & Memastikan kualitas kemasan Produk tidak bocor.",Lulusan D3/S1 Teknologi Pangan,Zero Accident (Kepatuhan K3)
+Analis Quality Control,Staf (Teknis),Operasi / QA/QC,"Menganalisa sampel bahan baku, obat jadi, bahan kemas, dan stabilitas.",SMK Jurusan Analis Kimia,Akurasi Hasil Analisa
+Analis Quality Control,Staf (Teknis),Operasi / QA/QC,"Melakukan analisa menggunakan alat HPLC, FTIR, Spektrofotometer UV-Vis, Karl Fischer, dsb.",D3/S1 Analisis Kimia, Biologi, Farmasi,Ketepatan Waktu Penyelesaian Analisa
+Analis Quality Control,Staf (Teknis),Operasi / QA/QC,"Membuat laporan hasil analisa.",Pengalaman bekerja di industri farmasi,Jumlah Sampel Dianalisa (Throughput)
+Analis Quality Control,Staf (Teknis),Operasi / QA/QC,"Melakukan verifikasi alat yang akan digunakan sesuai dengan SOP yang berlaku.",Mampu melakukan verifikasi dan validasi metode uji,Kepatuhan terhadap SOP & CPOB
+Staff Analis Microbiology,Staf (Teknis),Operasi / QA/QC,"Melakukan pengujian mikrobiologi terhadap sampel.",Pendidikan minimal D3/S1 Biologi,Penyimpangan Hasil Uji (OOS/OOT Rate)
+Quality Control Inspector,Staf (Teknis),Operasi / QA/QC,"Melakukan pengawasan dan pemeriksaan proses produksi dan proses hasil produksi.",(Sama dengan di atas),Efisiensi Penggunaan Reagen/Bahan Habis Pakai
+Staf Gudang Farmasi,Staf (Pelaksana),Operasi / Supply Chain,"Melakukan kegiatan staff gudang farmasi untuk mendukung operasional.",Pemahaman CDOB (Cara Distribusi Obat yang Baik),Akurasi Stok Inventaris (Stock Opname)
+Staf Gudang Farmasi,Staf (Pelaksana),Operasi / Supply Chain,"Mendukung proses distribusi farmasi sesuai dengan ketentuan CDOB.",Pemahaman sistem pergudangan (FIFO/FEFO),Kepatuhan FIFO/FEFO
+Staf Gudang Farmasi,Staf (Pelaksana),Operasi / Supply Chain,"Mengawasi arus keluar masuk barang (obat) beserta dokumen-dokumennya.",(Pendidikan SMA/SMK/D3),Ketepatan Waktu Picking & Packing
+Staf Logistik,Staf (Pelaksana),Operasi / Supply Chain,"Memastikan kelengkapan administrasi pengiriman barang.",Teliti dan rapi administrasi,Jumlah Kesalahan Pengiriman (Shipping Errors)
+Staf Gudang Farmasi,Staf (Pelaksana),Operasi / Supply Chain,"Menjaga kebersihan dan tata letak gudang sesuai standar.",(Pendidikan SMA/SMK/D3),Kepatuhan terhadap Prosedur K3 Gudang
+Staf PPIC,Staf (Spesialis),Operasi / PPIC,"Bertanggung jawab dalam perencanaan produksi & kontrol inventory.",Pendidikan S1 Teknik Industri,Production Schedule Adherence (Ketaatan Jadwal Produksi)
+Staf PPIC,Staf (Spesialis),Operasi / PPIC,"Membuat jadwal produksi harian, mingguan, dan bulanan.",Pengalaman min 2 tahun di PPIC manufaktur farmasi/kosmetik,Inventory Turnover Ratio (ITO)
+Staf PPIC,Staf (Spesialis),Operasi / PPIC,"Mengidentifikasi kebutuhan persediaan dan memastikan ketersediaan bahan baku.",Kemampuan analisis yang kuat,On-Time Delivery (OTD)
+Staf PPIC,Staf (Spesialis),Operasi / PPIC,"Memastikan ketersediaan kemasan primer & kemasan sekunder.",Mampu bekerja dengan data,Akurasi Perencanaan Material (MRP Accuracy)
+Staf PPIC,Staf (Spesialis),Operasi / PPIC,"Berkomunikasi dengan tim produksi untuk memastikan pemenuhan jadwal.",Kemampuan komunikasi dan koordinasi yang baik,Stockout Rate (Persentase Kehabisan Stok)

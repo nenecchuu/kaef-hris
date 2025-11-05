@@ -314,6 +314,19 @@ export default {
         separator: "hsl(var(--brand-separator) / <alpha-value>)",
         border: "hsl(var(--brand-border) / <alpha-value>)",
       },
+      // Kimia Farma Brand Colors
+      kf: {
+        blue: {
+          DEFAULT: "#003A78",
+          light: "#0057B7",
+          dark: "#002654",
+        },
+        orange: {
+          DEFAULT: "#F39200",
+          light: "#FFB84D",
+          dark: "#CC7600",
+        },
+      },
     },
     fontSize: {
       xs: ["0.75rem", { lineHeight: "1rem" }],

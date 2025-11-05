@@ -1,0 +1,21 @@
+Fungsi,Peran,Kategori KPI,Contoh KPI,Deskripsi/Contoh Target
+Sales,Area Sales Manager,Hasil (Tim),Pencapaian Target Penjualan Area,100% dari target triwulanan [3]
+Sales,Area Sales Manager,Hasil (Tim),Pertumbuhan Penjualan Area (YoY),Tumbuh 15% vs. tahun sebelumnya
+Sales,Area Sales Manager,Strategis (Tim),Pencapaian Target New Outlet Order (NOO) Area,40 outlet baru per kuartal [3]
+Sales,Area Sales Manager,Manajerial,Tingkat Kepatuhan Kunjungan Tim,95% kepatuhan rencana kunjungan
+Sales,Area Sales Manager,Manajerial,Tingkat Turnover Karyawan (Tim),Di bawah 10% per tahun
+Sales,Brand Manager,Hasil,Market Share Evolution,Mencapai target pangsa pasar
+Sales,Brand Manager,Hasil,Pencapaian Target Penjualan/Profit,Mencapai target revenue & profit
+Sales,Brand Manager,Proses,Execution Quality of Tactical Plans,Kualitas eksekusi rencana pemasaran
+Sales,Medical Representative,Hasil,Pencapaian Target Sales (Individu),100% dari target bulanan [3]
+Sales,Medical Representative,Strategis,New Outlet Order (NOO) (Individu),Target 10 outlet baru per bulan [3]
+Sales,Medical Representative,Aktivitas,Kunjungan Harian,Target 10 kunjungan efektif per hari [3]
+HR,Recruitment Specialist,Efisiensi,Time to Hire (Waktu Merekrut),Rata-rata 45 hari [15, 16]
+HR,Recruitment Specialist,Efisiensi,Cost per Hire (Biaya per Rekrutan),Rata-rata Rp 10.000.000 per karyawan [15, 16]
+HR,Recruitment Specialist,Efektivitas,Quality of Hire (Kualitas Rekrutan),90% karyawan baru lolos masa percobaan [15, 16]
+HR,Recruitment Specialist,Efektivitas,Offer Acceptance Rate (Tingkat Penerimaan Tawaran),80% [15, 16]
+HR,Recruitment Specialist,Efisiensi,Time to Fill (Waktu Pemenuhan),Waktu dari lowongan disetujui hingga kandidat menerima tawaran [15]
+HR,Recruitment Specialist,Efektivitas,Source of Hire (Sumber Rekrutan),% rekrutan berkualitas dari saluran (mis: LinkedIn, Jobstreet) [15]
+HR,Recruitment Specialist,Efektivitas,New-Hire Turnover Rate (Turnover Karyawan Baru),Persentase karyawan baru yang resign < 1 tahun [17, 15]
+HR,Recruitment Specialist,Efektivitas,Hiring Manager Satisfaction,Skor kepuasan manajer pengguna (skala 1-5) [15]
+HR,Recruitment Specialist,Efisiensi,Application Completion Rate,Persentase kandidat yang menyelesaikan lamaran online [15]

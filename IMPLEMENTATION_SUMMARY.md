@@ -159,7 +159,7 @@ isActive ? "border-kf-blue text-kf-blue" : "text-gray-600";
 
 // After: Blue background, orange active
 className = "bg-kf-blue";
-isActive ? "border-kf-orange text-kf-orange" : "text-white/60";
+isActive ? "border-kf-orange text-kf-orange" : "text-gray-50/60";
 ```
 
 **Design Decision**:

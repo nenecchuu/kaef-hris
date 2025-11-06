@@ -1,0 +1,200 @@
+{
+  "employee": {
+    "id": "E005",
+    "nama": "Joko Widodo",
+    "jabatan": "HR Staff - Performance Management",
+    "fungsi": "Human Resources / Performance Management",
+    "level": "Staff",
+    "photo": "https://i.pravatar.cc/150?u=E005",
+    "email": "joko.widodo@kimiafarma.co.id",
+    "phone": "+62 812-5678-9012",
+    "department": "Human Resources - Performance Management",
+    "join_date": "2019-11-01",
+    "status_kompetensi": "fit",
+    "fit_rate_overall": 83
+  },
+  "assessment_results": {
+    "assessed_date": "2024-10-15",
+    "assessor": "Dr. Andini Kusuma",
+    "assessments": [
+      {
+        "kategori": "Core Values",
+        "expected": 4.0,
+        "actual_avg": 3.8,
+        "fit_rate": 95,
+        "gap": 0,
+        "status": "fit",
+        "items": [
+          {"nama": "Professional", "expected": 4, "actual": 4, "gap": 0, "status": "fit"},
+          {"nama": "Integrity", "expected": 4, "actual": 4, "gap": 0, "status": "fit"},
+          {"nama": "Teamwork", "expected": 4, "actual": 4, "gap": 0, "status": "fit"},
+          {"nama": "Innovation", "expected": 4, "actual": 3, "gap": -1, "status": "gap"},
+          {"nama": "Customer Oriented", "expected": 4, "actual": 4, "gap": 0, "status": "fit"}
+        ]
+      },
+      {
+        "kategori": "Generic",
+        "expected": 4.0,
+        "actual_avg": 3.67,
+        "fit_rate": 92,
+        "gap": 0,
+        "status": "fit",
+        "items": [
+          {"nama": "Concern for Order", "expected": 4, "actual": 4, "gap": 0, "status": "fit"},
+          {"nama": "Thinking Ability", "expected": 4, "actual": 4, "gap": 0, "status": "fit"},
+          {"nama": "Empathy & Interpersonal Skill", "expected": 4, "actual": 3, "gap": -1, "status": "gap"}
+        ]
+      },
+      {
+        "kategori": "Management",
+        "expected": 4.0,
+        "actual_avg": 3.75,
+        "fit_rate": 94,
+        "gap": 0,
+        "status": "fit",
+        "items": [
+          {"nama": "Time Management", "expected": 4, "actual": 4, "gap": 0, "status": "fit"},
+          {"nama": "Organizational Awareness", "expected": 4, "actual": 4, "gap": 0, "status": "fit"},
+          {"nama": "Managing Work & Performance", "expected": 4, "actual": 4, "gap": 0, "status": "fit"},
+          {"nama": "Business Acumen", "expected": 4, "actual": 3, "gap": -1, "status": "gap"}
+        ]
+      },
+      {
+        "kategori": "Leadership",
+        "expected": 3.0,
+        "actual_avg": 3.0,
+        "fit_rate": 100,
+        "gap": 0,
+        "status": "fit",
+        "items": [
+          {"nama": "Problem Solving", "expected": 3, "actual": 3, "gap": 0, "status": "fit"},
+          {"nama": "Strategic Thinking", "expected": 3, "actual": 3, "gap": 0, "status": "fit"},
+          {"nama": "Visionary", "expected": 3, "actual": 3, "gap": 0, "status": "fit"},
+          {"nama": "Building Team", "expected": 3, "actual": 3, "gap": 0, "status": "fit"},
+          {"nama": "Change", "expected": 3, "actual": 3, "gap": 0, "status": "fit"},
+          {"nama": "Empowerment", "expected": 3, "actual": 3, "gap": 0, "status": "fit"}
+        ]
+      },
+      {
+        "kategori": "Technical (Performance Management)",
+        "expected": 4.0,
+        "actual_avg": 3.33,
+        "fit_rate": 83,
+        "gap": 0,
+        "status": "fit",
+        "items": [
+          {"nama": "Performance Appraisal Design", "expected": 4, "actual": 4, "gap": 0, "status": "fit"},
+          {"nama": "Feedback & Coaching", "expected": 4, "actual": 3, "gap": -1, "status": "gap"},
+          {"nama": "Goal Setting & OKR", "expected": 4, "actual": 3, "gap": -1, "status": "gap"},
+          {"nama": "Performance Analytics", "expected": 4, "actual": 4, "gap": 0, "status": "fit"},
+          {"nama": "Succession Planning", "expected": 4, "actual": 3, "gap": -1, "status": "gap"},
+          {"nama": "Development Planning", "expected": 4, "actual": 3, "gap": -1, "status": "gap"}
+        ]
+      }
+    ]
+  },
+  "work_history": [
+    {
+      "id": "WH001",
+      "position": "HR Staff - Performance Management",
+      "department": "Human Resources - Performance Management",
+      "start_date": "2021-06-01",
+      "end_date": null,
+      "is_current": true,
+      "description": "Mengelola sistem penilaian kinerja, goal setting, dan development planning untuk semua karyawan.",
+      "achievements": [
+        "Mengimplementasikan sistem appraisal berbasis OKR untuk 500+ karyawan",
+        "Meningkatkan participation rate dalam performance review hingga 98%",
+        "Mengembangkan coaching program untuk 50+ managers"
+      ]
+    },
+    {
+      "id": "WH002",
+      "position": "HR Associate - Performance & Development",
+      "department": "Human Resources",
+      "start_date": "2019-11-01",
+      "end_date": "2021-05-31",
+      "is_current": false,
+      "description": "Asisten dalam penilaian kinerja dan perencanaan pengembangan karyawan.",
+      "achievements": [
+        "Memproses 400+ performance reviews per tahun",
+        "Membantu koordinasi pelatihan pengembangan untuk 100+ karyawan"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": "EDU001",
+      "degree": "S1 Manajemen",
+      "institution": "Universitas Diponegoro",
+      "major": "Manajemen Sumber Daya Manusia",
+      "year_start": "2015",
+      "year_end": "2019",
+      "gpa": 3.71,
+      "description": "Fokus pada performance management dan organizational development"
+    }
+  ],
+  "training": [
+    {
+      "id": "TRN001",
+      "title": "OKR Framework & Performance Management",
+      "provider": "External - LinkedIn Learning",
+      "date": "2024-04-10",
+      "duration": "2 hari (online)",
+      "certificate_number": "LI-OKR-2024-0410",
+      "status": "Completed"
+    },
+    {
+      "id": "TRN002",
+      "title": "Coaching & Mentoring Skills for Managers",
+      "provider": "External - SHRM",
+      "date": "2023-07-20",
+      "duration": "3 hari",
+      "certificate_number": "SHRM-CMS-2023-0720",
+      "status": "Completed"
+    }
+  ],
+  "personal_qualification": [
+    {
+      "id": "QUAL001",
+      "type": "Sertifikasi",
+      "name": "Certified Performance Management Professional (CPMP)",
+      "issuer": "SHRM",
+      "issued_date": "2023-09-20",
+      "expiry_date": "2028-09-20",
+      "credential_id": "SHRM-CPMP-2023-09200456"
+    }
+  ],
+  "achievement": [
+    {
+      "id": "ACH001",
+      "title": "Performance Management Innovation 2024",
+      "date": "2024-06-15",
+      "category": "Innovation Award",
+      "description": "Implementasi sistem OKR yang meningkatkan alignment dan engagement karyawan",
+      "awarded_by": "Direktur Human Capital"
+    }
+  ],
+  "kpi_personal": [
+    {
+      "id": "KPI001",
+      "name": "Appraisal Completion Rate",
+      "category": "Efficiency",
+      "target": "95%",
+      "actual": "98%",
+      "period": "Q3 2024",
+      "status": "Exceed",
+      "notes": "Excellent compliance dengan deadline penilaian"
+    },
+    {
+      "id": "KPI002",
+      "name": "Manager Satisfaction with Appraisal System",
+      "category": "Quality",
+      "target": "80%",
+      "actual": "85%",
+      "period": "Q3 2024",
+      "status": "Exceed",
+      "notes": "Sistem yang user-friendly dan transparan"
+    }
+  ]
+}

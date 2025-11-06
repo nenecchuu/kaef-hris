@@ -30,26 +30,26 @@ export const AssessmentTable = ({ assessments }: AssessmentTableProps) => {
           className="bg-white overflow-hidden rounded-lg border-2 border-gray-200 shadow-sm"
         >
           {/* Category Header - Always Visible */}
-          <div className="bg-gradient-to-r from-kf-blue to-kf-blue-light p-4 text-white">
+          <div className="bg-gradient-to-r from-kf-blue to-kf-blue-light p-4 text-gray-50">
             <div className="flex items-center justify-between">
               <h3 className="text-lg font-bold">{category.kategori}</h3>
               <StatusBadge status={category.status} />
             </div>
             <div className="mt-2 flex gap-6 text-sm">
               <div>
-                <span className="text-white/70">Expected: </span>
+                <span className="text-gray-50/70">Expected: </span>
                 <span className="font-semibold">{category.expected.toFixed(1)}</span>
               </div>
               <div>
-                <span className="text-white/70">Actual: </span>
+                <span className="text-gray-50/70">Actual: </span>
                 <span className="font-semibold">{category.actual_avg.toFixed(1)}</span>
               </div>
               <div>
-                <span className="text-white/70">Fit Rate: </span>
+                <span className="text-gray-50/70">Fit Rate: </span>
                 <span className="font-semibold">{category.fit_rate}%</span>
               </div>
               <div>
-                <span className="text-white/70">Gap: </span>
+                <span className="text-gray-50/70">Gap: </span>
                 <span className={clsx(
                   "font-semibold",
                   category.gap < 0 && "text-orange-300",

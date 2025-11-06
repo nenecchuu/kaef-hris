@@ -1,0 +1,209 @@
+{
+  "employee": {
+    "id": "E010",
+    "nama": "Ani Susanti",
+    "jabatan": "HR Admin",
+    "fungsi": "Human Resources / Administration",
+    "level": "Staff",
+    "photo": "https://i.pravatar.cc/150?u=E010",
+    "email": "ani.susanti@kimiafarma.co.id",
+    "phone": "+62 818-5678-9012",
+    "department": "Human Resources - Administration",
+    "join_date": "2019-08-05",
+    "status_kompetensi": "gap",
+    "fit_rate_overall": 65
+  },
+  "assessment_results": {
+    "assessed_date": "2024-10-15",
+    "assessor": "Dr. Andini Kusuma",
+    "assessments": [
+      {
+        "kategori": "Core Values",
+        "expected": 4.0,
+        "actual_avg": 3.4,
+        "fit_rate": 85,
+        "gap": 0,
+        "status": "gap",
+        "items": [
+          {"nama": "Professional", "expected": 4, "actual": 3, "gap": -1, "status": "gap"},
+          {"nama": "Integrity", "expected": 4, "actual": 4, "gap": 0, "status": "fit"},
+          {"nama": "Teamwork", "expected": 4, "actual": 3, "gap": -1, "status": "gap"},
+          {"nama": "Innovation", "expected": 4, "actual": 2, "gap": -2, "status": "gap"},
+          {"nama": "Customer Oriented", "expected": 4, "actual": 4, "gap": 0, "status": "fit"}
+        ]
+      },
+      {
+        "kategori": "Generic",
+        "expected": 4.0,
+        "actual_avg": 3.33,
+        "fit_rate": 83,
+        "gap": 0,
+        "status": "gap",
+        "items": [
+          {"nama": "Concern for Order", "expected": 4, "actual": 3, "gap": -1, "status": "gap"},
+          {"nama": "Thinking Ability", "expected": 4, "actual": 3, "gap": -1, "status": "gap"},
+          {"nama": "Empathy & Interpersonal Skill", "expected": 4, "actual": 4, "gap": 0, "status": "fit"}
+        ]
+      },
+      {
+        "kategori": "Management",
+        "expected": 4.0,
+        "actual_avg": 3.25,
+        "fit_rate": 81,
+        "gap": 0,
+        "status": "gap",
+        "items": [
+          {"nama": "Time Management", "expected": 4, "actual": 3, "gap": -1, "status": "gap"},
+          {"nama": "Organizational Awareness", "expected": 4, "actual": 3, "gap": -1, "status": "gap"},
+          {"nama": "Managing Work & Performance", "expected": 4, "actual": 3, "gap": -1, "status": "gap"},
+          {"nama": "Business Acumen", "expected": 4, "actual": 3, "gap": -1, "status": "gap"}
+        ]
+      },
+      {
+        "kategori": "Leadership",
+        "expected": 3.0,
+        "actual_avg": 2.33,
+        "fit_rate": 78,
+        "gap": -1,
+        "status": "gap",
+        "items": [
+          {"nama": "Problem Solving", "expected": 3, "actual": 2, "gap": -1, "status": "gap"},
+          {"nama": "Strategic Thinking", "expected": 3, "actual": 2, "gap": -1, "status": "gap"},
+          {"nama": "Visionary", "expected": 3, "actual": 2, "gap": -1, "status": "gap"},
+          {"nama": "Building Team", "expected": 3, "actual": 2, "gap": -1, "status": "gap"},
+          {"nama": "Change", "expected": 3, "actual": 2, "gap": -1, "status": "gap"},
+          {"nama": "Empowerment", "expected": 3, "actual": 3, "gap": 0, "status": "fit"}
+        ]
+      },
+      {
+        "kategori": "Technical (HR Admin)",
+        "expected": 4.0,
+        "actual_avg": 2.83,
+        "fit_rate": 71,
+        "gap": -1,
+        "status": "gap",
+        "items": [
+          {"nama": "HR Documentation & Records Management", "expected": 4, "actual": 3, "gap": -1, "status": "gap"},
+          {"nama": "Employee File Management", "expected": 4, "actual": 3, "gap": -1, "status": "gap"},
+          {"nama": "Administrative Office Skills", "expected": 4, "actual": 3, "gap": -1, "status": "gap"},
+          {"nama": "HR Policies & Procedures", "expected": 4, "actual": 2, "gap": -2, "status": "gap"},
+          {"nama": "Communication & Coordination", "expected": 4, "actual": 3, "gap": -1, "status": "gap"},
+          {"nama": "MS Office & HR Systems", "expected": 4, "actual": 3, "gap": -1, "status": "gap"}
+        ]
+      }
+    ]
+  },
+  "work_history": [
+    {
+      "id": "WH001",
+      "position": "HR Admin",
+      "department": "Human Resources - Administration",
+      "start_date": "2021-01-01",
+      "end_date": null,
+      "is_current": true,
+      "description": "Mengelola dokumentasi HR, file karyawan, correspondence, dan dukungan administratif untuk semua fungsi HR.",
+      "achievements": [
+        "Mengorganisir dan maintain 500+ employee files dengan dokumentasi lengkap",
+        "Meningkatkan efisiensi proses administrative melalui digitalisasi dokumen",
+        "Memproses 100+ administrative requests per bulan dengan accuracy 95%"
+      ]
+    },
+    {
+      "id": "WH002",
+      "position": "HR Assistant",
+      "department": "Human Resources",
+      "start_date": "2019-08-05",
+      "end_date": "2020-12-31",
+      "is_current": false,
+      "description": "Asisten dalam administrasi HR, filing, dan koordinasi dengan berbagai departemen HR.",
+      "achievements": [
+        "Membantu menangani dokumentasi 300+ karyawan baru",
+        "Mengorganisir berbagai HR events dan coordination"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": "EDU001",
+      "degree": "D3 Administrasi Perkantoran",
+      "institution": "Politeknik Jakarta",
+      "major": "Administrasi Perkantoran",
+      "year_start": "2016",
+      "year_end": "2019",
+      "gpa": 3.35,
+      "description": "Fokus pada office management dan administrative procedures"
+    }
+  ],
+  "training": [
+    {
+      "id": "TRN001",
+      "title": "HR Policies & Compliance Update 2024",
+      "provider": "External - Kementerian Ketenagakerjaan",
+      "date": "2024-03-10",
+      "duration": "2 hari",
+      "certificate_number": "KEMNAKER-HRPC-2024-0310",
+      "status": "Completed"
+    },
+    {
+      "id": "TRN002",
+      "title": "Advanced MS Office & Digital Documentation",
+      "provider": "Internal - Kimia Farma IT",
+      "date": "2023-07-15",
+      "duration": "2 hari",
+      "certificate_number": "KF-MSOAD-2023-0715",
+      "status": "Completed"
+    },
+    {
+      "id": "TRN003",
+      "title": "HR Records Management & Compliance",
+      "provider": "External - KADIN",
+      "date": "2023-05-20",
+      "duration": "1 hari",
+      "certificate_number": "KADIN-HRMC-2023-0520",
+      "status": "Completed"
+    }
+  ],
+  "personal_qualification": [
+    {
+      "id": "QUAL001",
+      "type": "Sertifikasi",
+      "name": "Certified HR Administrator (CHA)",
+      "issuer": "Indonesian HRM Association",
+      "issued_date": "2023-10-20",
+      "expiry_date": "2028-10-20",
+      "credential_id": "IHRA-CHA-2023-10200567"
+    }
+  ],
+  "achievement": [
+    {
+      "id": "ACH001",
+      "title": "Administrative Excellence Award 2023",
+      "date": "2023-12-20",
+      "category": "Performance Award",
+      "description": "Pengakuan untuk dedikasi dalam mengelola dokumentasi HR yang rapi dan terorganisir",
+      "awarded_by": "Direktur Human Capital"
+    }
+  ],
+  "kpi_personal": [
+    {
+      "id": "KPI001",
+      "name": "Employee File Completeness",
+      "category": "Quality",
+      "target": "98%",
+      "actual": "92%",
+      "period": "Q3 2024",
+      "status": "Gap",
+      "notes": "Perlu improvement dalam tracking dan updating dokumentasi"
+    },
+    {
+      "id": "KPI002",
+      "name": "Administrative Request Response Time",
+      "category": "Efficiency",
+      "target": "24 jam",
+      "actual": "36 jam",
+      "period": "Q3 2024",
+      "status": "Gap",
+      "notes": "Proses masih memerlukan improvement untuk meningkatkan responsiveness"
+    }
+  ]
+}

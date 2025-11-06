@@ -1,5 +1,5 @@
 import * as React from "react";
-import { IconArrowLeft } from "@tabler/icons-react";
+import { IconArrowLeft, IconChartBar } from "@tabler/icons-react";
 import { useNavigate, useParams } from "react-router-dom";
 
 import { LoadingFallback } from "@src/components/fallbacks";
@@ -357,7 +357,7 @@ export function EmployeeDetail() {
                     const assessmentTab = document.querySelector('[value="assessment"]') as HTMLElement;
                     assessmentTab?.click();
                   }}
-                  className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-4 py-2 text-white transition-colors hover:bg-blue-700"
+                  className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-4 py-2 text-gray-50 transition-colors hover:bg-blue-700"
                 >
                   <IconChartBar size={18} />
                   <span>Lihat Detail Assessment</span>

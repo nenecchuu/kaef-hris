@@ -1,0 +1,209 @@
+{
+  "employee": {
+    "id": "E009",
+    "nama": "Rizky Pratama",
+    "jabatan": "Recruitment Specialist",
+    "fungsi": "Human Resources / Recruitment",
+    "level": "Specialist",
+    "photo": "https://i.pravatar.cc/150?u=E009",
+    "email": "rizky.pratama@kimiafarma.co.id",
+    "phone": "+62 817-1234-5678",
+    "department": "Human Resources - Recruitment",
+    "join_date": "2019-05-10",
+    "status_kompetensi": "fit",
+    "fit_rate_overall": 78
+  },
+  "assessment_results": {
+    "assessed_date": "2024-10-15",
+    "assessor": "Dr. Andini Kusuma",
+    "assessments": [
+      {
+        "kategori": "Core Values",
+        "expected": 4.0,
+        "actual_avg": 3.6,
+        "fit_rate": 90,
+        "gap": 0,
+        "status": "fit",
+        "items": [
+          {"nama": "Professional", "expected": 4, "actual": 4, "gap": 0, "status": "fit"},
+          {"nama": "Integrity", "expected": 4, "actual": 4, "gap": 0, "status": "fit"},
+          {"nama": "Teamwork", "expected": 4, "actual": 3, "gap": -1, "status": "gap"},
+          {"nama": "Innovation", "expected": 4, "actual": 3, "gap": -1, "status": "gap"},
+          {"nama": "Customer Oriented", "expected": 4, "actual": 4, "gap": 0, "status": "fit"}
+        ]
+      },
+      {
+        "kategori": "Generic",
+        "expected": 4.0,
+        "actual_avg": 3.67,
+        "fit_rate": 92,
+        "gap": 0,
+        "status": "fit",
+        "items": [
+          {"nama": "Concern for Order", "expected": 4, "actual": 4, "gap": 0, "status": "fit"},
+          {"nama": "Thinking Ability", "expected": 4, "actual": 4, "gap": 0, "status": "fit"},
+          {"nama": "Empathy & Interpersonal Skill", "expected": 4, "actual": 3, "gap": -1, "status": "gap"}
+        ]
+      },
+      {
+        "kategori": "Management",
+        "expected": 4.0,
+        "actual_avg": 3.5,
+        "fit_rate": 87,
+        "gap": 0,
+        "status": "fit",
+        "items": [
+          {"nama": "Time Management", "expected": 4, "actual": 4, "gap": 0, "status": "fit"},
+          {"nama": "Organizational Awareness", "expected": 4, "actual": 3, "gap": -1, "status": "gap"},
+          {"nama": "Managing Work & Performance", "expected": 4, "actual": 3, "gap": -1, "status": "gap"},
+          {"nama": "Business Acumen", "expected": 4, "actual": 4, "gap": 0, "status": "fit"}
+        ]
+      },
+      {
+        "kategori": "Leadership",
+        "expected": 3.0,
+        "actual_avg": 2.67,
+        "fit_rate": 89,
+        "gap": 0,
+        "status": "fit",
+        "items": [
+          {"nama": "Problem Solving", "expected": 3, "actual": 3, "gap": 0, "status": "fit"},
+          {"nama": "Strategic Thinking", "expected": 3, "actual": 2, "gap": -1, "status": "gap"},
+          {"nama": "Visionary", "expected": 3, "actual": 3, "gap": 0, "status": "fit"},
+          {"nama": "Building Team", "expected": 3, "actual": 3, "gap": 0, "status": "fit"},
+          {"nama": "Change", "expected": 3, "actual": 2, "gap": -1, "status": "gap"},
+          {"nama": "Empowerment", "expected": 3, "actual": 3, "gap": 0, "status": "fit"}
+        ]
+      },
+      {
+        "kategori": "Technical (Recruitment)",
+        "expected": 4.0,
+        "actual_avg": 3.33,
+        "fit_rate": 83,
+        "gap": 0,
+        "status": "fit",
+        "items": [
+          {"nama": "Talent Sourcing & Networking", "expected": 4, "actual": 4, "gap": 0, "status": "fit"},
+          {"nama": "Interview Techniques", "expected": 4, "actual": 3, "gap": -1, "status": "gap"},
+          {"nama": "Candidate Assessment & Evaluation", "expected": 4, "actual": 3, "gap": -1, "status": "gap"},
+          {"nama": "Recruitment Analytics", "expected": 4, "actual": 3, "gap": -1, "status": "gap"},
+          {"nama": "Job Description & Position Analysis", "expected": 4, "actual": 4, "gap": 0, "status": "fit"},
+          {"nama": "Offer Negotiation & Onboarding", "expected": 4, "actual": 3, "gap": -1, "status": "gap"}
+        ]
+      }
+    ]
+  },
+  "work_history": [
+    {
+      "id": "WH001",
+      "position": "Recruitment Specialist",
+      "department": "Human Resources - Recruitment",
+      "start_date": "2021-07-01",
+      "end_date": null,
+      "is_current": true,
+      "description": "Menangani proses rekrutmen end-to-end untuk posisi specialist dan professional. Melakukan sourcing, screening, interview, dan koordinasi offer.",
+      "achievements": [
+        "Successfully hired 80+ candidates dalam 1.5 tahun terakhir",
+        "Membangun talent network dengan 500+ qualified candidates",
+        "Meningkatkan offer acceptance rate menjadi 85%"
+      ]
+    },
+    {
+      "id": "WH002",
+      "position": "Recruitment Coordinator",
+      "department": "Human Resources - Recruitment",
+      "start_date": "2019-05-10",
+      "end_date": "2021-06-30",
+      "is_current": false,
+      "description": "Asisten dalam proses rekrutmen, scheduling interview, dan koordinasi dengan hiring managers.",
+      "achievements": [
+        "Memproses 200+ job applications per bulan",
+        "Mengorganisir 100+ interview sessions dengan tingkat efisiensi 95%"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": "EDU001",
+      "degree": "S1 Psikologi",
+      "institution": "Universitas Binus",
+      "major": "Psikologi Industri & Organisasi",
+      "year_start": "2015",
+      "year_end": "2019",
+      "gpa": 3.45,
+      "description": "Fokus pada industrial psychology dan human resources management"
+    }
+  ],
+  "training": [
+    {
+      "id": "TRN001",
+      "title": "Advanced Recruitment Strategies & Sourcing",
+      "provider": "External - LinkedIn Learning",
+      "date": "2024-04-20",
+      "duration": "3 minggu (online)",
+      "certificate_number": "LI-ARS-2024-0420",
+      "status": "Completed"
+    },
+    {
+      "id": "TRN002",
+      "title": "Behavioral Event Interview (BEI) Training",
+      "provider": "External - DDI",
+      "date": "2023-09-15",
+      "duration": "3 hari",
+      "certificate_number": "DDI-BEI-2023-0915",
+      "status": "Completed"
+    },
+    {
+      "id": "TRN003",
+      "title": "Recruitment Analytics & Metrics",
+      "provider": "Internal - Kimia Farma HR",
+      "date": "2023-06-10",
+      "duration": "2 hari",
+      "certificate_number": "KF-RAM-2023-0610",
+      "status": "Completed"
+    }
+  ],
+  "personal_qualification": [
+    {
+      "id": "QUAL001",
+      "type": "Sertifikasi",
+      "name": "Certified Recruitment Specialist (CRS)",
+      "issuer": "Indonesian HRM Association",
+      "issued_date": "2023-08-15",
+      "expiry_date": "2028-08-15",
+      "credential_id": "IHRA-CRS-2023-08150789"
+    }
+  ],
+  "achievement": [
+    {
+      "id": "ACH001",
+      "title": "Recruitment Excellence Award 2023",
+      "date": "2023-12-20",
+      "category": "Performance Award",
+      "description": "Penghargaan untuk kinerja rekrutmen terbaik dengan tingkat offer acceptance tertinggi",
+      "awarded_by": "Direktur Human Capital"
+    }
+  ],
+  "kpi_personal": [
+    {
+      "id": "KPI001",
+      "name": "Quality of Hire Score",
+      "category": "Quality",
+      "target": "80%",
+      "actual": "82%",
+      "period": "Q3 2024",
+      "status": "Achieve",
+      "notes": "Konsisten mencapai target dengan candidate quality yang baik"
+    },
+    {
+      "id": "KPI002",
+      "name": "Time to Hire",
+      "category": "Efficiency",
+      "target": "50 hari",
+      "actual": "48 hari",
+      "period": "Q3 2024",
+      "status": "Exceed",
+      "notes": "Proses recruitment yang cepat tanpa mengorbankan kualitas"
+    }
+  ]
+}

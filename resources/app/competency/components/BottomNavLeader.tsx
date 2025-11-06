@@ -1,6 +1,6 @@
 import {
   IconBell,
-  IconChartBar,
+  IconChartColumn,
   IconDots,
   IconHome,
   IconUsers,
@@ -11,7 +11,7 @@ import { Link, useLocation } from "react-router-dom";
 const navItems = [
   { icon: IconHome, label: "Beranda", path: "/leader/home" },
   { icon: IconUsers, label: "Tim", path: "/leader/team" },
-  { icon: IconChartBar, label: "Analisis", path: "/leader/analysis" },
+  { icon: IconChartColumn, label: "Analisis", path: "/leader/analysis" },
   { icon: IconBell, label: "Notifikasi", path: "/leader/notifications" },
   { icon: IconDots, label: "Lainnya", path: "/leader/more" },
 ];
@@ -45,20 +45,22 @@ export const BottomNavLeader = () => {
                 "flex flex-1 flex-col items-center gap-1 py-3 transition-all duration-200",
                 isActive
                   ? "border-t-4 border-kf-orange text-kf-orange bg-kf-blue-dark/30"
-                  : "text-white/60 hover:text-white/80 hover:bg-kf-blue-dark/20",
+                  : "text-gray-100/60 hover:text-gray-100/80 hover:bg-kf-blue-dark/20",
               )}
             >
               <Icon
                 size={24}
                 className={clsx(
                   "transition-all",
-                  isActive ? "text-kf-orange scale-110" : "text-white/70"
+                  isActive ? "text-kf-orange scale-110" : "text-gray-50/70"
                 )}
               />
-              <span className={clsx(
-                "text-xs font-medium transition-all",
-                isActive ? "text-kf-orange" : "text-white/70"
-              )}>
+              <span
+                className={clsx(
+                  "text-xs font-medium transition-all",
+                  isActive ? "text-kf-orange" : "text-gray-50/70"
+                )}
+              >
                 {item.label}
               </span>
             </Link>

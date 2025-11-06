@@ -274,17 +274,17 @@ Translation: Continue YOLO mode but create E004-E010 employee files later (takes
 
 1. **Rich Division Header**:
 ```tsx
-<div className="bg-gradient-to-br from-kf-blue to-kf-blue-dark p-6 text-white shadow-lg">
+<div className="bg-gradient-to-br from-kf-blue to-kf-blue-dark p-6 text-gray-50 shadow-lg">
   <div className="flex items-start gap-3 mb-3">
     <div className="rounded-full bg-kf-orange/20 p-2">
       <IconBuilding size={24} className="text-kf-orange" />
     </div>
     <div className="flex-1">
-      <div className="text-sm text-white/80 mb-1">{leader_function}</div>
-      <h1 className="text-2xl font-bold text-white mb-1">
+      <div className="text-sm text-gray-50/80 mb-1">{leader_function}</div>
+      <h1 className="text-2xl font-bold text-gray-50 mb-1">
         {leader_division || "Divisi Human Capital"}
       </h1>
-      <div className="text-sm text-white/90">
+      <div className="text-sm text-gray-50/90">
         Dipimpin oleh {leader_name}
       </div>
     </div>
@@ -293,8 +293,8 @@ Translation: Continue YOLO mode but create E004-E010 employee files later (takes
   {/* Team Stats with glassmorphism effect */}
   <div className="mt-4 grid grid-cols-3 gap-3">
     <div className="rounded-lg bg-white/10 p-3 text-center backdrop-blur-sm">
-      <div className="text-2xl font-bold text-white">{team_members.length}</div>
-      <div className="text-xs text-white/80">Total Tim</div>
+      <div className="text-2xl font-bold text-gray-50">{team_members.length}</div>
+      <div className="text-xs text-gray-50/80">Total Tim</div>
     </div>
     {/* ... Fit and Gap stats */}
   </div>
@@ -319,7 +319,7 @@ const filteredMembers = filterStatus
 **Filter Indicator**:
 ```tsx
 {filterStatus && (
-  <div className="bg-kf-orange px-4 py-2 text-white shadow-sm">
+  <div className="bg-kf-orange px-4 py-2 text-gray-50 shadow-sm">
     <div className="flex items-center justify-between">
       <div className="flex items-center gap-2">
         <IconFilter size={16} />

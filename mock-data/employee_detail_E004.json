@@ -1,0 +1,373 @@
+{
+  "employee": {
+    "id": "E004",
+    "nama": "Rina Wijaya",
+    "jabatan": "HR Staff - Employee Relations",
+    "fungsi": "Human Resources / Employee Relations",
+    "level": "Staff",
+    "photo": "https://i.pravatar.cc/150?u=E004",
+    "email": "rina.wijaya@kimiafarma.co.id",
+    "phone": "+62 813-2789-4561",
+    "department": "Human Resources - Employee Relations",
+    "join_date": "2020-07-15",
+    "status_kompetensi": "fit",
+    "fit_rate_overall": 75
+  },
+  "assessment_results": {
+    "assessed_date": "2024-10-15",
+    "assessor": "Dr. Andini Kusuma",
+    "assessments": [
+      {
+        "kategori": "Core Values",
+        "expected": 4.0,
+        "actual_avg": 3.8,
+        "fit_rate": 95,
+        "gap": 0,
+        "status": "fit",
+        "items": [
+          {
+            "nama": "Professional",
+            "expected": 4,
+            "actual": 4,
+            "gap": 0,
+            "status": "fit"
+          },
+          {
+            "nama": "Integrity",
+            "expected": 4,
+            "actual": 4,
+            "gap": 0,
+            "status": "fit"
+          },
+          {
+            "nama": "Teamwork",
+            "expected": 4,
+            "actual": 4,
+            "gap": 0,
+            "status": "fit"
+          },
+          {
+            "nama": "Innovation",
+            "expected": 4,
+            "actual": 3,
+            "gap": -1,
+            "status": "gap"
+          },
+          {
+            "nama": "Customer Oriented",
+            "expected": 4,
+            "actual": 4,
+            "gap": 0,
+            "status": "fit"
+          }
+        ]
+      },
+      {
+        "kategori": "Generic",
+        "expected": 4.0,
+        "actual_avg": 3.67,
+        "fit_rate": 92,
+        "gap": 0,
+        "status": "fit",
+        "items": [
+          {
+            "nama": "Concern for Order",
+            "expected": 4,
+            "actual": 4,
+            "gap": 0,
+            "status": "fit"
+          },
+          {
+            "nama": "Thinking Ability",
+            "expected": 4,
+            "actual": 3,
+            "gap": -1,
+            "status": "gap"
+          },
+          {
+            "nama": "Empathy & Interpersonal Skill",
+            "expected": 4,
+            "actual": 4,
+            "gap": 0,
+            "status": "fit"
+          }
+        ]
+      },
+      {
+        "kategori": "Management",
+        "expected": 4.0,
+        "actual_avg": 3.5,
+        "fit_rate": 87,
+        "gap": 0,
+        "status": "fit",
+        "items": [
+          {
+            "nama": "Time Management",
+            "expected": 4,
+            "actual": 4,
+            "gap": 0,
+            "status": "fit"
+          },
+          {
+            "nama": "Organizational Awareness",
+            "expected": 4,
+            "actual": 3,
+            "gap": -1,
+            "status": "gap"
+          },
+          {
+            "nama": "Managing Work & Performance",
+            "expected": 4,
+            "actual": 4,
+            "gap": 0,
+            "status": "fit"
+          },
+          {
+            "nama": "Business Acumen",
+            "expected": 4,
+            "actual": 3,
+            "gap": -1,
+            "status": "gap"
+          }
+        ]
+      },
+      {
+        "kategori": "Leadership",
+        "expected": 3.0,
+        "actual_avg": 2.8,
+        "fit_rate": 93,
+        "gap": 0,
+        "status": "fit",
+        "items": [
+          {
+            "nama": "Problem Solving",
+            "expected": 3,
+            "actual": 3,
+            "gap": 0,
+            "status": "fit"
+          },
+          {
+            "nama": "Strategic Thinking",
+            "expected": 3,
+            "actual": 3,
+            "gap": 0,
+            "status": "fit"
+          },
+          {
+            "nama": "Visionary",
+            "expected": 3,
+            "actual": 2,
+            "gap": -1,
+            "status": "gap"
+          },
+          {
+            "nama": "Building Team",
+            "expected": 3,
+            "actual": 3,
+            "gap": 0,
+            "status": "fit"
+          },
+          {
+            "nama": "Change",
+            "expected": 3,
+            "actual": 3,
+            "gap": 0,
+            "status": "fit"
+          },
+          {
+            "nama": "Empowerment",
+            "expected": 3,
+            "actual": 3,
+            "gap": 0,
+            "status": "fit"
+          }
+        ]
+      },
+      {
+        "kategori": "Technical (HR ER)",
+        "expected": 4.0,
+        "actual_avg": 3.33,
+        "fit_rate": 83,
+        "gap": 0,
+        "status": "fit",
+        "items": [
+          {
+            "nama": "Employee Relations Strategy",
+            "expected": 4,
+            "actual": 3,
+            "gap": -1,
+            "status": "gap"
+          },
+          {
+            "nama": "Conflict Resolution & Mediation",
+            "expected": 4,
+            "actual": 4,
+            "gap": 0,
+            "status": "fit"
+          },
+          {
+            "nama": "Employee Engagement Programs",
+            "expected": 4,
+            "actual": 3,
+            "gap": -1,
+            "status": "gap"
+          },
+          {
+            "nama": "Labor Law & Compliance",
+            "expected": 4,
+            "actual": 4,
+            "gap": 0,
+            "status": "fit"
+          },
+          {
+            "nama": "Performance Management",
+            "expected": 4,
+            "actual": 3,
+            "gap": -1,
+            "status": "gap"
+          },
+          {
+            "nama": "Employee Communication",
+            "expected": 4,
+            "actual": 4,
+            "gap": 0,
+            "status": "fit"
+          }
+        ]
+      }
+    ]
+  },
+  "work_history": [
+    {
+      "id": "WH001",
+      "position": "HR Staff - Employee Relations",
+      "department": "Human Resources - Employee Relations",
+      "start_date": "2022-01-01",
+      "end_date": null,
+      "is_current": true,
+      "description": "Mengelola hubungan karyawan, menangani keluhan, dan memfasilitasi program engagement. Memastikan kepatuhan terhadap peraturan perburuhan.",
+      "achievements": [
+        "Mengurangi tingkat turnover 15% melalui program retention dan engagement",
+        "Menangani 95% keluhan karyawan dengan resolusi memuaskan",
+        "Mengembangkan program employee wellness yang diikuti 200+ karyawan"
+      ]
+    },
+    {
+      "id": "WH002",
+      "position": "HR Associate - Employee Relations",
+      "department": "Human Resources - Employee Relations",
+      "start_date": "2020-07-15",
+      "end_date": "2021-12-31",
+      "is_current": false,
+      "description": "Asisten dalam mengelola hubungan karyawan, dokumentasi keluhan, dan koordinasi program engagement.",
+      "achievements": [
+        "Memproses 150+ employee requests dengan efisien",
+        "Membantu koordinasi 5 major employee events per tahun"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": "EDU001",
+      "degree": "S1 Manajemen",
+      "institution": "Universitas Gadjah Mada",
+      "major": "Manajemen Sumber Daya Manusia",
+      "year_start": "2015",
+      "year_end": "2019",
+      "gpa": 3.52,
+      "description": "Fokus pada employee relations dan organizational behavior"
+    },
+    {
+      "id": "EDU002",
+      "degree": "SMA IPS",
+      "institution": "SMA Negeri 2 Yogyakarta",
+      "major": "Ilmu Pengetahuan Sosial",
+      "year_start": "2012",
+      "year_end": "2015",
+      "gpa": null,
+      "description": null
+    }
+  ],
+  "training": [
+    {
+      "id": "TRN001",
+      "title": "Advanced Employee Relations & Conflict Management",
+      "provider": "External - SHRM",
+      "date": "2024-05-15",
+      "duration": "3 hari",
+      "certificate_number": "SHRM-AER-2024-0515",
+      "status": "Completed"
+    },
+    {
+      "id": "TRN002",
+      "title": "Labor Law & Compliance Essentials",
+      "provider": "External - KADIN Indonesia",
+      "date": "2023-08-20",
+      "duration": "2 hari",
+      "certificate_number": "KADIN-LLC-2023-0820",
+      "status": "Completed"
+    },
+    {
+      "id": "TRN003",
+      "title": "Employee Engagement & Communication",
+      "provider": "Internal Training - Kimia Farma",
+      "date": "2022-09-10",
+      "duration": "2 hari",
+      "certificate_number": "KF-EEC-2022-0910",
+      "status": "Completed"
+    }
+  ],
+  "personal_qualification": [
+    {
+      "id": "QUAL001",
+      "type": "Sertifikasi",
+      "name": "Certified Employee Relations Professional (CERP)",
+      "issuer": "SHRM",
+      "issued_date": "2023-06-15",
+      "expiry_date": "2028-06-15",
+      "credential_id": "SHRM-CERP-2023-06150234"
+    }
+  ],
+  "achievement": [
+    {
+      "id": "ACH001",
+      "title": "Employee Relations Excellence 2023",
+      "date": "2023-12-20",
+      "category": "Performance Award",
+      "description": "Penghargaan atas dedikasi dalam menangani hubungan karyawan dan program engagement yang sukses",
+      "awarded_by": "Direktur Human Capital"
+    }
+  ],
+  "kpi_personal": [
+    {
+      "id": "KPI001",
+      "name": "Employee Satisfaction Score",
+      "category": "Engagement",
+      "target": "85%",
+      "actual": "88%",
+      "period": "Q3 2024",
+      "status": "Exceed",
+      "notes": "Excellent! Program engagement yang konsisten meningkatkan kepuasan karyawan"
+    },
+    {
+      "id": "KPI002",
+      "name": "Grievance Resolution Rate",
+      "category": "Effectiveness",
+      "target": "90%",
+      "actual": "95%",
+      "period": "Q3 2024",
+      "status": "Exceed",
+      "notes": "Penanganan keluhan yang cepat dan memuaskan"
+    },
+    {
+      "id": "KPI003",
+      "name": "Employee Retention Rate",
+      "category": "Quality",
+      "target": "92%",
+      "actual": "94%",
+      "period": "Q3 2024",
+      "status": "Exceed",
+      "notes": "Kontribusi program retention berjalan efektif"
+    }
+  ]
+}

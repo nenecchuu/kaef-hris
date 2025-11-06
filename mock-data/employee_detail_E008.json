@@ -1,0 +1,209 @@
+{
+  "employee": {
+    "id": "E008",
+    "nama": "Maya Angelina",
+    "jabatan": "Training Coordinator",
+    "fungsi": "Human Resources / Training",
+    "level": "Coordinator",
+    "photo": "https://i.pravatar.cc/150?u=E008",
+    "email": "maya.angelina@kimiafarma.co.id",
+    "phone": "+62 816-4567-8901",
+    "department": "Human Resources - Training & Development",
+    "join_date": "2020-01-20",
+    "status_kompetensi": "fit",
+    "fit_rate_overall": 85
+  },
+  "assessment_results": {
+    "assessed_date": "2024-10-15",
+    "assessor": "Dr. Andini Kusuma",
+    "assessments": [
+      {
+        "kategori": "Core Values",
+        "expected": 4.0,
+        "actual_avg": 3.8,
+        "fit_rate": 95,
+        "gap": 0,
+        "status": "fit",
+        "items": [
+          {"nama": "Professional", "expected": 4, "actual": 4, "gap": 0, "status": "fit"},
+          {"nama": "Integrity", "expected": 4, "actual": 4, "gap": 0, "status": "fit"},
+          {"nama": "Teamwork", "expected": 4, "actual": 4, "gap": 0, "status": "fit"},
+          {"nama": "Innovation", "expected": 4, "actual": 3, "gap": -1, "status": "gap"},
+          {"nama": "Customer Oriented", "expected": 4, "actual": 4, "gap": 0, "status": "fit"}
+        ]
+      },
+      {
+        "kategori": "Generic",
+        "expected": 4.0,
+        "actual_avg": 3.67,
+        "fit_rate": 92,
+        "gap": 0,
+        "status": "fit",
+        "items": [
+          {"nama": "Concern for Order", "expected": 4, "actual": 4, "gap": 0, "status": "fit"},
+          {"nama": "Thinking Ability", "expected": 4, "actual": 4, "gap": 0, "status": "fit"},
+          {"nama": "Empathy & Interpersonal Skill", "expected": 4, "actual": 3, "gap": -1, "status": "gap"}
+        ]
+      },
+      {
+        "kategori": "Management",
+        "expected": 4.0,
+        "actual_avg": 3.75,
+        "fit_rate": 94,
+        "gap": 0,
+        "status": "fit",
+        "items": [
+          {"nama": "Time Management", "expected": 4, "actual": 4, "gap": 0, "status": "fit"},
+          {"nama": "Organizational Awareness", "expected": 4, "actual": 4, "gap": 0, "status": "fit"},
+          {"nama": "Managing Work & Performance", "expected": 4, "actual": 4, "gap": 0, "status": "fit"},
+          {"nama": "Business Acumen", "expected": 4, "actual": 3, "gap": -1, "status": "gap"}
+        ]
+      },
+      {
+        "kategori": "Leadership",
+        "expected": 3.0,
+        "actual_avg": 2.83,
+        "fit_rate": 94,
+        "gap": 0,
+        "status": "fit",
+        "items": [
+          {"nama": "Problem Solving", "expected": 3, "actual": 3, "gap": 0, "status": "fit"},
+          {"nama": "Strategic Thinking", "expected": 3, "actual": 3, "gap": 0, "status": "fit"},
+          {"nama": "Visionary", "expected": 3, "actual": 3, "gap": 0, "status": "fit"},
+          {"nama": "Building Team", "expected": 3, "actual": 3, "gap": 0, "status": "fit"},
+          {"nama": "Change", "expected": 3, "actual": 2, "gap": -1, "status": "gap"},
+          {"nama": "Empowerment", "expected": 3, "actual": 3, "gap": 0, "status": "fit"}
+        ]
+      },
+      {
+        "kategori": "Technical (Training & Development)",
+        "expected": 4.0,
+        "actual_avg": 3.5,
+        "fit_rate": 87,
+        "gap": 0,
+        "status": "fit",
+        "items": [
+          {"nama": "Training Program Design", "expected": 4, "actual": 4, "gap": 0, "status": "fit"},
+          {"nama": "Learning Management System (LMS)", "expected": 4, "actual": 4, "gap": 0, "status": "fit"},
+          {"nama": "Facilitation & Presentation", "expected": 4, "actual": 3, "gap": -1, "status": "gap"},
+          {"nama": "Needs Assessment & Analysis", "expected": 4, "actual": 3, "gap": -1, "status": "gap"},
+          {"nama": "Training Evaluation & ROI", "expected": 4, "actual": 4, "gap": 0, "status": "fit"},
+          {"nama": "Instructional Design & E-Learning", "expected": 4, "actual": 3, "gap": -1, "status": "gap"}
+        ]
+      }
+    ]
+  },
+  "work_history": [
+    {
+      "id": "WH001",
+      "position": "Training Coordinator",
+      "department": "Human Resources - Training & Development",
+      "start_date": "2021-09-01",
+      "end_date": null,
+      "is_current": true,
+      "description": "Mengelola program pelatihan, koordinasi instruktur, dan evaluasi efektivitas training untuk pengembangan karyawan.",
+      "achievements": [
+        "Mengorganisir 50+ program training per tahun melibatkan 2,000+ peserta",
+        "Meningkatkan training satisfaction score dari 7.5 menjadi 8.7 dari 10",
+        "Mengimplementasikan learning management system (LMS) baru"
+      ]
+    },
+    {
+      "id": "WH002",
+      "position": "Training Assistant",
+      "department": "Human Resources - Training",
+      "start_date": "2020-01-20",
+      "end_date": "2021-08-31",
+      "is_current": false,
+      "description": "Asisten dalam koordinasi program training dan manajemen peserta.",
+      "achievements": [
+        "Membantu koordinasi 40+ training sessions",
+        "Mengorganisir registrasi dan dokumentasi peserta training"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": "EDU001",
+      "degree": "S1 Pendidikan",
+      "institution": "Universitas Pendidikan Indonesia",
+      "major": "Teknologi Pendidikan",
+      "year_start": "2016",
+      "year_end": "2020",
+      "gpa": 3.58,
+      "description": "Fokus pada training design dan e-learning development"
+    }
+  ],
+  "training": [
+    {
+      "id": "TRN001",
+      "title": "Instructional Design & E-Learning Development",
+      "provider": "External - LinkedIn Learning",
+      "date": "2024-06-10",
+      "duration": "4 minggu (online)",
+      "certificate_number": "LI-IDEL-2024-0610",
+      "status": "Completed"
+    },
+    {
+      "id": "TRN002",
+      "title": "Training Evaluation & Measurement",
+      "provider": "External - ASTD (Association for Talent Development)",
+      "date": "2023-10-15",
+      "duration": "3 hari",
+      "certificate_number": "ASTD-TEM-2023-1015",
+      "status": "Completed"
+    },
+    {
+      "id": "TRN003",
+      "title": "Advanced Facilitation Skills",
+      "provider": "Internal - Kimia Farma HR",
+      "date": "2023-05-20",
+      "duration": "2 hari",
+      "certificate_number": "KF-AFS-2023-0520",
+      "status": "Completed"
+    }
+  ],
+  "personal_qualification": [
+    {
+      "id": "QUAL001",
+      "type": "Sertifikasi",
+      "name": "Certified Training Professional (CTP)",
+      "issuer": "ASTD",
+      "issued_date": "2023-11-20",
+      "expiry_date": "2028-11-20",
+      "credential_id": "ASTD-CTP-2023-11200678"
+    }
+  ],
+  "achievement": [
+    {
+      "id": "ACH001",
+      "title": "Training Excellence Award 2024",
+      "date": "2024-07-15",
+      "category": "Performance Award",
+      "description": "Pengakuan untuk program training yang berkualitas dan peningkatan employee satisfaction",
+      "awarded_by": "L&D Director"
+    }
+  ],
+  "kpi_personal": [
+    {
+      "id": "KPI001",
+      "name": "Training Program Completion Rate",
+      "category": "Efficiency",
+      "target": "95%",
+      "actual": "96%",
+      "period": "Q3 2024",
+      "status": "Exceed",
+      "notes": "Excellent attendance dan completion rates"
+    },
+    {
+      "id": "KPI002",
+      "name": "Training Satisfaction Score",
+      "category": "Quality",
+      "target": "8.0",
+      "actual": "8.7",
+      "period": "Q3 2024",
+      "status": "Exceed",
+      "notes": "Peserta sangat puas dengan program dan delivery"
+    }
+  ]
+}

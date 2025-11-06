@@ -66,7 +66,7 @@ export function LeaderHome() {
       {/* Rich Leader Profile Card with Avatar and Details */}
       {/* DESIGN DECISION: Using gradient with brand colors for visual impact */}
       {/* BOD BENEFIT: Professional, executive-level presentation */}
-      <div className="bg-gradient-to-br from-kf-blue to-kf-blue-dark p-6 text-white shadow-lg">
+      <div className="bg-gradient-to-br from-kf-blue to-kf-blue-dark p-6 text-gray-50 shadow-lg">
         <div className="flex items-start gap-4">
           {/* Large Avatar */}
           <Avatar className="h-20 w-20 border-4 border-white/20 shadow-xl">
@@ -74,38 +74,16 @@ export function LeaderHome() {
               src={leader_photo || "https://i.pravatar.cc/150?u=L001"}
               alt={leader_name}
             />
-            <AvatarFallback className="bg-kf-orange text-white text-2xl font-bold">
+            <AvatarFallback className="bg-kf-orange text-gray-50 text-2xl font-bold">
               {leader_name.split(' ').map(n => n[0]).join('')}
             </AvatarFallback>
           </Avatar>
 
           {/* Leader Info */}
           <div className="flex-1">
-            <div className="mb-1 text-sm text-white/80">{getGreeting()},</div>
-            <div className="text-2xl font-bold text-white mb-1">{leader_name}</div>
-            <div className="text-sm text-white/90 mb-3">{leader_position}</div>
-
-            {/* Contact Info with Icons - Using secondary color accents */}
-            <div className="space-y-1.5">
-              {leader_division && (
-                <div className="flex items-center gap-2 text-sm text-white/80">
-                  <IconBuilding size={16} className="text-kf-orange" />
-                  <span>{leader_division}</span>
-                </div>
-              )}
-              {leader_email && (
-                <div className="flex items-center gap-2 text-sm text-white/80">
-                  <IconMail size={16} className="text-kf-orange" />
-                  <span>{leader_email}</span>
-                </div>
-              )}
-              {leader_phone && (
-                <div className="flex items-center gap-2 text-sm text-white/80">
-                  <IconPhone size={16} className="text-kf-orange" />
-                  <span>{leader_phone}</span>
-                </div>
-              )}
-            </div>
+            <div className="mb-1 text-sm text-gray-50/80">{getGreeting()},</div>
+            <div className="text-2xl font-bold text-gray-50 mb-1">{leader_name}</div>
+            <div className="text-sm text-gray-50/90 mb-3">{leader_position}</div>
           </div>
         </div>
       </div>

@@ -1,0 +1,200 @@
+{
+  "employee": {
+    "id": "E007",
+    "nama": "Rudi Hartono",
+    "jabatan": "HR Staff - Payroll",
+    "fungsi": "Human Resources / Payroll",
+    "level": "Staff",
+    "photo": "https://i.pravatar.cc/150?u=E007",
+    "email": "rudi.hartono@kimiafarma.co.id",
+    "phone": "+62 815-6789-0123",
+    "department": "Human Resources - Payroll",
+    "join_date": "2018-09-15",
+    "status_kompetensi": "gap",
+    "fit_rate_overall": 62
+  },
+  "assessment_results": {
+    "assessed_date": "2024-10-15",
+    "assessor": "Dr. Andini Kusuma",
+    "assessments": [
+      {
+        "kategori": "Core Values",
+        "expected": 4.0,
+        "actual_avg": 3.6,
+        "fit_rate": 90,
+        "gap": 0,
+        "status": "fit",
+        "items": [
+          {"nama": "Professional", "expected": 4, "actual": 4, "gap": 0, "status": "fit"},
+          {"nama": "Integrity", "expected": 4, "actual": 3, "gap": -1, "status": "gap"},
+          {"nama": "Teamwork", "expected": 4, "actual": 4, "gap": 0, "status": "fit"},
+          {"nama": "Innovation", "expected": 4, "actual": 3, "gap": -1, "status": "gap"},
+          {"nama": "Customer Oriented", "expected": 4, "actual": 4, "gap": 0, "status": "fit"}
+        ]
+      },
+      {
+        "kategori": "Generic",
+        "expected": 4.0,
+        "actual_avg": 3.33,
+        "fit_rate": 83,
+        "gap": 0,
+        "status": "gap",
+        "items": [
+          {"nama": "Concern for Order", "expected": 4, "actual": 4, "gap": 0, "status": "fit"},
+          {"nama": "Thinking Ability", "expected": 4, "actual": 3, "gap": -1, "status": "gap"},
+          {"nama": "Empathy & Interpersonal Skill", "expected": 4, "actual": 3, "gap": -1, "status": "gap"}
+        ]
+      },
+      {
+        "kategori": "Management",
+        "expected": 4.0,
+        "actual_avg": 3.25,
+        "fit_rate": 81,
+        "gap": 0,
+        "status": "gap",
+        "items": [
+          {"nama": "Time Management", "expected": 4, "actual": 4, "gap": 0, "status": "fit"},
+          {"nama": "Organizational Awareness", "expected": 4, "actual": 3, "gap": -1, "status": "gap"},
+          {"nama": "Managing Work & Performance", "expected": 4, "actual": 3, "gap": -1, "status": "gap"},
+          {"nama": "Business Acumen", "expected": 4, "actual": 3, "gap": -1, "status": "gap"}
+        ]
+      },
+      {
+        "kategori": "Leadership",
+        "expected": 3.0,
+        "actual_avg": 2.33,
+        "fit_rate": 78,
+        "gap": -1,
+        "status": "gap",
+        "items": [
+          {"nama": "Problem Solving", "expected": 3, "actual": 2, "gap": -1, "status": "gap"},
+          {"nama": "Strategic Thinking", "expected": 3, "actual": 2, "gap": -1, "status": "gap"},
+          {"nama": "Visionary", "expected": 3, "actual": 2, "gap": -1, "status": "gap"},
+          {"nama": "Building Team", "expected": 3, "actual": 2, "gap": -1, "status": "gap"},
+          {"nama": "Change", "expected": 3, "actual": 3, "gap": 0, "status": "fit"},
+          {"nama": "Empowerment", "expected": 3, "actual": 2, "gap": -1, "status": "gap"}
+        ]
+      },
+      {
+        "kategori": "Technical (Payroll)",
+        "expected": 4.0,
+        "actual_avg": 2.67,
+        "fit_rate": 67,
+        "gap": -1,
+        "status": "gap",
+        "items": [
+          {"nama": "Payroll System Management", "expected": 4, "actual": 3, "gap": -1, "status": "gap"},
+          {"nama": "Tax & Compliance (PPh21, BPJS)", "expected": 4, "actual": 2, "gap": -2, "status": "gap"},
+          {"nama": "Salary Calculation & Processing", "expected": 4, "actual": 3, "gap": -1, "status": "gap"},
+          {"nama": "Regulatory Compliance & Updates", "expected": 4, "actual": 2, "gap": -2, "status": "gap"},
+          {"nama": "Financial Analysis & Budgeting", "expected": 4, "actual": 3, "gap": -1, "status": "gap"},
+          {"nama": "Payroll Analytics & Reporting", "expected": 4, "actual": 2, "gap": -2, "status": "gap"}
+        ]
+      }
+    ]
+  },
+  "work_history": [
+    {
+      "id": "WH001",
+      "position": "HR Staff - Payroll",
+      "department": "Human Resources - Payroll",
+      "start_date": "2021-06-01",
+      "end_date": null,
+      "is_current": true,
+      "description": "Mengelola proses payroll, perhitungan gaji, potongan pajak, dan kepatuhan regulasi payroll.",
+      "achievements": [
+        "Memproses payroll untuk 500+ karyawan setiap bulannya",
+        "Mengurangi payroll errors dari 2% menjadi 0.5%",
+        "Mengupdate sistem payroll sesuai perubahan regulasi pemerintah"
+      ]
+    },
+    {
+      "id": "WH002",
+      "position": "HR Associate - Payroll",
+      "department": "Human Resources - Payroll",
+      "start_date": "2018-09-15",
+      "end_date": "2021-05-31",
+      "is_current": false,
+      "description": "Asisten dalam pemrosesan payroll dan perhitungan gaji karyawan.",
+      "achievements": [
+        "Membantu memproses 400+ payroll transactions per bulan",
+        "Mengorganisir dokumentasi pajak dan compliance untuk audit"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": "EDU001",
+      "degree": "S1 Akuntansi",
+      "institution": "Universitas Negeri Jakarta",
+      "major": "Akuntansi",
+      "year_start": "2014",
+      "year_end": "2018",
+      "gpa": 3.42,
+      "description": "Fokus pada financial accounting dan tax management"
+    }
+  ],
+  "training": [
+    {
+      "id": "TRN001",
+      "title": "Payroll Compliance & Tax Update 2024",
+      "provider": "External - Indonesian Tax Authority",
+      "date": "2024-03-15",
+      "duration": "2 hari",
+      "certificate_number": "DJP-PCT-2024-0315",
+      "status": "Completed"
+    },
+    {
+      "id": "TRN002",
+      "title": "Payroll System (SAP) Advanced Training",
+      "provider": "Internal - Kimia Farma IT",
+      "date": "2023-08-20",
+      "duration": "3 hari",
+      "certificate_number": "KF-SAPHR-2023-0820",
+      "status": "Completed"
+    }
+  ],
+  "personal_qualification": [
+    {
+      "id": "QUAL001",
+      "type": "Sertifikasi",
+      "name": "Brevet A Pajak",
+      "issuer": "Indonesian Tax Authority (DJP)",
+      "issued_date": "2022-06-10",
+      "expiry_date": "2025-06-10",
+      "credential_id": "DJP-BREV-A-2022-06100234"
+    }
+  ],
+  "achievement": [
+    {
+      "id": "ACH001",
+      "title": "Payroll Excellence Award 2023",
+      "date": "2023-12-20",
+      "category": "Performance Award",
+      "description": "Pengakuan untuk akurasi dan ketepatan waktu dalam pemrosesan payroll",
+      "awarded_by": "Finance Director"
+    }
+  ],
+  "kpi_personal": [
+    {
+      "id": "KPI001",
+      "name": "Payroll Processing Accuracy",
+      "category": "Quality",
+      "target": "99.5%",
+      "actual": "99.0%",
+      "period": "Q3 2024",
+      "status": "Near Target",
+      "notes": "Masih perlu improvement dalam tax calculation compliance"
+    },
+    {
+      "id": "KPI002",
+      "name": "Payroll Submission Timeliness",
+      "category": "Efficiency",
+      "target": "100%",
+      "actual": "92%",
+      "period": "Q3 2024",
+      "status": "Gap",
+      "notes": "Beberapa submission terlambat karena approval delays"
+    }
+  ]
+}
